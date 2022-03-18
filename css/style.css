@@ -21,6 +21,7 @@ a {
   --color-black: #000;
   --color-main: #333;
   --color-white: #fff;
+  --color-accent: #9d5cd0;
 }
 
 body {
@@ -29,8 +30,6 @@ body {
   font-size: 16px;
   line-height: 32px;
   color: var(--color-main);
-  /* потом не забудь убрать */
-  height: 500px;
 }
 
 .list-reset {
@@ -56,4 +55,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 65px;
+}
+
+.descr {
+  margin: 0;
 }

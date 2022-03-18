@@ -15,11 +15,15 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/fonts.css">
   <!-- Подключаем стили для библиотек -->
-
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
   <!-- Подключаем наши стили -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about-us.css">
+  <link rel="stylesheet" href="css/gallery.css">
 </head>
 
 <header class="header">
@@ -159,8 +163,46 @@
 </header>
 
 <body>
+  <section class="hero">
+    <div class="swiper hero__slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url(img/hero-bg1@1x.jpg);"></div>
+        <div class="swiper-slide" style="background-image: url(img/hero-bg2@1x.jpg);"></div>
+        <div class="swiper-slide" style="background-image: url(img/hero-bg3@1x.jpg);"></div>
+      </div>
+    </div>
+    <div class="container hero__container">
+      <div class="hero__content">
+        <h1 class="main-title">
+          Прикоснитесь к&nbsp;прекрасному
+        </h1>
+        <p class="descr hero__descr">
+          Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
+        </p>
+        <a href="#" class="link hero__link">Подписаться на&nbsp;рассылку</a>
+      </div>
+    </div>
+  </section>
 
+  <section class="about-us" id="about-us">
+    <div class="container about-us__container">
+      <h2 class="title about-us__title">О нас</h2>
+      <p class="descr about-us__descr">
+        Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать,
+        что высококачественный прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный
+        план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных
+        слоев населения, а&nbsp;значит, должны быть разоблачены.
+      </p>
+    </div>
+  </section>
 
+  <section class="gallery" id="gallery">
+    <div class="container gallery__container">
+
+    </div>
+  </section>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
 </body>
 
 
