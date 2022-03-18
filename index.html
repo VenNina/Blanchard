@@ -6,10 +6,162 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blanchard - галерея</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <!-- Подключаем шрифты -->
+  <!-- <link rel="preload" as="font" href="fonts/OpenSans-Regular.woff2" type="font/woff2"> -->
+  <!-- <link rel="preload" as="font" href="fonts/OpenSans-Bold.woff2" type="font/woff2"> -->
+  <!-- <link rel="preload" as="font" href="fonts/OpenSans-SemiBold.woff2" type="font/woff2"> -->
+  <!-- <link rel="preload" as="font" href="fonts/OpenSans-Italic.woff2" type="font/woff2"> -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <!-- Подключаем стили для библиотек -->
+
+
+  <!-- Подключаем наши стили -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
 </head>
+
+<header class="header">
+  <div class="header-top">
+    <div class="container header-top__container">
+      <picture class="header__picture flex-center">
+        <source srcset="img/logo_header_320_mobile.svg" media="(max-width: 320px)">
+        <source srcset="img/logo_header_1024_tablet.svg" media="(max-width: 1024px)">
+        <source srcset="img/logo_header_1920_desktop.svg" media="(max-width: 1920px)">
+        <img src="img/logo_header_1920_desktop.svg" alt="Логотип галереи Blanchard">
+      </picture>
+      <nav class="nav header__nav">
+        <ul class="nav__list list-reset">
+          <li class="nav__item">
+            <a href="#about-us" class="nav__link">О нас</a>
+          </li>
+          <li class="nav__item">
+            <a href="#gallery" class="nav__link">Галерея</a>
+          </li>
+          <li class="nav__item">
+            <a href="#catalog" class="nav__link">Каталог</a>
+          </li>
+          <li class="nav__item">
+            <a href="#events" class="nav__link">События</a>
+          </li>
+          <li class="nav__item">
+            <a href="#ptogects" class="nav__link">Проекты</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contacts" class="nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#" class="link__enter">Войти</a>
+    </div>
+  </div>
+  <div class="header-bottom">
+    <div class="container header-bottom__container">
+      <ul class="direction__list list-reset">
+        <li class="direction__item">
+          <h3 class="direction__title">Реализм</h3>
+          <ul class="option__item list-reset">
+            <li class="option__list">
+              <h4 class="option__title">Тинторетто</h4>
+            </li>
+            <li class="option__list">
+              <h4 class="option__title">Фридрих</h4>
+            </li>
+            <li class="option__list">
+              <h4 class="option__title">Леонардо</h4>
+            </li>
+            <li class="option__list">
+              <h4 class="option__title">Верроккьо</h4>
+            </li>
+          </ul>
+        </li>
+        <li class="direction__item">
+          <h3 class="direction__title">Импрессионизм</h3>
+          <ul class="option__item list-reset">
+            <li class="option__list">
+              <h4 class="option__title">Моне</h4>
+            </li>
+            <li class="option__list">
+              <h4 class="option__title">Сислей</h4>
+            </li>
+            <li class="option__list">
+              <h4 class="option__title">Мане</h4>
+            </li>
+            <li class="option__list">
+              <h4 class="option__title">Ренуар</h4>
+            </li>
+          </ul>
+        </li>
+        <li class="direction__item">
+          <h3 class="direction__title">Постимпрессионизм</h3>
+          <ul class="option__item list-reset">
+            <li class="option__list">
+              <h4 class="option__title">Ван Гог</h4>
+            </li>
+            <li class="option__list">
+              <h4 class="option__title">Сезанн</h4>
+            </li>
+            <li class="option__list">
+              <h4 class="option__title">Гоген</h4>
+            </li>
+            <li class="option__list">
+              <h4 class="option__title">Сёра</h4>
+            </li>
+          </ul>
+        </li>
+        <li class="direction__item">
+          <h3 class="direction__title">Авангард</h3>
+          <ul class="option__item list-reset">
+            <li class="option__list">
+              <h4 class="option__title">Кандинский</h4>
+            </li>
+            <li class="option__list">
+              <h4 class="option__title">Маринетти</h4>
+            </li>
+            <li class="option__list">
+              <h4 class="option__title">Малевич</h4>
+            </li>
+            <li class="option__list">
+              <h4 class="option__title">Пикассо</h4>
+            </li>
+          </ul>
+        </li>
+        <li class="direction__item">
+          <h3 class="direction__title">Футуризм</h3>
+          <ul class="option__item list-reset">
+            <li class="option__list">
+              <h4 class="option__title">Карра</h4>
+            </li>
+            <li class="option__list">
+              <h4 class="option__title">Прателла</h4>
+            </li>
+            <li class="option__list">
+              <h4 class="option__title">Северини</h4>
+            </li>
+            <li class="option__list">
+              <h4 class="option__title">Балла</h4>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <form class="seach__form" action="#" method="POST">
+        <button class="btn-reset seach__btn flex-center" type="submit" aria-label="Найти на сайте">
+          <svg class="seach__icon" width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"/>
+            </svg>
+        </button>
+        <input class="seach__input" placeholder="Поиск по сайту" required>
+      </form>
+    </div>
+  </div>
+</header>
 
 <body>
 
+
 </body>
+
 
 </html>

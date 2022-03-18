@@ -1,0 +1,137 @@
+.header {
+  color: var(--color-white);
+}
+
+.header-top {
+  background-color: var(--color-black);
+}
+
+.header-top__container {
+  display: flex;
+  align-items: center;
+  padding-top: 29px;
+  padding-bottom: 31px;
+}
+
+.header__picture {
+  margin-right: 178px;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 60px;
+}
+
+.link__enter {
+  margin-left: auto;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.link__enter:before {
+  content: "";
+  display: inline-block;
+  left: 0;
+  margin-right: 8px;
+  width: 13px;
+  height: 13px;
+  background-image: url(../img/link_enter.svg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header-bottom {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header-bottom__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+.direction__list {
+  display: flex;
+}
+
+.direction__item:not(:last-child) {
+  margin-right: 101px;
+}
+
+.direction__title,
+.artist__title {
+  margin: 0;
+  font-weight: 400;
+}
+
+.direction__title {
+  font-size: 18px;
+  line-height: 25px;
+  cursor: pointer;
+}
+
+.direction__title:after {
+  content: "";
+  right: 0;
+  display: inline-block;
+  width: 12px;
+  height: 7px;
+  background-image: url(../img/check.svg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateX(1px);
+}
+
+.option__item {
+  display: none;
+}
+
+.seach__form {
+  display: flex;
+  align-items: center;
+  min-width: 250px;
+}
+
+.seach__btn {
+  width: 23px;
+  height: 22px;
+  color: var(--color-white);
+}
+
+.seach__icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.seach__icon rect,
+.seach__icon path {
+  fill: currentColor;
+}
+
+.seach__input {
+  padding: 3px 10px;
+  border: none;
+  border-bottom: 1px solid var(--color-white);
+  width: 100%;
+  background-color: transparent;
+}
+
+.seach__input::placeholder {
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--color-white);
+}
