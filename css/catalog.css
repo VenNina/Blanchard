@@ -1,0 +1,31 @@
+.catalog__container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.catalog__title {
+  margin-bottom: 15px;
+}
+
+.catalog__content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+
+.catalog__card,
+.catalog__tabs {
+  flex: 0 0 50%;
+}
+
+.catalog__card {
+  width: 40%;
+}
+
+.card__figure {
+  margin: 0;
+}
+
+.card__img {
+  margin-bottom: 21px;
+}

@@ -1,7 +1,229 @@
 .gallery {
-  min-height: 1024px;
+  color: var(--color-white);
   background-image: url(../img/gallery-bg.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.gallery__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.gallery__left {
+  display: flex;
+  flex-direction: column;
+  width: 28%;
+}
+
+.gallery__right {
+  padding-top: 23px;
+  width: 72%;
+}
+
+.gallery__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 100%;
+}
+
+.gallery__title {
+  margin-bottom: 15px;
+}
+
+.content__text {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+
+/* choices*/
+
+.choices {
+  width: 400px;
+}
+
+.choices[data-type*=select-one] .choices__inner {
+  padding: 0 0 0 14px;
+}
+
+.is-open .choices__inner {
+  border-radius: 6px;
+  border-color: var(--color-white);
+}
+
+.choices__inner {
+  border-radius: 6px;
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+}
+
+.choices__list--dropdown .choices__item {
+  background-color: var(--color-black);
+  border: 1px solid var(--color-grey);
+}
+
+.choices__list--dropdown .choices__item--selectable,
+.choices__list[aria-expanded] .choices__item--selectable {
+  padding-right: 10px;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: var(--color-black);
+}
+
+.is-open .choices__list--dropdown,
+.is-open .choices__list[aria-expanded] {
+  border-radius: 6px;
+  border: 1px solid var(--color-grey);
+}
+
+.choices__list--dropdown {
+  border: 1px solid var(--color-grey);
+}
+
+#choices--selectChoices-item-choice-1 {
+  display: none;
+}
+
+.is-selected {
+  display: none;
+}
+
+.choices__item--selectable.is-highlighted::after {
+  display: none;
+}
+
+.choices::after {
+  opacity: 0;
+}
+
+.choices::before {
+  content: '';
+  position: absolute;
+  right: 11.5px;
+  top: 39%;
+  margin-top: -2.5px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  height: 8px;
+  width: 8px;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.choices.is-open::before {
+  margin-top: 4.5px;
+  transform: rotate(225deg);
+}
+
+
+/* checkbox */
+
+.checkbox__input {
+  opacity: 0;
+}
+
+.checkbox__label {
+  position: relative;
+}
+
+.checkbox__visible {
+  transition: color .2s ease-in-out;
+}
+
+.checkbox__visible::before,
+.checkbox__visible::after {
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.checkbox__visible::before {
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border: 1px solid currentColor;
+}
+
+.checkbox__visible::after {
+  left: 4px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50px;
+  background-color: currentColor;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.checkbox__input:checked+.checkbox__visible {
+  color: var(--color-accent);
+}
+
+.checkbox__input:checked+.checkbox__visible::after {
+  opacity: 1;
+}
+
+
+/* swiper */
+
+.swiper-second {
+  width: 1150px;
+  height: 350px;
+}
+
+.swiper-zoom-container>.swiper-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__slide-btn {
+  margin-bottom: 29px;
+  display: flex;
+}
+
+.gallery__swiper-button-prev,
+.gallery__swiper-button-next,
+.gallery__swiper-pagination {
+  position: static;
+}
+
+.gallery__swiper-pagination {
+  width: 7%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  margin-top: 0;
+  background-color: var(--color-dusty);
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-position: center;
+  background-size: 9px 9px;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-next {
+  background-image: url(../img/swiper-next.svg);
+}
+
+.swiper-button-prev {
+  background-image: url(../img/swiper-prev.svg);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  display: none;
 }

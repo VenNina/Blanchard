@@ -33,16 +33,16 @@
 }
 
 .nav__item:not(:last-child) {
-  margin-right: 60px;
+  margin-right: 63px;
 }
 
-.link__enter {
+.link-enter {
   margin-left: auto;
   font-size: 18px;
   line-height: 25px;
 }
 
-.link__enter:before {
+.link-enter:before {
   content: "";
   display: inline-block;
   left: 0;
@@ -67,27 +67,27 @@
   padding-bottom: 22px;
 }
 
-.direction__list {
+.main-menu {
   display: flex;
 }
 
-.direction__item:not(:last-child) {
+.main-menu__item:not(:last-child) {
   margin-right: 101px;
 }
 
-.direction__title,
-.artist__title {
+.main-menu__link,
+.main-menu-inner__link {
   margin: 0;
   font-weight: 400;
 }
 
-.direction__title {
+.main-menu__item {
   font-size: 18px;
   line-height: 25px;
   cursor: pointer;
 }
 
-.direction__title:after {
+.main-menu__link:after {
   content: "";
   right: 0;
   display: inline-block;
@@ -100,42 +100,43 @@
   transform: translateX(1px);
 }
 
-.option__item {
+.main-menu-inner {
   display: none;
 }
 
-.seach__form {
+.seach-form {
   display: flex;
   align-items: center;
   min-width: 250px;
 }
 
-.seach__btn {
+.seach-form__btn {
+  margin-right: 10px;
   width: 23px;
   height: 22px;
   color: var(--color-white);
 }
 
-.seach__icon {
+.seach-form__icon {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.seach__icon rect,
-.seach__icon path {
+.seach-form__icon rect,
+.seach-form__icon path {
   fill: currentColor;
 }
 
-.seach__input {
-  padding: 3px 10px;
+.seach-form__input {
+  padding: 3px 5px 3px 0;
   border: none;
   border-bottom: 1px solid var(--color-white);
   width: 100%;
   background-color: transparent;
 }
 
-.seach__input::placeholder {
+.seach-form__input::placeholder {
   font-size: 18px;
   line-height: 25px;
   color: var(--color-white);

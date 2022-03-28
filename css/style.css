@@ -1,4 +1,5 @@
 html {
+  scroll-behavior: smooth;
   box-sizing: border-box;
 }
 
@@ -19,12 +20,16 @@ a {
 
 :root {
   --color-black: #000;
-  --color-main: #333;
+  --color-grey: #999;
   --color-white: #fff;
+  --color-main: #333;
   --color-accent: #9d5cd0;
+  --color-dusty: #999;
 }
 
 body {
+  /* position: relative;
+  overflow-x: hidden; */
   font-family: "OpenSans", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -64,6 +69,30 @@ body {
   line-height: 65px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.subtitle {
+  margin: 0;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
 .descr {
   margin: 0;
+}
+
+.descr--width {
+  width: 68%
 }
