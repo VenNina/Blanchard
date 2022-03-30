@@ -291,7 +291,7 @@
         </p>
         <div class="catalog__content">
           <div class="catalog__card card">
-            <figure class="card__figure">
+            <figure class="card__figure" id="step-one-tab" aria-labelledby="step-one" data-target="one">
               <picture class="card__picture">
                 <source srcset="img/Domeniko320@1x.jpg 1x, img/Domeniko320@2x.jpg 2x" media="(max-width: 320px)">
                 <source srcset="img/Domeniko768@1x.jpg 1x, img/Domeniko768@2x.jpg 2x" media="(max-width: 768px)">
@@ -299,10 +299,8 @@
                 <source srcset="img/Domeniko@1x.jpg 1x, img/Domeniko@2x.jpg 2x" media="(max-width: 1920px)">
                 <img src="img/Domeniko@1x.jpg" alt="Доменико Гирландайо" class="card__img">
               </picture>
-              <h3 class="subtitle card__subtitle">
-                Доменико Гирландайо
-              </h3>
               <figcaption class="card__figcaption">
+                <h3 class="subtitle card__subtitle">Доменико Гирландайо</h3>
                 <p class="descr__time"><time datetime="1448-06-02">2&nbsp;июня 1448&nbsp;</time>&mdash;<time datetime="1494-01-11">11&nbsp;января 1494</time></p>
                 <p class="descr card__descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал
                   профессиональными навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того
@@ -311,18 +309,204 @@
               </figcaption>
             </figure>
           </div>
-          <div class="catalog__accordion catalog__tabs tabs" id="accordion">
-            <h3 class="subtitle tabs__subtitle">First header</h3>
-            <ul class="tabs__list list-reset">
-              <li class="tabs__item"><button class="tabs__btn btn-reset"></button></li>
-              <li class="tabs__item"><button class="tabs__btn btn-reset"></button></li>
-            </ul>
-            <h3>Second header</h3>
-            <ul class="tabs__list list-reset">
-              <li class="tabs__item"><button class="tabs__btn btn-reset"></button></li>
-              <li class="tabs__item"><button class="tabs__btn btn-reset"></button></li>
-            </ul>
-          </div>
+          <ul class="catalog__accordion catalog__tabs tabs list-reset" id="accordion">
+            <li class="tabs__item tabs-inner">
+              <div class="tabs-inner__content">
+                <h3 class="subtitle tabs-inner__subtitle"><time>C 1400 по 1499 гг.</time></h3>
+                <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M49 25C49 38.2548 38.2548 49 25 49C11.7452 49 1 38.2548 1 25C1 11.7452 11.7452 1 25 1C38.2548 1 49 11.7452 49 25Z" fill="#D1A9F0" stroke="#9D5CD0" stroke-width="2"/>
+                  <path d="M16.6667 27.3334L25 19.0001L33.3333 27.3334" stroke="black"/>
+                </svg>
+                <!-- <svg class="tabs-inner__icon icon-accordion" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="icon-accordion__fill" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                  <path class="icon-accordion__circle" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" stroke="ececec" stroke-width="1"/>
+                  <path class="icon-accordion__arrow" d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                </svg> -->
+              </div>
+              <ul class="tabs-inner__list list-reset">
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="one">Бенедетто ди Биндо</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="two">Бергоньоне, Амброджо</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="three">Биссоло, Франческо</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="four">Больтраффио, Джованни</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="five">Бонсиньори, Франческо</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="six">Боттичини, Рафаэлло</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="seven">Брамантино</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="eight">Бреа, Людовико</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="nine">Бьяджо д’Антонио Туччи</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="ten">Веккьетта</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="eleven">Андреа Верроккьо</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twelve">Доменико Гирландайо</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="fourteen">Беноццо Гоццоли</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="fifteen">Граначчи, Франческо</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="sixteen">Грегорио ди Чекко</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="seventeen">Джованни да Удине</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="eighteen">Джованни ди Паоло</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="nineteen">Джорджоне</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty">Парентино, Бернардо</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-one">Пезеллино</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-twoo">Пьетро Перуджино</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-three">Перуцци, Бальдассаре</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-four">Пизанелло</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-five">Пинтуриккьо</button>
+                </li>
+              </ul>
+            </li>
+            <li class="tabs__item tabs-inner">
+              <div class="tabs-inner__content">
+                <h3 class="subtitle tabs-inner__subtitle"><time>C 1500 по 1599 гг.</time></h3>
+                <svg class="tabs-inner__icon icon-accordion" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="icon-accordion__fill" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                  <path class="icon-accordion__circle" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" stroke="#ECECEC"/>
+                  <path class="icon-accordion__arrow" d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                </svg>
+              </div>
+              <ul class="tabs-inner__list list-reset">
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-four">Пизанелло</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-five">Пинтуриккьо</button>
+                </li>
+              </ul>
+            </li>
+            <li class="tabs__item tabs-inner">
+              <div class="tabs-inner__content">
+                <h3 class="subtitle tabs-inner__subtitle"><time>C 1600 по 1699 гг.</time></h3>
+                <svg class="tabs-inner__icon icon-accordion" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="icon-accordion__fill" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                  <path class="icon-accordion__circle" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" stroke="#ECECEC"/>
+                  <path class="icon-accordion__arrow" d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                </svg>
+              </div>
+              <ul class="tabs-inner__list list-reset">
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-four">Пизанелло</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-five">Пинтуриккьо</button>
+                </li>
+              </ul>
+            </li>
+            <li class="tabs__item tabs-inner">
+              <div class="tabs-inner__content">
+                <h3 class="subtitle tabs-inner__subtitle"><time>C 1700 по 1799 гг.</time></h3>
+                <svg class="tabs-inner__icon icon-accordion" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="icon-accordion__fill" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                  <path class="icon-accordion__circle" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" stroke="#ECECEC"/>
+                  <path class="icon-accordion__arrow" d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                </svg>
+              </div>
+              <ul class="tabs-inner__list list-reset">
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-four">Пизанелло</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-five">Пинтуриккьо</button>
+                </li>
+              </ul>
+            </li>
+            <li class="tabs__item tabs-inner">
+              <div class="tabs-inner__content">
+                <h3 class="subtitle tabs-inner__subtitle"><time>C 1800 по 1899 гг.</time></h3>
+                <svg class="tabs-inner__icon icon-accordion" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="icon-accordion__fill" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                  <path class="icon-accordion__circle" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" stroke="#ECECEC"/>
+                  <path class="icon-accordion__arrow" d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                </svg>
+              </div>
+              <ul class="tabs-inner__list list-reset">
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-four">Пизанелло</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-five">Пинтуриккьо</button>
+                </li>
+              </ul>
+            </li>
+            <li class="tabs__item tabs-inner">
+              <div class="tabs-inner__content">
+                <h3 class="subtitle tabs-inner__subtitle"><time>C 1900 по 1999 гг.</time></h3>
+                <svg class="tabs-inner__icon icon-accordion" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="icon-accordion__fill" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                  <path class="icon-accordion__circle" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" stroke="#ECECEC"/>
+                  <path class="icon-accordion__arrow" d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                </svg>
+              </div>
+              <ul class="tabs-inner__list list-reset">
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-four">Пизанелло</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-five">Пинтуриккьо</button>
+                </li>
+              </ul>
+            </li>
+            <li class="tabs__item tabs-inner">
+              <div class="tabs-inner__content">
+                <h3 class="subtitle tabs-inner__subtitle"><time>C 2000 г.</time></h3>
+                <svg class="tabs-inner__icon icon-accordion" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="icon-accordion__fill" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                  <path class="icon-accordion__circle" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" stroke="#ECECEC"/>
+                  <path class="icon-accordion__arrow" d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                </svg>
+              </div>
+              <ul class="tabs-inner__list list-reset">
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-four">Пизанелло</button>
+                </li>
+                <li class="tabs-inner__item">
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-five">Пинтуриккьо</button>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

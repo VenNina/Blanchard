@@ -13,13 +13,12 @@
   padding-top: 40px;
 }
 
-.catalog__card,
-.catalog__tabs {
-  flex: 0 0 50%;
+.catalog__card {
+  flex: 0 0 47%;
 }
 
-.catalog__card {
-  width: 40%;
+.catalog__tabs {
+  flex: 0 0 50%;
 }
 
 .card__figure {
@@ -28,4 +27,116 @@
 
 .card__img {
   margin-bottom: 21px;
+  object-fit: cover;
+}
+
+.card__subtitle {
+  margin-bottom: 10px;
+}
+
+.descr__time {
+  margin: 0;
+  margin-bottom: 6px;
+  color: var(--color-caca);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+
+/* accordion */
+
+.tabs-inner__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 34px;
+  padding-bottom: 32px;
+}
+
+.ui-accordion-header-icon {
+  display: none;
+}
+
+.tabs-inner__content::before,
+.tabs-inner__content::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--color-caca);
+  transition: background-color .3s ease-in-out;
+}
+
+.tabs-inner__content::before {
+  top: 0;
+  bottom: 100%;
+}
+
+.tabs-inner__content::after {
+  top: 100%;
+  bottom: 0;
+}
+
+.tabs-inner__content {
+  cursor: pointer;
+}
+
+.icon-accordion {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.icon-accordion__fill {
+  transition: fill .3s ease-in-out;
+}
+
+.icon-accordion__circle {
+  transition: stroke .3s ease-in-out;
+}
+
+.tabs-inner__content:hover.tabs-inner__content::before,
+.tabs-inner__content:hover.tabs-inner__content::after {
+  z-index: 10;
+  background-color: var(--color-accent);
+}
+
+.tabs-inner__content:hover .icon-accordion__fill {
+  fill: var(--color-accent);
+}
+
+.tabs-inner__content:active.tabs-inner__content::before,
+.tabs-inner__content:active.tabs-inner__content::after {
+  z-index: 10;
+  background-color: var(--color-active);
+}
+
+
+/* .tabs-inner__content:active .icon-accordion__circle {
+  stroke: var(--color-active);
+} */
+
+.tabs-inner__icon {
+  transition: transform .3s ease-in-out;
+}
+
+.ui-state-active .tabs-inner__icon {
+  transform: rotate(180deg);
+}
+
+.tabs-inner__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  max-height: 369px;
+}
+
+.tabs-inner__item {
+  flex: 0 0 33%;
+  width: 33%;
 }

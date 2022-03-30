@@ -1,3 +1,5 @@
+/* focus, hover, active */
+
 html {
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -24,7 +26,9 @@ a {
   --color-white: #fff;
   --color-main: #333;
   --color-accent: #9d5cd0;
+  --color-active: #7943a4;
   --color-dusty: #999;
+  --color-caca: #cacaca;
 }
 
 body {
