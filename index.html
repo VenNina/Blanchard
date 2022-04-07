@@ -2,28 +2,28 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blanchard - галерея</title>
-  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
   <!-- Подключаем шрифты -->
   <!-- <link rel="preload" as="font" href="fonts/OpenSans-Regular.woff2" type="font/woff2"> -->
   <!-- <link rel="preload" as="font" href="fonts/OpenSans-Bold.woff2" type="font/woff2"> -->
   <!-- <link rel="preload" as="font" href="fonts/OpenSans-SemiBold.woff2" type="font/woff2"> -->
   <!-- <link rel="preload" as="font" href="fonts/OpenSans-Italic.woff2" type="font/woff2"> -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/fonts.css" />
   <!-- Подключаем стили для библиотек -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/choices.min.css" />
   <!-- Подключаем наши стили -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/hero.css">
-  <link rel="stylesheet" href="css/about-us.css">
-  <link rel="stylesheet" href="css/gallery.css">
-  <link rel="stylesheet" href="css/catalog.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/about-us.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
+  <link rel="stylesheet" href="css/catalog.css" />
 </head>
 
 <body>
@@ -31,10 +31,10 @@
     <div class="header-top">
       <div class="container header-top__container">
         <picture class="header__picture flex-center">
-          <source srcset="img/logo_header_320_mobile.svg" media="(max-width: 320px)">
-          <source srcset="img/logo_header_1024_tablet.svg" media="(max-width: 1024px)">
-          <source srcset="img/logo_header_1920_desktop.svg" media="(max-width: 1920px)">
-          <img src="img/logo_header_1920_desktop.svg" alt="Логотип галереи Blanchard">
+          <source srcset="img/logo_header_320_mobile.svg" media="(max-width: 320px)" />
+          <source srcset="img/logo_header_1024_tablet.svg" media="(max-width: 1024px)" />
+          <source srcset="img/logo_header_1920_desktop.svg" media="(max-width: 1920px)" />
+          <img src="img/logo_header_1920_desktop.svg" alt="Логотип галереи Blanchard" />
         </picture>
         <nav class="header__nav nav">
           <ul class="nav__list list-reset">
@@ -152,35 +152,36 @@
         </ul>
         <form class="seach-form" action="#" method="get">
           <button class="btn-reset seach-form__btn flex-center" type="submit" aria-label="Найти на сайте">
-          <svg class="seach-form__icon" width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"/>
+            <svg class="seach-form__icon" width="23" height="22" viewbox="0 0 23 22" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695"
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" />
             </svg>
-        </button>
-          <input class="seach-form__input" placeholder="Поиск по сайту" required>
+          </button>
+          <input class="seach-form__input" placeholder="Поиск по сайту" required />
         </form>
       </div>
     </div>
   </header>
 
-
   <main>
     <section class="hero">
       <div class="swiper swiper-first hero__slider">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" style="background-image: url(img/hero-bg1@1x.jpg);"></div>
-          <div class="swiper-slide" style="background-image: url(img/hero-bg2@1x.jpg);"></div>
-          <div class="swiper-slide" style="background-image: url(img/hero-bg3@1x.jpg);"></div>
+          <div class="swiper-slide" style="background-image: url(img/hero-bg1@1x.jpg)"></div>
+          <div class="swiper-slide" style="background-image: url(img/hero-bg2@1x.jpg)"></div>
+          <div class="swiper-slide" style="background-image: url(img/hero-bg3@1x.jpg)"></div>
         </div>
       </div>
       <div class="container hero__container">
         <div class="hero__content">
           <h1 class="visually-hidden">Blanchard - художественная галерея</h1>
-          <p class="main-descr">
-            Прикоснитесь к&nbsp;прекрасному
-          </p>
+          <p class="main-descr">Прикоснитесь к&nbsp;прекрасному</p>
           <p class="descr hero__descr">
-            Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
+            Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки
+            для новых предложений.
           </p>
           <a href="#" class="link hero__link">Подписаться на&nbsp;рассылку</a>
         </div>
@@ -191,10 +192,16 @@
       <div class="container about-us__container">
         <h2 class="title about-us__title">О нас</h2>
         <p class="descr about-us__descr descr--width">
-          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать,
-          что высококачественный прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный
-          план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных
-          слоев населения, а&nbsp;значит, должны быть разоблачены.
+          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
+          участника как способного принимать собственные решения касаемо распределения внутренних резервов
+          и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать,
+          что высококачественный прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации
+          модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт
+          необходимость включения в&nbsp;производственный план целого ряда внеочередных мероприятий с&nbsp;учётом
+          комплекса распределения
+          внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках спецификации современных стандартов, действия
+          представителей оппозиции набирают популярность среди определенных слоев населения, а&nbsp;значит, должны быть
+          разоблачены.
         </p>
       </div>
     </section>
@@ -216,19 +223,19 @@
               <ul class="checkbox__list list-reset">
                 <li class="checkbox__item">
                   <label class="checkbox__label">
-                    <input class="checkbox__input" type="checkbox">
+                    <input class="checkbox__input" type="checkbox" />
                     <span class="checkbox__visible">XIX век</span>
                   </label>
                 </li>
                 <li class="checkbox__item">
                   <label class="checkbox__label">
-                    <input class="checkbox__input" type="checkbox">
+                    <input class="checkbox__input" type="checkbox" />
                     <span class="checkbox__visible">XX век</span>
                   </label>
                 </li>
                 <li class="checkbox__item">
                   <label class="checkbox__label">
-                    <input class="checkbox__input" type="checkbox">
+                    <input class="checkbox__input" type="checkbox" />
                     <span class="checkbox__visible">Современность</span>
                   </label>
                 </li>
@@ -246,32 +253,37 @@
             <div class="swiper-wrapper gallery__swipet-wrapper">
               <div class="swiper-slide swiper-slide-second">
                 <div class="swiper-zoom-container">
-                  <img src="img/gallery1@1x.jpg" alt="Торс (Фигура с розовым лицом) - Казимир Малевич" class="swiper-img gallery__swiper-img">
+                  <img class="swiper-img gallery__swiper-img" src="img/gallery1@1x.jpg"
+                    alt="Торс (Фигура с розовым лицом) - Казимир Малевич" />
                 </div>
               </div>
               <div class="swiper-slide swiper-slide-second">
                 <div class="swiper-zoom-container">
-                  <img src="img/gallery2@2x.jpg" alt="Женщина с граблями - Казимир Малевич" class="swiper-img  gallery__swiper-img">
+                  <img class="swiper-img gallery__swiper-img" src="img/gallery2@2x.jpg"
+                    alt="Женщина с граблями - Казимир Малевич" />
                 </div>
               </div>
               <div class="swiper-slide swiper-slide-second">
                 <div class="swiper-zoom-container">
-                  <img src="img/gallery3@1x.jpg" alt="Taking in the harvest - Казимир Малевич" class="swiper-img  gallery__swiper-img">
+                  <img class="swiper-img gallery__swiper-img" src="img/gallery3@1x.jpg"
+                    alt="Taking in the harvest - Казимир Малевич" />
                 </div>
               </div>
               <div class="swiper-slide swiper-slide-second">
                 <div class="swiper-zoom-container">
-                  <img src="img/gallery4@1x.jpg" alt="Сюпрематизм - Иван Клюн" class="swiper-img  gallery__swiper-img">
+                  <img src="img/gallery4@1x.jpg" alt="Сюпрематизм - Иван Клюн" class="swiper-img gallery__swiper-img" />
                 </div>
               </div>
               <div class="swiper-slide swiper-slide-second">
                 <div class="swiper-zoom-container">
-                  <img src="img/gallery5@1x.jpg" alt="Женщина с ведрами - Казимир Малевич" class="swiper-img  gallery__swiper-img">
+                  <img class="swiper-img gallery__swiper-img" src="img/gallery5@1x.jpg"
+                    alt="Женщина с ведрами - Казимир Малевич" />
                 </div>
               </div>
               <div class="swiper-slide swiper-slide-second">
                 <div class="swiper-zoom-container">
-                  <img src="img/gallery6@1x.jpg" alt="Сюпрематизм - Казимир Малевич" class="swiper-img  gallery__swiper-img">
+                  <img class="swiper-img gallery__swiper-img" src="img/gallery6@1x.jpg"
+                    alt="Сюпрематизм - Казимир Малевич" />
                 </div>
               </div>
             </div>
@@ -282,38 +294,72 @@
 
     <section class="catalog" id="catalog">
       <div class="container catalog__container">
-        <h2 class="title catalog__title">
-          Каталог
-        </h2>
+        <h2 class="title catalog__title">Каталог</h2>
         <p class="descr catalog__descr descr--width">
-          Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь всего лишь частью общей картины, стремящиеся
-          вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть функционально разнесены на&nbsp;независимые элементы.
+          Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+          политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь всего
+          лишь частью общей картины, стремящиеся
+          вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые
+          жаждут быть функционально разнесены на&nbsp;независимые элементы.
         </p>
         <div class="catalog__content">
           <div class="catalog__card card">
             <figure class="card__figure card__figure--active" aria-labelledby="step-one" data-target="one">
-                <img src="img/Benedetto_Madonna_humility.jpg" alt="Мадонна Смирение и св. Иероним, переводящий евангелие от Иоанна" class="card__img">
+              <div class="card__inner">
+                <img class="card__img" src="img/Benedetto_Madonna_humility.jpg"
+                  alt="Мадонна Смирение и св. Иероним, переводящий евангелие от Иоанна художник Бенедетто ди Биндо" />
+              </div>
               <figcaption class="card__figcaption">
                 <h3 class="subtitle card__subtitle">Бенедетто ди Биндо</h3>
-                <p class="descr__time"><time datetime="1380">1380</time>&mdash;<time datetime="1417">1417</time></p>
-                <p class="descr card__descr">Бенедетто ди&nbsp;Биндо остался в&nbsp;истории искусства как сиенский художник, так сказать, &laquo;второго ряда&raquo;, несмотря на&nbsp;то, что за&nbsp;свою короткую жизнь он&nbsp;выполнил ряд весьма престижных заказов, включая работы в&nbsp;Сиенском соборе (работы в&nbsp;главном соборе республики второстепенным художникам не&nbsp;поручались).
+                <p class="descr__time">
+                  <time datetime="1380">1380</time>&mdash;<time datetime="1417">1417</time>
+                </p>
+                <p class="descr card__descr">
+                  Бенедетто ди&nbsp;Биндо остался в&nbsp;истории искусства как сиенский художник, так сказать,
+                  &laquo;второго ряда&raquo;, несмотря на&nbsp;то, что за&nbsp;свою короткую жизнь он&nbsp;выполнил ряд
+                  весьма престижных заказов, включая работы в&nbsp;Сиенском
+                  соборе (работы в&nbsp;главном соборе республики второстепенным художникам не&nbsp;поручались).
+                </p>
+              </figcaption>
+            </figure>
+            <figure class="card__figure" aria-labelledby="step-one" data-target="two">
+              <div class="card__inner">
+                <img class="card__img" src="img/Bergonone_Madonna.jpg"
+                  alt="Мадонна с Младенцем со святой Екатериной и блаженным Стефано Макони художник Бергоньоне Амброджо" />
+              </div>
+              <figcaption class="card__figcaption">
+                <h3 class="subtitle card__subtitle">Бергоньоне, Амброджо</h3>
+                <p class="descr__time">
+                  <time datetime="1453">1453</time>&mdash;<time datetime="1523">1523</time>
+                </p>
+                <p class="descr card__descr">
+                  Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Наш путь имени
+                  родного журчит первую необходимыми бросил залетают своего запятой то маленькая гор океана последний
+                  рыбного свое, проектах ведущими, там эта домах решила.
+                  Вскоре дороге рот ручеек, заголовок единственное пунктуация на берегу снова речью скатился назад
+                  семантика от всех продолжил ему.
                 </p>
               </figcaption>
             </figure>
             <figure class="card__figure" aria-labelledby="step-one" data-target="twelve">
-              <picture class="card__picture">
-                <source srcset="img/Domeniko320@1x.jpg 1x, img/Domeniko320@2x.jpg 2x" media="(max-width: 320px)">
-                <source srcset="img/Domeniko768@1x.jpg 1x, img/Domeniko768@2x.jpg 2x" media="(max-width: 768px)">
-                <source srcset="img/Domeniko1024@1x.jpg 1x, img/Domeniko1024@2x.jpg 2x" media="(max-width: 1024px)">
-                <source srcset="img/Domeniko@1x.jpg 1x, img/Domeniko@2x.jpg 2x" media="(max-width: 1920px)">
-                <img src="img/Domeniko@1x.jpg" alt="Доменико Гирландайо" class="card__img">
-              </picture>
+              <div class="card_inner">
+                <picture class="card__picture">
+                  <source srcset="img/Domeniko320@1x.jpg 1x, img/Domeniko320@2x.jpg 2x" media="(max-width: 320px)" />
+                  <source srcset="img/Domeniko768@1x.jpg 1x,img/Domeniko768@2x.jpg 2x" media="(max-width: 768px)" />
+                  <source srcset="img/Domeniko1024@1x.jpg 1x, img/Domeniko1024@2x.jpg 2x" media="(max-width: 1024px)" />
+                  <source srcset="img/Domeniko@1x.jpg 1x, img/Domeniko@2x.jpg 2x" media="(max-width: 1920px)" />
+                  <img src="img/Domeniko@1x.jpg" alt="Доменико Гирландайо" class="card__img" />
+                </picture>
+              </div>
               <figcaption class="card__figcaption">
                 <h3 class="subtitle card__subtitle">Доменико Гирландайо</h3>
-                <p class="descr__time"><time datetime="1448-06-02">2&nbsp;июня 1448&nbsp;</time>&mdash;<time datetime="1494-01-11">11&nbsp;января 1494</time></p>
-                <p class="descr card__descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал
-                  профессиональными навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того
-                  времени).
+                <p class="descr__time">
+                  <time datetime="1448-06-02">2&nbsp;июня 1448&nbsp;</time>&mdash;<time
+                    datetime="1494-01-11">11&nbsp;января 1494</time>
+                </p>
+                <p class="descr card__descr">
+                  Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Предупредила
+                  имени диких грустный продолжил букв, страна коварный ведущими однажды.
                 </p>
               </figcaption>
             </figure>
@@ -321,81 +367,151 @@
           <ul class="catalog__accordion catalog__tabs tabs list-reset" id="accordion">
             <li class="tabs__item tabs-inner">
               <div class="tabs-inner__content">
-                <h3 class="subtitle tabs-inner__subtitle"><time>C 1400 по 1499 гг.</time></h3>
+                <h3 class="subtitle tabs-inner__subtitle">
+                  <time>C 1400 по 1499 гг.</time>
+                </h3>
                 <span class="tabs-inner__icon"></span>
               </div>
               <ul class="tabs-inner__list list-reset">
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="one">Бенедетто ди Биндо</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="one">
+                    Бенедетто ди Биндо
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="two">Бергоньоне, Амброджо</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="two">
+                    Бергоньоне, Амброджо
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="three">Биссоло, Франческо</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="three">
+                    Биссоло, Франческо
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="four">Больтраффио, Джованни</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="four">
+                    Больтраффио, Джованни
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="five">Бонсиньори, Франческо</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="five">
+                    Бонсиньори, Франческо
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="six">Боттичини, Рафаэлло</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="six">
+                    Боттичини, Рафаэлло
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="seven">Брамантино</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="seven">
+                    Брамантино
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="eight">Бреа, Людовико</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="eight">
+                    Бреа, Людовико
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="nine">Бьяджо д’Антонио Туччи</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="nine">
+                    Бьяджо д’Антонио Туччи
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="ten">Веккьетта</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="ten">
+                    Веккьетта
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="eleven">Андреа Верроккьо</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="eleven">
+                    Андреа Верроккьо
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twelve">Доменико Гирландайо</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="twelve">
+                    Доменико Гирландайо
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="fourteen">Беноццо Гоццоли</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="fourteen">
+                    Беноццо Гоццоли
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="fifteen">Граначчи, Франческо</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="fifteen">
+                    Граначчи, Франческо
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="sixteen">Грегорио ди Чекко</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="sixteen">
+                    Грегорио ди Чекко
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="seventeen">Джованни да Удине</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="seventeen">
+                    Джованни да Удине
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="eighteen">Джованни ди Паоло</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="eighteen">
+                    Джованни ди Паоло
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="nineteen">Джорджоне</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="nineteen">
+                    Джорджоне
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty">Парентино, Бернардо</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="twenty">
+                    Парентино, Бернардо
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-one">Пезеллино</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="twenty-one">
+                    Пезеллино
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-twoo">Пьетро Перуджино</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="twenty-twoo">
+                    Пьетро Перуджино
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-three">Перуцци, Бальдассаре</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="twenty-three">
+                    Перуцци, Бальдассаре
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-four">Пизанелло</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="twenty-four">
+                    Пизанелло
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-five">Пинтуриккьо</button>
+                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset"
+                    data-path="twenty-five">
+                    Пинтуриккьо
+                  </button>
                 </li>
               </ul>
             </li>
@@ -404,84 +520,72 @@
                 <h3 class="subtitle tabs-inner__subtitle"><time>C 1500 по 1599 гг.</time></h3>
                 <span class="tabs-inner__icon"></span>
               </div>
-              <ul class="tabs-inner__list list-reset">
-                <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-four">Пизанелло</button>
-                </li>
-                <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-five">Пинтуриккьо</button>
-                </li>
-              </ul>
+              <div class="tabs-inner__empty-content empty-content">
+                <h4 class="subtitle">Здесь пока пусто</h4>
+                <p class="empty-content">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                </p>
+                <a href="#" class="empty-content__link">В галлерею</a>
+              </div>
             </li>
             <li class="tabs__item tabs-inner">
               <div class="tabs-inner__content">
                 <h3 class="subtitle tabs-inner__subtitle"><time>C 1600 по 1699 гг.</time></h3>
                 <span class="tabs-inner__icon"></span>
               </div>
-              <ul class="tabs-inner__list list-reset">
-                <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-four">Пизанелло</button>
-                </li>
-                <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-five">Пинтуриккьо</button>
-                </li>
-              </ul>
+              <div class="tabs-inner__empty-content empty-content">
+                <h4 class="subtitle">Здесь пока пусто</h4>
+                <p class="empty-content">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                </p>
+                <a href="#" class="empty-content__link">В галлерею</a>
+              </div>
             </li>
             <li class="tabs__item tabs-inner">
               <div class="tabs-inner__content">
                 <h3 class="subtitle tabs-inner__subtitle"><time>C 1700 по 1799 гг.</time></h3>
                 <span class="tabs-inner__icon"></span>
               </div>
-              <ul class="tabs-inner__list list-reset">
-                <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-four">Пизанелло</button>
-                </li>
-                <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-five">Пинтуриккьо</button>
-                </li>
-              </ul>
+              <div class="tabs-inner__empty-content empty-content">
+                <h4 class="subtitle">Здесь пока пусто</h4>
+                <p class="empty-content">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                </p>
+                <a href="#" class="empty-content__link">В галлерею</a>
+              </div>
             </li>
             <li class="tabs__item tabs-inner">
               <div class="tabs-inner__content">
                 <h3 class="subtitle tabs-inner__subtitle"><time>C 1800 по 1899 гг.</time></h3>
                 <span class="tabs-inner__icon"></span>
               </div>
-              <ul class="tabs-inner__list list-reset">
-                <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-four">Пизанелло</button>
-                </li>
-                <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-five">Пинтуриккьо</button>
-                </li>
-              </ul>
+              <div class="tabs-inner__empty-content empty-content">
+                <h4 class="subtitle">Здесь пока пусто</h4>
+                <p class="empty-content">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                </p>
+                <a href="#" class="empty-content__link">В галлерею</a>
+              </div>
             </li>
             <li class="tabs__item tabs-inner">
               <div class="tabs-inner__content">
                 <h3 class="subtitle tabs-inner__subtitle"><time>C 1900 по 1999 гг.</time></h3>
                 <span class="tabs-inner__icon"></span>
               </div>
-              <ul class="tabs-inner__list list-reset">
-                <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-four">Пизанелло</button>
-                </li>
-                <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-five">Пинтуриккьо</button>
-                </li>
-              </ul>
+              <div class="tabs-inner__empty-content empty-content">
+                <h4 class="subtitle">Здесь пока пусто</h4>
+                <p class="empty-content">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                </p>
+                <a href="#" class="empty-content__link">В галлерею</a>
+              </div>
             </li>
             <li class="tabs__item tabs-inner">
               <div class="tabs-inner__content">
                 <h3 class="subtitle tabs-inner__subtitle"><time>C 2000 г.</time></h3>
                 <span class="tabs-inner__icon"></span>
               </div>
-              <ul class="tabs-inner__list list-reset">
-                <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-four">Пизанелло</button>
-                </li>
-                <li class="tabs-inner__item">
-                  <button aria-selected="true" aria-controls="step-one-tab" class="tabs__btn btn-reset" data-path="twenty-five">Пинтуриккьо</button>
-                </li>
-              </ul>
+              <div class="tabs-inner__empty-content empty-content">
+                <h4 class="subtitle">Здесь пока пусто</h4>
+                <p class="empty-content">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                </p>
+                <a href="#" class="empty-content__link">В галлерею</a>
+              </div>
             </li>
           </ul>
         </div>
@@ -501,6 +605,5 @@
   <!-- Tabs -->
   <script src="js/tabs.js"></script>
 </body>
-
 
 </html>

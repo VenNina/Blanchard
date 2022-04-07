@@ -25,9 +25,12 @@
   margin: 0;
 }
 
+.card__inner{
+  text-align: center;
+}
+
 .card__img {
   margin-bottom: 21px;
-  object-fit: cover;
 }
 
 .card__subtitle {
