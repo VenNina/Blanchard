@@ -26,5 +26,22 @@ const swiperSecond = new Swiper('.swiper-second', {
   zoom: {
     maxRatio: 5,
   },
+});
+
+const swiperThree = new Swiper('.swiper-three', {
+  slidesPerView: 3,
+  spaceBetween: 50,
+  slidesPerGroup: 3,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction',
+  },
+  a11y: {
+    paginationBulletMessage: 'Перейти к слайду {{index}}',
+  },
 
 });
