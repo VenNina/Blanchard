@@ -1,4 +1,116 @@
+.events__container {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.events__title {
+  margin-bottom: 15px;
+}
+
 .swiper-three {
-  width: 1630px;
+  width: 1600px;
   height: 700px;
+}
+
+.swiper-acticle {
+  height: 100%;
+}
+
+.events__slide-btn .swiper-button-next,
+.events__slide-btn .swiper-button-prev {
+  background-color: var(--color-gallery);
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-position: center;
+  background-size: 17px 17px;
+  background-repeat: no-repeat;
+}
+
+.events__slide-btn .swiper-button-next {
+  background-image: url(../img/events-swiper-next.svg);
+}
+
+.events__slide-btn .swiper-button-prev {
+  background-image: url(../img/events-swiper-prev.svg);
+}
+
+.events__swiper-button-next.swiper-button-disabled,
+.events__swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.events__slide-btn .events__swiper-button-prev {
+  top: 54%;
+  left: -10px;
+  right: auto;
+}
+
+.events__slide-btn .events__swiper-button-next {
+  top: 54%;
+  left: auto;
+  right: -10px;
+}
+
+.events__swiper-button-prev::after,
+.events__swiper-button-next::after {
+  display: none;
+  display: none;
+}
+
+.card-events {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-caca);
+  height: 100%;
+  background-size: 100% 300px;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.card-events--one {
+  background-image: url(../img/event1@1x.jpg);
+}
+
+.card-events--two {
+  background-image: url(../img/event2@2x.jpg);
+}
+
+.card-events--three {
+  background-image: url(../img/event3@1x.jpg);
+}
+
+.card-events--four {
+  background-image: url(../img/event4@1x.jpg);
+}
+
+.card-events--five {
+  background-image: url(../img/event5@1x.jpg);
+}
+
+.card-events__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 100%;
+  padding: 313px 50px 40px;
+}
+
+.card-events__name {
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-dusty);
+}
+
+.card-events__subtitle {
+  margin-bottom: 7px;
+}
+
+.card-events__link {
+  border-bottom: 1px solid var(--color-accent);
+  color: var(--color-accent);
 }

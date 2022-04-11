@@ -12,6 +12,7 @@ const swiperSecond = new Swiper('.swiper-second', {
   slidesPerView: 3,
   spaceBetween: 50,
   slidesPerGroup: 3,
+  zoom: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -32,6 +33,7 @@ const swiperThree = new Swiper('.swiper-three', {
   slidesPerView: 3,
   spaceBetween: 50,
   slidesPerGroup: 3,
+  loop: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
