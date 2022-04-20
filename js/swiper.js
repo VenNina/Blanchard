@@ -3,9 +3,9 @@ const swiperFirst = new Swiper('.swiper-first', {
   fadeEffect: {
     crossFade: true
   },
-  autoplay: {
-    delay: 2000,
-  },
+  // autoplay: {
+  //   delay: 2000,
+  // },
 });
 
 const swiperSecond = new Swiper('.swiper-second', {
@@ -14,8 +14,8 @@ const swiperSecond = new Swiper('.swiper-second', {
   slidesPerGroup: 3,
   zoom: true,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.gallery__swiper-button-next',
+    prevEl: '.gallery__swiper-button-prev',
   },
   pagination: {
     el: '.swiper-pagination',
@@ -33,17 +33,26 @@ const swiperThree = new Swiper('.swiper-three', {
   slidesPerView: 3,
   spaceBetween: 50,
   slidesPerGroup: 3,
-  loop: true,
+  // loop: true,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
+    nextEl: '.events__swiper-button-next',
+    prevEl: '.events__swiper-button-prev',
   },
   a11y: {
     paginationBulletMessage: 'Перейти к слайду {{index}}',
   },
+});
 
+const swiperFourth = new Swiper('.swiper-fourth', {
+  slidesPerView: 3,
+  spaceBetween: 50,
+  slidesPerGroup: 3,
+  // loop: true,
+  navigation: {
+    nextEl: '.prodjects__swiper-button-next',
+    prevEl: '.prodjects__swiper-button-prev',
+  },
+  a11y: {
+    paginationBulletMessage: 'Перейти к слайду {{index}}',
+  },
 });

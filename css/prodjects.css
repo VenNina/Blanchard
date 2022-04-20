@@ -1,0 +1,85 @@
+.prodjects__container {
+  padding-top: 69px;
+  padding-bottom: 69px;
+}
+
+.prodjects__title {
+  margin-bottom: 16px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: translateY(4px);
+}
+
+.tooltip__btn {
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/i-tooltip.svg);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image .3s ease;
+}
+
+.tooltip__text {
+  position: absolute;
+  z-index: 1;
+  bottom: calc(100% + 7px);
+  left: 50%;
+  padding: 10px 10px;
+  max-width: 269px;
+  width: max-content;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-white);
+  background-color: var(--color-active);
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: .3s opacity ease-in-out;
+}
+
+.tooltip__text::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 13px;
+  height: 13px;
+  background-color: var(--color-active);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.tooltip:focus .tooltip__btn {
+  background-image: url(../img/i-tooltip-active.svg);
+}
+
+.tooltip:hover .tooltip__text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip__btn:focus {
+  outline: none;
+  background-image: url(../img/i-tooltip-active.svg);
+}
+
+.tooltip__btn:focus+.tooltip__text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip__btn:hover {
+  background-image: url(../img/i-tooltip-active.svg);
+}
+
+.swiper-fourth {
+  width: 1450px;
+}
