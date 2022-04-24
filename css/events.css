@@ -16,6 +16,11 @@
   height: 100%;
 }
 
+
+/* .events__slide-btn {
+  position: relative;
+} */
+
 .events__slide-btn .events__swiper-button-next,
 .events__slide-btn .events__swiper-button-prev {
   background-color: var(--color-gallery);
@@ -56,7 +61,6 @@
 
 .events__swiper-button-prev::after,
 .events__swiper-button-next::after {
-  display: none;
   display: none;
 }
 

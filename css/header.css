@@ -159,21 +159,14 @@
   outline: none;
 }
 
-
-/* .main-menu__link:focus+.main-menu-dropdown {
+.main-menu__link:focus+.main-menu-dropdown {
   opacity: 1;
   visibility: visible;
-} */
+}
 
 .main-menu__link:focus::before {
   background-color: var(--color-amethyst);
 }
-
-
-/* .main-menu__link:focus+.main-menu-dropdown {
-  opacity: 1;
-  visibility: visible;
-} */
 
 
 /* ! */
