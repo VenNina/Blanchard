@@ -137,7 +137,18 @@
 
 /* ! general-link focus, hover, active*/
 
-.main-menu__item:hover .main-menu-dropdown,
+.main-menu__list:hover .main-menu__item:focus-within .main-menu-dropdown {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.main-menu__list .main-menu__item:focus-within .main-menu-dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* .main-menu__item:hover .main-menu-dropdown,
 .main-menu__item:focus .main-menu-dropdown {
   opacity: 1;
   visibility: visible;
@@ -155,18 +166,16 @@
   color: var(--color-white);
 }
 
-.main-menu__link:focus {
-  outline: none;
-}
 
-.main-menu__link:focus+.main-menu-dropdown {
+
+.main-menu__item:focus-within .main-menu-dropdown {
   opacity: 1;
   visibility: visible;
 }
 
 .main-menu__link:focus::before {
   background-color: var(--color-amethyst);
-}
+} */
 
 
 /* ! */
