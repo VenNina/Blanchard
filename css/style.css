@@ -31,6 +31,7 @@ a {
   --color-caca: #cacaca;
   --color-gallery: #ececec;
   --color-amethyst: #9d5cd0;
+  --color-hover: #c283f3;
 }
 
 body {
@@ -103,15 +104,82 @@ body {
   width: 68%
 }
 
-.visually-hidden {
+.btn {
+  display: inline-block;
+  padding: 22px 35px;
+  border-radius: 100px;
+  border: 2px solid var(--color-amethyst);
+  color: var(--color-white);
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.btn--fill {
+  background-color: var(--color-amethyst);
+}
+
+.btn--stroke {
+  padding: 11px 35px;
+  color: var(--color-amethyst);
+}
+
+
+/* link focus, hover, active */
+
+.link {
+  position: relative;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-white);
+  transition: color .3s ease;
+}
+
+.link>* {
+  position: relative;
+  z-index: 10;
+}
+
+.link__text {
+  display: inline-block;
+  background-color: transparent;
+}
+
+.link::before {
+  content: "";
   position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  z-index: 0;
+  top: 0;
+  right: -8px;
+  bottom: 0;
+  left: -8px;
+  background-color: transparent;
+  transition: background-color .3s ease;
+}
+
+.link:focus {
+  outline: none;
+  color: var(--color-white);
+}
+
+.link:focus::before {
+  background-color: var(--color-active);
+}
+
+.link:focus.link:hover {
+  color: var(--white);
+}
+
+.link:focus.link:active {
+  color: var(--white);
+}
+
+.link:hover {
+  color: var(--color-hover);
+}
+
+.link:active {
+  color: var(--color-active);
 }

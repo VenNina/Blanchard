@@ -1,0 +1,75 @@
+.showroom__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.showroom__address {
+  font-style: normal;
+}
+
+.fieldset-reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form__list {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+.form__input {
+  padding: 15px 24px;
+  border-radius: 100px;
+  min-width: 270px;
+}
+
+.shoowroom__subtitle {
+  margin-bottom: 8px;
+}
+
+.showroom__list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social__icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social__icon--watsapp {
+  background-image: url(../img/whatsapp-Icon.svg);
+}
+
+.social__icon--telegram {
+  background-image: url(../img/telegram-Icon.svg);
+}
+
+.showroom__map {
+  width: 100%;
+  height: 704px;
+}
+
+
+/* ищем все элементы у которых в имени класса содержиться текст ground-pane */
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}

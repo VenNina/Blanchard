@@ -42,17 +42,20 @@
   line-height: 25px;
 }
 
-.link-enter:before {
-  content: "";
-  display: inline-block;
-  left: 0;
-  margin-right: 8px;
-  width: 13px;
-  height: 13px;
-  background-image: url(../img/link_enter.svg);
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+.link-enter__icon {
+  margin-right: 5px;
+}
+
+.link-enter__icon path {
+  fill: currentColor;
+}
+
+.main-menu-link__icon {
+  stroke: currentColor;
+}
+
+.main-menu-link__text {
+  margin-right: 2px;
 }
 
 .header-bottom {
@@ -64,7 +67,6 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 5px;
-  /* padding-bottom: 6px; */
 }
 
 .main-menu {
@@ -79,43 +81,6 @@
   padding-top: 17px;
   padding-bottom: 23px;
   cursor: pointer;
-}
-
-.main-menu__link {
-  position: relative;
-  z-index: 100;
-  display: inline-flex;
-  align-items: center;
-  color: var(--color-white);
-  transition: color .3s ease;
-}
-
-.main-menu__link>* {
-  position: relative;
-  z-index: 10;
-  color: currentColor;
-}
-
-.main-menu__link::before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  right: -8px;
-  bottom: 0;
-  left: -8px;
-  background-color: transparent;
-  transition: background-color .3s ease;
-}
-
-.main-menu__link-text {
-  display: inline-block;
-  margin-right: 2px;
-  background-color: transparent;
-}
-
-.main-menu__link-icon path {
-  stroke: currentColor;
 }
 
 .main-menu-dropdown {
@@ -137,15 +102,27 @@
 
 /* ! general-link focus, hover, active*/
 
+.main-menu__list .main-menu__item:focus-within .main-menu-dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-menu__list .main-menu__item:focus-within .main-menu__link::before {
+  background-color: var(--color-amethyst);
+}
+
 .main-menu__list:hover .main-menu__item:focus-within .main-menu-dropdown {
   opacity: 0;
   visibility: hidden;
 }
 
-.main-menu__list .main-menu__item:focus-within .main-menu-dropdown {
+.main-menu__list:hover .main-menu__item:hover .main-menu-dropdown {
   opacity: 1;
   visibility: visible;
 }
+
+
+/**********************************************/
 
 
 /* .main-menu__item:hover .main-menu-dropdown,
@@ -165,8 +142,6 @@
 .main-menu__item:hover .main-menu__link:focus {
   color: var(--color-white);
 }
-
-
 
 .main-menu__item:focus-within .main-menu-dropdown {
   opacity: 1;
