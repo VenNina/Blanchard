@@ -80,6 +80,40 @@
   background-image: url(../img/i-tooltip-active.svg);
 }
 
+.prodject-link-btn {
+  color: var(--color-amethyst);
+  transform: translate(5px);
+}
+
+.prodject-link-btn::before {
+  bottom: 0;
+}
+
+.prodject-link-btn__text {
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color .3s ease-in-out;
+}
+
+.prodject-link-btn.focus-visible::before {
+  color: #9d5cd0;
+}
+
+.prodject-link-btn:hover {
+  color: var(--color-amethyst);
+}
+
+.prodject-link-btn:hover .prodject-link-btn__text {
+  border-bottom-color: var(--color-amethyst);
+}
+
+.prodject-link-btn:active {
+  color: var(--color-active);
+}
+
+.prodject-link-btn:active .prodject-link-btn__text {
+  border-bottom-color: var(--color-active);
+}
+
 .prodjects__aside {
   position: relative;
   padding: 20px 0px;

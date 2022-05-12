@@ -28,6 +28,10 @@
   <link rel="stylesheet" href="css/prodjects.css" />
   <link rel="stylesheet" href="css/showroom.css" />
   <link rel="stylesheet" href="css/footer.css" />
+  <!-- полифил состояния focus-visible для Safari  -->
+  <script src="js/focus-visible.js" defer></script>
+  <!-- открытие закрытие меню -->
+  <script src="js/dropdownOpenClose.js" defer></script>
 </head>
 
 <body>
@@ -43,42 +47,42 @@
         <nav class="header__nav nav">
           <ul class="nav__list list-reset">
             <li class="nav__item">
-              <a href="#about-us" class="nav__link link">
-                <span class="link__text">О нас</span>
+              <a href="#about" class="nav__link link-btn">
+                <span class="link-btn__text">О нас</span>
               </a>
             </li>
             <li class="nav__item">
-              <a href="#gallery" class="nav__link link">
-                <span class="link__text">Галерея</span>
+              <a href="#gallery" class="nav__link link-btn">
+                <span class="link-btn__text">Галерея</span>
               </a>
             </li>
             <li class="nav__item">
-              <a href="#catalog" class="nav__link link">
-                <span class="link__text">Каталог</span>
+              <a href="#catalog" class="nav__link link-btn">
+                <span class="link-btn__text">Каталог</span>
               </a>
             </li>
             <li class="nav__item">
-              <a href="#events" class="nav__link link">
-                <span class="link__text">События</span>
+              <a href="#events" class="nav__link link-btn">
+                <span class="link-btn__text">События</span>
               </a>
             </li>
             <li class="nav__item">
-              <a href="#projects" class="nav__link link">
-                <span class="link__text">Проекты</span>
+              <a href="#prodjects" class="nav__link link-btn">
+                <span class="link-btn__text">Проекты</span>
               </a>
             </li>
             <li class="nav__item">
-              <a href="#contacts" class="nav__link link">
-                <span class="link__text">Контакты</span>
+              <a href="#contacts" class="nav__link link-btn">
+                <span class="link-btn__text">Контакты</span>
               </a>
             </li>
           </ul>
         </nav>
-        <a href="#" class="header__link-enter link-enter link">
+        <a href="#" class="header__link-enter link-enter link-btn">
           <svg class="link-enter__icon link__icon" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"/>
           </svg>
-          <span class="link-enter__text link__text">Войти</span>
+          <span class="link-enter__text link-btn__text">Войти</span>
         </a>
       </div>
     </div>
@@ -86,112 +90,112 @@
       <div class="container header-bottom__container">
         <ul class="header__main-menu main-menu main-menu__list list-reset">
           <li class="main-menu__item">
-            <a class="main-menu__link main-menu-link link" href="#">
-              <span class="main-menu-link__text link__text">Реализм</span>
-              <svg class="main-menu-link__icon link__icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="main-menu__btn main-menu-btn link-btn btn-reset" type="button">
+              <span class="main-menu-btn__text link-btn__text">Реализм</span>
+              <svg class="main-menu-btn__icon link-btn__icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11 1L6 6L1 1"/>
               </svg>
-            </a>
+            </button>
             <ul class="main-menu__dropdown main-menu-dropdown list-reset">
-              <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg1-1">
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg1-1">
                 <a class="main-menu-dropdown__link" href="#">Тинторетто</a>
               </li>
-              <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg1-2">
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg1-2">
                 <a class="main-menu-dropdown__link" href="#">Фридрих</a>
               </li>
-              <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg1-3">
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg1-3">
                 <a class="main-menu-dropdown__link" href="#">Леонардо</a>
               </li>
-              <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg1-4">
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg1-4">
                 <a class="main-menu-dropdown__link" href="#">Верроккьо</a>
               </li>
             </ul>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link main-menu-link link" href="#">
-              <span class="main-menu-link__text">Импрессионизм</span>
-              <svg class="main-menu-link__icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="main-menu__btn main-menu-btn link-btn btn-reset">
+              <span class="main-menu-btn__text link-btn__text">Импрессионизм</span>
+              <svg class="main-menu-btn__icon link-btn__icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11 1L6 6L1 1"/>
               </svg>
-            </a>
+            </button>
             <ul class="main-menu__dropdown main-menu-dropdown list-reset">
-              <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg2-1">
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg2-1">
                 <a class="main-menu-dropdown__link" href="#">Моне</a>
               </li>
-              <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg2-2">
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg2-2">
                 <a class="main-menu-dropdown__link" href="#">Сислей</a>
               </li>
-              <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg2-3">
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg2-3">
                 <a class="main-menu-dropdown__link" href="#">Мане</a>
               </li>
-              <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg2-4">
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg2-4">
                 <a class="main-menu-dropdown__link" href="#">Ренуар</a>
               </li>
             </ul>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link main-menu-link link" href="#">
-              <span class="main-menu-link__text">Постимпрессионизм</span>
-              <svg class="main-menu-link__icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="main-menu__btn main-menu-btn link-btn btn-reset">
+              <span class="main-menu-btn__text link-btn__text">Постимпрессионизм</span>
+              <svg class="main-menu-btn__icon link-btn__icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11 1L6 6L1 1"/>
               </svg>
-            </a>
+            </button>
             <ul class="main-menu__dropdown main-menu-dropdown list-reset">
-              <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg3-1">
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg3-1">
                 <a class="main-menu-dropdown__link" href="#">Ван Гог</a>
               </li>
-              <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg3-2">
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg3-2">
                 <a class="main-menu-dropdown__link" href="#">Сезанн</a>
               </li>
-              <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg3-3">
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg3-3">
                 <a class="main-menu-dropdown__link" href="#">Гоген</a>
               </li>
-              <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg3-4">
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg3-4">
                 <a class="main-menu-dropdown__link" href="#">Сёра</a>
               </li>
             </ul>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link main-menu-link link" href="#">
-              <span class="main-menu-link__text">Авангард<span>
-                <svg class="main-me-__li__k-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11 1L6 6L1 1"/>
-                </svg>
-              </a>
-              <ul class="main-menu__dropdown main-menu-dropdown list-reset">
-                <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg4-1">
-                  <a class="main-menu-dropdown__link" href="#">Кандинский</a>
-                </li>
-                <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg4-2">
-                  <a class="main-menu-dropdown__link" href="#">Маринетти</a>
-                </li>
-                <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg4-3">
-                  <a class="main-menu-dropdown__link" href="#">Малевич</a>
-                </li>
-                <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg4-4">
-                  <a class="main-menu-dropdown__link" href="#">Пикассо</a>
-                </li>
-              </ul>
-            </li>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link main-menu-link link" href="#">
-              <span class="main-menu-link__text">Футуризм</span>
-              <svg class="main-menu-link__icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="main-menu__btn main-menu-btn link-btn btn-reset">
+              <span class="main-menu-btn__text link-btn__text">Авангард<span>
+              <svg class="main-menu-btn__icon link-btn__icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11 1L6 6L1 1"/>
               </svg>
-            </a>
+              </button>
             <ul class="main-menu__dropdown main-menu-dropdown list-reset">
-              <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg5-1">
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg4-1">
+                <a class="main-menu-dropdown__link" href="#">Кандинский</a>
+              </li>
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg4-2">
+                <a class="main-menu-dropdown__link" href="#">Маринетти</a>
+              </li>
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg4-3">
+                <a class="main-menu-dropdown__link" href="#">Малевич</a>
+              </li>
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg4-4">
+                <a class="main-menu-dropdown__link" href="#">Пикассо</a>
+              </li>
+            </ul>
+          </li>
+          </li>
+          <li class="main-menu__item">
+            <button class="main-menu__btn main-menu-btn link-btn btn-reset" href="#">
+              <span class="main-menu-btn__text link-btn__text">Футуризм</span>
+              <svg class="main-menu-btn__icon link-btn__icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1L6 6L1 1"/>
+              </svg>
+            </button>
+            <ul class="main-menu__dropdown main-menu-dropdown list-reset">
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg5-1">
                 <a class="main-menu-dropdown__link" href="#">Карра</a>
               </li>
-              <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg5-2">
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg5-2">
                 <a class="main-menu-dropdown__link" href="#">Прателла</a>
               </li>
-              <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg5-3">
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg5-3">
                 <a class="main-menu-dropdown__link" href="#">Северини</a>
               </li>
-              <li class="main-menu__item main-menu-dropdown__item main-menu-dropdown__item--bg5-4">
+              <li class="main-menu-dropdown__item main-menu-dropdown__item--bg5-4">
                 <a class="main-menu-dropdown__link" href="#">Балла</a>
               </li>
             </ul>
@@ -738,7 +742,9 @@
                       </p>
                     </div>
                     <div class="card-events__inner-bottom">
-                      <a href="#" class="card-events__link">Подробнее</a>
+                      <a href="#" class="card-events__link card-events-link link-btn">
+                        <span class="card-events-link__text link-btn__text">Подробнее</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -763,7 +769,9 @@
                       </p>
                     </div>
                     <div class="card-events__inner-bottom">
-                      <a href="#" class="card-events__link">Подробнее</a>
+                      <a href="#" class="card-events__link card-events-link link-btn">
+                        <span class="card-events-link__text link-btn__text">Подробнее</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -788,7 +796,9 @@
                       </p>
                     </div>
                     <div class="card-events__inner-bottom">
-                      <a href="#" class="card-events__link">Подробнее</a>
+                      <a href="#" class="card-events__link card-events-link link-btn">
+                        <span class="card-events-link__text link-btn__text">Подробнее</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -813,7 +823,9 @@
                       </p>
                     </div>
                     <div class="card-events__inner-bottom">
-                      <a href="#" class="card-events__link">Подробнее</a>
+                      <a href="#" class="card-events__link card-events-link link-btn">
+                        <span class="card-events-link__text link-btn__text">Подробнее</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -838,7 +850,9 @@
                       </p>
                     </div>
                     <div class="card-events__inner-bottom">
-                      <a href="#" class="card-events__link">Подробнее</a>
+                      <a href="#" class="card-events__link card-events-link link-btn">
+                        <span class="card-events-link__text link-btn__text">Подробнее</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -875,7 +889,7 @@
               В&nbsp;стремлении повысить качество
             </span>
           </span> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными
-          до&nbsp;степени совершенной неузнаваемости. Подробнее: <a href="" class="link prodject__link">blanchard-art.ru/projects</a>
+          до&nbsp;степени совершенной неузнаваемости. Подробнее: <a href="#" class="prodject__link-btn prodject-link-btn link-btn"><span class="prodject-link-btn__text link-btn__text">blanchard-art.ru/projects</span></a>
         </p>
 
         <aside class="prodjects__aside">

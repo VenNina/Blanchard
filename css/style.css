@@ -126,9 +126,9 @@ body {
 }
 
 
-/* link focus, hover, active */
+/* link-btn focus, hover, active */
 
-.link {
+.link-btn {
   position: relative;
   z-index: 100;
   display: inline-flex;
@@ -137,49 +137,45 @@ body {
   transition: color .3s ease;
 }
 
-.link>* {
+.link-btn>* {
   position: relative;
   z-index: 10;
 }
 
-.link__text {
+.link-btn__text {
   display: inline-block;
   background-color: transparent;
 }
 
-.link::before {
+.link-btn::before {
   content: "";
   position: absolute;
   z-index: 0;
   top: 0;
   right: -8px;
-  bottom: 0;
+  bottom: -3px;
   left: -8px;
   background-color: transparent;
   transition: background-color .3s ease;
 }
 
-.link:focus {
+.link-btn.focus-visible {
   outline: none;
   color: var(--color-white);
 }
 
-.link:focus::before {
-  background-color: var(--color-active);
+.link-btn.focus-visible::before {
+  background-color: #7943a4;
 }
 
-.link:focus.link:hover {
-  color: var(--white);
-}
-
-.link:focus.link:active {
-  color: var(--white);
-}
-
-.link:hover {
+.link-btn:hover {
   color: var(--color-hover);
 }
 
-.link:active {
+.link-btn:hover::before {
+  background-color: transparent;
+}
+
+.link-btn:active {
   color: var(--color-active);
 }
