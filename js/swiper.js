@@ -3,9 +3,9 @@ const swiperFirst = new Swiper('.swiper-first', {
   fadeEffect: {
     crossFade: true
   },
-  // autoplay: {
-  //   delay: 2000,
-  // },
+  autoplay: {
+    delay: 2000,
+  },
 });
 
 const swiperSecond = new Swiper('.swiper-second', {

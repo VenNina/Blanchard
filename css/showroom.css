@@ -25,10 +25,43 @@
   gap: 22px;
 }
 
+.form__item {
+  position: relative;
+}
+
 .form__input {
   padding: 15px 24px;
+  border: 1px solid var(--color-main);
   border-radius: 100px;
   min-width: 270px;
+  color: var(--color-main);
+  transition: background-color .3s ease-in-out;
+}
+
+.form__input::placeholder {
+  color: var(--color-grey);
+}
+
+.form__input.just-validate-error-field {
+  border-color: #d11616;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.is-label-invalid.just-validate-error-label {
+  position: absolute;
+  top: calc(100% - 83px);
+  left: 20px;
+}
+
+.form__input.focus-visible {
+  background-color: var(--color-form);
+  outline: none;
+}
+
+.form__input:hover {
+  background-color: var(--color-form);
 }
 
 .shoowroom__subtitle {
@@ -46,12 +79,31 @@
 }
 
 .social__icon {
+  position: relative;
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid transparent;
+  border-radius: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  transition: opacity .3s ease-in-out;
+}
+
+.social__icon:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-circle);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
 }
 
 .social__icon--watsapp {
@@ -60,6 +112,23 @@
 
 .social__icon--telegram {
   background-image: url(../img/telegram-Icon.svg);
+}
+
+.social__icon.focus-visible {
+  outline: none;
+  opacity: .5;
+}
+
+.social__icon:hover {
+  opacity: .5;
+}
+
+.social__icon:active {
+  opacity: 1;
+}
+
+.social__icon:active::after {
+  opacity: 1;
 }
 
 .showroom__map {

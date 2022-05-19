@@ -20,7 +20,7 @@
   width: 20px;
   height: 20px;
   background-image: url(../img/i-tooltip.svg);
-  background-size: 16px 16px;
+  background-size: 18px 17px;
   background-repeat: no-repeat;
   background-position: center;
   transition: background-image .3s ease;
@@ -57,8 +57,8 @@
   transform: translateX(-50%) rotate(45deg);
 }
 
-.tooltip:focus .tooltip__btn {
-  background-image: url(../img/i-tooltip-active.svg);
+.tooltip.focus-visilble .tooltip__btn {
+  background-image: url(../img/i-tooltip-hover.svg);
 }
 
 .tooltip:hover .tooltip__text {
@@ -66,17 +66,21 @@
   opacity: 1;
 }
 
-.tooltip__btn:focus {
+.tooltip__btn.focus-visible {
   outline: none;
   background-image: url(../img/i-tooltip-active.svg);
 }
 
-.tooltip__btn:focus+.tooltip__text {
+.tooltip__btn.focus-visible+.tooltip__text {
   visibility: visible;
   opacity: 1;
 }
 
 .tooltip__btn:hover {
+  background-image: url(../img/i-tooltip-hover.svg);
+}
+
+.tooltip__btn:active {
   background-image: url(../img/i-tooltip-active.svg);
 }
 
@@ -170,29 +174,17 @@
   border: 1px solid var(--color-active);
 }
 
-
-/* .prodjects__swiper-img:focus {
-  outline: 1px solid var(--color-active);
-}
-
-.prodjects__swiper-img:hover {
-  opacity: 1;
-  filter: grayscale(0);
-}
-
-.prodjects__swiper-img:active {
-  border: 1px solid var(--color-active);
-} */
-
 .prodjects__slide-btn .prodjects__swiper-button-next,
 .prodjects__slide-btn .prodjects__swiper-button-prev {
   background-color: var(--color-gallery);
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--color-gallery);
   border-radius: 50px;
   background-position: center;
   background-size: 7px 7px;
   background-repeat: no-repeat;
+  transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
 }
 
 .prodjects__slide-btn .prodjects__swiper-button-next {
@@ -221,4 +213,22 @@
 .prodjects__swiper-button-prev::after,
 .prodjects__swiper-button-next::after {
   display: none;
+}
+
+.prodjects__slide-btn .prodjects__swiper-button-next.focus-visible,
+.prodjects__slide-btn .prodjects__swiper-button-prev.focus-visible {
+  border-color: var(--color-active);
+  outline: none;
+}
+
+.prodjects__slide-btn .prodjects__swiper-button-next:hover,
+.prodjects__slide-btn .prodjects__swiper-button-prev:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent);
+}
+
+.prodjects__slide-btn .prodjects__swiper-button-next:active,
+.prodjects__slide-btn .prodjects__swiper-button-prev:active {
+  border-color: var(--color-active);
+  background-color: var(--color-accent);
 }

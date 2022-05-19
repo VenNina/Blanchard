@@ -22,15 +22,18 @@ a {
 
 :root {
   --color-black: #000;
-  --color-grey: #999;
-  --color-white: #fff;
   --color-main: #333;
-  --color-accent: #d1a9f0;
-  --color-active: #7943a4;
-  --color-dusty: #999;
+  --color-dove: #666;
+  --color-grey: #999;
+  --color-disable: #b3b3b3;
+  --color-white: #fff;
   --color-caca: #cacaca;
-  --color-gallery: #ececec;
+  --color-form: #eaeaea;
+  --color-active: #7943a4;
+  --color-circle: #9643a4;
   --color-amethyst: #9d5cd0;
+  --color-accent: #d1a9f0;
+  --color-gallery: #ececec;
   --color-hover: #c283f3;
 }
 
@@ -106,14 +109,15 @@ body {
 
 .btn {
   display: inline-block;
-  padding: 22px 35px;
+  padding: 21px 34px;
+  border: 3px solid var(--color-amethyst);
   border-radius: 100px;
-  border: 2px solid var(--color-amethyst);
   color: var(--color-white);
   background-color: transparent;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
+  transition: color .3s ease-in-out, border-color .3s ease-in-out, background-color .3s ease-in-out;
 }
 
 .btn--fill {
@@ -123,6 +127,33 @@ body {
 .btn--stroke {
   padding: 11px 35px;
   color: var(--color-amethyst);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn.focus-visible {
+  outline: 2px solid var(--color-hover);
+  outline-offset: 3px;
+}
+
+.btn--fill:hover {
+  border-color: var(--color-accent);
+}
+
+.btn--stroke:hover {
+  color: var(--color-white);
+  background-color: var(--color-amethyst);
+}
+
+.btn:active {
+  border-color: var(--color-accent);
+  background-color: var(--color-active);
+}
+
+.btn--stroke:active.btn--stroke {
+  color: var(--color-white);
 }
 
 
@@ -161,6 +192,10 @@ body {
 
 .link-btn.focus-visible {
   outline: none;
+  color: var(--color-white);
+}
+
+.link-btn.focus-visible:hover {
   color: var(--color-white);
 }
 

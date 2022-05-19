@@ -15,3 +15,20 @@
   align-items: center;
   gap: 20px;
 }
+
+.footer__icon path {
+  transition: fill .3s ease-in-out;
+}
+
+.footer__link.focus-visible {
+  outline: none;
+}
+
+.footer__link.focus-visible .footer__icon path,
+.footer__link:hover .footer__icon path {
+  fill: var(--color-white);
+}
+
+.footer__link:active .footer__icon path {
+  fill: var(--color-amethyst);
+}

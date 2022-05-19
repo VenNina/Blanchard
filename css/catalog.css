@@ -83,6 +83,16 @@
   cursor: pointer;
 }
 
+.tabs-inner__link-btn {
+  display: inline-block;
+  color: var(--color-main);
+}
+
+.tabs-inner__link-btn::before {
+  right: 0;
+  left: 0;
+}
+
 .tabs-inner__icon {
   display: block;
   width: 50px;
@@ -91,17 +101,36 @@
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  transition: background-image .3s ease-in-out;
+  transition: background-image .3s ease-in-out, transform .3s ease-in-out;
 }
 
+.tabs-inner__content.focus-visible {
+  outline: none;
+}
+
+.tabs-inner__content.focus-visible .tabs-inner__link-btn::before {
+  background-color: var(--color-amethyst);
+}
+
+.tabs-inner__content.focus-visible .tabs-inner__icon,
+.tabs-inner__content:hover .tabs-inner__icon {
+  background-image: url(../img/accordion-icon_hover.svg);
+}
+
+.tabs-inner__content.focus-visible::before,
+.tabs-inner__content.focus-visible::after,
 .tabs-inner__content:hover.tabs-inner__content::before,
 .tabs-inner__content:hover.tabs-inner__content::after {
   z-index: 10;
   background-color: var(--color-accent);
 }
 
-.tabs-inner__content:hover .tabs-inner__icon {
-  background-image: url(../img/accordion-icon_hover.svg);
+.tabs-inner__content:hover .tabs-inner__link-btn {
+  color: var(--color-amethyst)
+}
+
+.tabs-inner__content.focus-visible .tabs-inner__link-btn {
+  color: var(--color-white);
 }
 
 .tabs-inner__content:active.tabs-inner__content::before,
@@ -110,8 +139,8 @@
   background-color: var(--color-active);
 }
 
-.tabs-inner__icon {
-  transition: transform .3s ease-in-out;
+.tabs-inner__content:active .tabs-inner__icon {
+  background-image: url(../img/accordion-icon_active.svg);
 }
 
 .ui-state-active .tabs-inner__icon {
@@ -119,15 +148,23 @@
 }
 
 .tabs__btn {
+  color: var(--color-main);
   transition: color .3s ease-in-out;
+}
+
+.tabs__btn:before {
+  top: -3px;
+  right: 0;
+  bottom: -6px;
+  left: 0;
 }
 
 .tabs__btn--active {
   color: var(--color-active);
 }
 
-.tabs-inner__content:active .tabs-inner__icon {
-  background-image: url(../img/accordion-icon_active.svg);
+.tabs__btn.focus-visible::before {
+  background-color: var(--color-amethyst);
 }
 
 .tabs-inner__list {
@@ -196,5 +233,5 @@
 .empty-link {
   font-size: 15px;
   line-height: 21px;
-  color: var(--color-active);
+  color: var(--color-amethyst);
 }

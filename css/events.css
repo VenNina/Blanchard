@@ -24,12 +24,14 @@
 .events__slide-btn .events__swiper-button-next,
 .events__slide-btn .events__swiper-button-prev {
   background-color: var(--color-gallery);
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
+  border: 2px solid var(--color-gallery);
   border-radius: 50px;
   background-position: center;
   background-size: 17px 17px;
   background-repeat: no-repeat;
+  transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
 }
 
 .events__slide-btn .events__swiper-button-next {
@@ -62,6 +64,24 @@
 .events__swiper-button-prev::after,
 .events__swiper-button-next::after {
   display: none;
+}
+
+.events__slide-btn .events__swiper-button-next.focus-visible,
+.events__slide-btn .events__swiper-button-prev.focus-visible {
+  border-color: var(--color-active);
+  outline: none;
+}
+
+.events__slide-btn .events__swiper-button-next:hover,
+.events__slide-btn .events__swiper-button-prev:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent);
+}
+
+.events__slide-btn .events__swiper-button-next:active,
+.events__slide-btn .events__swiper-button-prev:active {
+  border-color: var(--color-active);
+  background-color: var(--color-accent);
 }
 
 .card-events {

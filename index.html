@@ -30,8 +30,15 @@
   <link rel="stylesheet" href="css/footer.css" />
   <!-- полифил состояния focus-visible для Safari  -->
   <script src="js/focus-visible.js" defer></script>
-  <!-- открытие закрытие меню -->
+  <!-- открытие закрытие меню dropdown-->
   <script src="js/dropdownOpenClose.js" defer></script>
+  <!-- маскирование инпутов -->
+  <script src="js/inputmask.js" defer></script>
+  <!-- валидация -->
+  <script src="https://unpkg.com/just-validate@2.0.0-beta.12/dist/just-validate.production.min.js" defer></script>
+  <!-- <script src="js/inputmask.min.js" defer></script> -->
+  <script src="js/validate.js" defer></script>
+
 </head>
 
 <body>
@@ -505,135 +512,191 @@
           <ul class="catalog__accordion catalog__tabs tabs list-reset" id="accordion">
             <li class="tabs__item tabs-inner">
               <div class="tabs-inner__content">
-                <h3 class="subtitle tabs-inner__subtitle">C <time datetime="1400">1400</time> по <time datetime="1499">1499</time> гг.</h3>
+                <h3 class="subtitle tabs-inner__subtitle tabs-inner__link-btn link-btn">
+                  <span class="tabs-inner__text">
+                    C <time datetime="1400">1400</time> по <time datetime="1499">1499</time> гг.
+                  </span>
+                </h3>
                 <span class="tabs-inner__icon"></span>
               </div>
               <ul class="tabs-inner__list list-reset">
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="one" type="button" aria-controls="one-tab" data-path="one">
-                    Бенедетто ди Биндо
+                  <button class="tabs__btn link-btn btn-reset" id="one" type="button" aria-controls="one-tab" data-path="one">
+                    <span class="link-btn__text">
+                      Бенедетто ди Биндо
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="two" type="button" aria-controls="two-tab" data-path="two">
-                    Бергоньоне, Амброджо
+                  <button class="tabs__btn link-btn btn-reset" id="two" type="button" aria-controls="two-tab" data-path="two">
+                    <span class="link-btn__text">
+                      Бергоньоне, Амброджо
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="three" type="button" aria-controls="three-tab" data-path="three">
-                    Биссоло, Франческо
+                  <button class="tabs__btn link-btn btn-reset" id="three" type="button" aria-controls="three-tab" data-path="three">
+                    <span class="link-btn__text">
+                      Биссоло, Франческо
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="four" type="button" aria-controls="four-tab" data-path="four">
-                    Больтраффио, Джованни
+                  <button class="tabs__btn link-btn btn-reset" id="four" type="button" aria-controls="four-tab" data-path="four">
+                    <span class="link-btn__text">
+                      Больтраффио, Джованни
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="five" type="button" aria-controls="five-tab" data-path="five">
-                    Бонсиньори, Франческо
+                  <button class="tabs__btn link-btn btn-reset" id="five" type="button" aria-controls="five-tab" data-path="five">
+                    <span class="link-btn__text">
+                      Бонсиньори, Франческо
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="six" type="button" aria-controls="six-tab" data-path="six">
-                    Боттичини, Рафаэлло
+                  <button class="tabs__btn link-btn btn-reset" id="six" type="button" aria-controls="six-tab" data-path="six">
+                    <span class="link-btn__text">
+                      Боттичини, Рафаэлло
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="seven" type="button" aria-controls="seven-tab" data-path="seven">
-                    Брамантино
+                  <button class="tabs__btn link-btn btn-reset" id="seven" type="button" aria-controls="seven-tab" data-path="seven">
+                    <span class="link-btn__text">
+                      Брамантино
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="eight" type="button" aria-controls="eight-tab" data-path="eight">
-                    Бреа, Людовико
+                  <button class="tabs__btn link-btn btn-reset" id="eight" type="button" aria-controls="eight-tab" data-path="eight">
+                    <span class="link-btn__text">
+                      Бреа, Людовико
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="nine" type="button" aria-controls="nine-tab" data-path="nine">
-                    Бьяджо д’Антонио Туччи
+                  <button class="tabs__btn link-btn btn-reset" id="nine" type="button" aria-controls="nine-tab" data-path="nine">
+                    <span class="link-btn__text">
+                      Бьяджо д’Антонио Туччи
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="ten" type="button" aria-controls="ten-tab" data-path="ten">
-                    Веккьетта
+                  <button class="tabs__btn link-btn btn-reset" id="ten" type="button" aria-controls="ten-tab" data-path="ten">
+                    <span class="link-btn__text">
+                      Веккьетта
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="eleven" type="button" aria-controls="eleven-tab" data-path="eleven">
-                    Андреа Верроккьо
+                  <button class="tabs__btn link-btn btn-reset" id="eleven" type="button" aria-controls="eleven-tab" data-path="eleven">
+                    <span class="link-btn__text">
+                      Андреа Верроккьо
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset tabs__btn--active" id="twelve" type="button" aria-controls="twelve-tab" data-path="twelve">
-                    Доменико Гирландайо
+                  <button class="tabs__btn link-btn btn-reset tabs__btn--active" id="twelve" type="button" aria-controls="twelve-tab" data-path="twelve">
+                    <span class="link-btn__text">
+                      Доменико Гирландайо
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="thirteen" type="button" aria-controls="thirteen-tab" data-path="thirteen">
-                    Беноццо Гоццоли
+                  <button class="tabs__btn link-btn btn-reset" id="thirteen" type="button" aria-controls="thirteen-tab" data-path="thirteen">
+                    <span class="link-btn__text">
+                      Беноццо Гоццоли
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="fourteen" type="button" aria-controls="fourteen-tab" data-path="fourteen">
-                    Граначчи, Франческо
+                  <button class="tabs__btn link-btn btn-reset" id="fourteen" type="button" aria-controls="fourteen-tab" data-path="fourteen">
+                    <span class="link-btn__text">
+                      Граначчи, Франческо
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="fifteen" type="button" aria-controls="fifteen-tab" data-path="fifteen">
-                    Грегорио ди Чекко
+                  <button class="tabs__btn link-btn btn-reset" id="fifteen" type="button" aria-controls="fifteen-tab" data-path="fifteen">
+                    <span class="link-btn__text">
+                      Грегорио ди Чекко
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="sixteen" type="button" aria-controls="sixteen-tab" data-path="sixteen">
-                    Джованни да Удине
+                  <button class="tabs__btn link-btn btn-reset" id="sixteen" type="button" aria-controls="sixteen-tab" data-path="sixteen">
+                    <span class="link-btn__text">
+                      Джованни да Удине
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="seventeen" type="button" aria-controls="seventeen-tab" data-path="seventeen">
-                    Джованни ди Паоло
+                  <button class="tabs__btn link-btn btn-reset" id="seventeen" type="button" aria-controls="seventeen-tab" data-path="seventeen">
+                    <span class="link-btn__text">
+                      Джованни ди Паоло
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="eighteen" type="button" aria-controls="eighteen-tab" data-path="eighteen">
-                    Джорджоне
+                  <button class="tabs__btn link-btn btn-reset" id="eighteen" type="button" aria-controls="eighteen-tab" data-path="eighteen">
+                    <span class="link-btn__text">
+                      Джорджоне
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="nineteen" type="button" aria-controls="nineteen-tab" data-path="nineteen">
-                    Парентино, Бернардо
+                  <button class="tabs__btn link-btn btn-reset" id="nineteen" type="button" aria-controls="nineteen-tab" data-path="nineteen">
+                    <span class="link-btn__text">
+                      Парентино, Бернардо
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="twenty" type="button" aria-controls="twenty-tab" data-path="twenty">
-                    Пезеллино
+                  <button class="tabs__btn link-btn btn-reset" id="twenty" type="button" aria-controls="twenty-tab" data-path="twenty">
+                    <span class="link-btn__text">
+                      Пезеллино
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="twenty-one" type="button" aria-controls="twenty-one-tab" data-path="twenty-one">
-                    Пьетро Перуджино
+                  <button class="tabs__btn link-btn btn-reset" id="twenty-one" type="button" aria-controls="twenty-one-tab" data-path="twenty-one">
+                    <span class="link-btn__text">
+                      Пьетро Перуджино
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="twenty-twoo" type="button" aria-controls="twenty-twoo-tab" data-path="twenty-twoo">
-                    Перуцци, Бальдассаре
+                  <button class="tabs__btn link-btn btn-reset" id="twenty-twoo" type="button" aria-controls="twenty-twoo-tab" data-path="twenty-twoo">
+                    <span class="link-btn__text">
+                      Перуцци, Бальдассаре
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="twenty-three" type="button" aria-controls="twenty-three-tab" data-path="twenty-three">
-                    Пизанелло
+                  <button class="tabs__btn link-btn btn-reset" id="twenty-three" type="button" aria-controls="twenty-three-tab" data-path="twenty-three">
+                    <span class="link-btn__text">
+                      Пизанелло
+                    </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn btn-reset" id="twenty-four" type="button" aria-controls="twenty-four-tab" data-path="twenty-four">
-                    Пинтуриккьо
+                  <button class="tabs__btn link-btn btn-reset" id="twenty-four" type="button" aria-controls="twenty-four-tab" data-path="twenty-four">
+                    <span class="link-btn__text">
+                      Пинтуриккьо
+                    </span>
                   </button>
                 </li>
               </ul>
             </li>
             <li class="tabs__item tabs-inner">
               <div class="tabs-inner__content">
-                <h3 class="subtitle tabs-inner__subtitle">C <time datetime="1500">1500</time> по <time datetime="1599">1599</time> гг.</h3>
+                <h3 class="subtitle tabs-inner__subtitle tabs-inner__link-btn link-btn">
+                  <span class="tabs-inner__text">
+                    C <time datetime="1500">1500</time> по <time datetime="1599">1599</time> гг.
+                  </span>
+                </h3>
                 <span class="tabs-inner__icon"></span>
               </div>
               <div class="tabs-inner__empty-content empty-content">
@@ -646,7 +709,11 @@
             </li>
             <li class="tabs__item tabs-inner">
               <div class="tabs-inner__content">
-                <h3 class="subtitle tabs-inner__subtitle">C <time datetime="1600">1600</time> по <time datetime="1699">1699</time> гг.</h3>
+                <h3 class="subtitle tabs-inner__subtitle tabs-inner__link-btn link-btn">
+                  <span class="tabs-inner__text">
+                    C <time datetime="1600">1600</time> по <time datetime="1699">1699</time> гг.
+                  </span>
+                </h3>
                 <span class="tabs-inner__icon"></span>
               </div>
               <div class="tabs-inner__empty-content empty-content">
@@ -659,7 +726,11 @@
             </li>
             <li class="tabs__item tabs-inner">
               <div class="tabs-inner__content">
-                <h3 class="subtitle tabs-inner__subtitle">C <time datetime="1700">1700</time> по <time datetime="1799">1799</time> гг.</h3>
+                <h3 class="subtitle tabs-inner__subtitle tabs-inner__link-btn link-btn">
+                  <span class="tabs-inner__text">
+                    C <time datetime="1700">1700</time> по <time datetime="1799">1799</time> гг.
+                  </span>
+                </h3>
                 <span class="tabs-inner__icon"></span>
               </div>
               <div class="tabs-inner__empty-content empty-content">
@@ -672,7 +743,11 @@
             </li>
             <li class="tabs__item tabs-inner">
               <div class="tabs-inner__content">
-                <h3 class="subtitle tabs-inner__subtitle">C <time datetime="1800">1800</time> по <time datetime="1899">1899</time> гг.</h3>
+                <h3 class="subtitle tabs-inner__subtitle tabs-inner__link-btn link-btn">
+                  <span class="tabs-inner__text">
+                    C <time datetime="1800">1800</time> по <time datetime="1899">1899</time> гг.
+                  </span>
+                </h3>
                 <span class="tabs-inner__icon"></span>
               </div>
               <div class="tabs-inner__empty-content empty-content">
@@ -686,7 +761,11 @@
             </li>
             <li class="tabs__item tabs-inner">
               <div class="tabs-inner__content">
-                <h3 class="subtitle tabs-inner__subtitle">C <time datetime="1900">1900</time> по <time datetime="1999">1999</time> гг.</h3>
+                <h3 class="subtitle tabs-inner__subtitle tabs-inner__link-btn link-btn">
+                  <span class="tabs-inner__text">
+                    C <time datetime="1900">1900</time> по <time datetime="1999">1999</time> гг.
+                  </span>
+                </h3>
                 <span class="tabs-inner__icon"></span>
               </div>
               <div class="tabs-inner__empty-content empty-content">
@@ -700,7 +779,11 @@
             </li>
             <li class="tabs__item tabs-inner">
               <div class="tabs-inner__content">
-                <h3 class="subtitle tabs-inner__subtitle">C<time datetime="2000"> 2000 </time>г.</h3>
+                <h3 class="subtitle tabs-inner__subtitle tabs-inner__link-btn link-btn">
+                  <span class="tabs-inner__text">
+                    C<time datetime="2000"> 2000 </time>г.
+                  </span>
+                </h3>
                 <span class="tabs-inner__icon"></span>
               </div>
               <div class="tabs-inner__empty-content empty-content">
@@ -870,7 +953,7 @@
           Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени
           совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское обеспечение
           <span class="tooltip">
-            <button class="tooltip__btn btn-reset" aria-describedby="tooltip-1"></button>
+            <button class="tooltip__btn btn-reset" id="toolltip-btn" aria-describedby="tooltip-1"></button>
             <span class="tooltip__text" role="tooltip" id="tooltip-1">
               Пример современных тенденций&nbsp;&mdash; современная методология разработки
             </span>
@@ -986,19 +1069,17 @@
           <address class="showroom__address">Леонтьевский переулок, дом 5/1</address>
         </div>
 
-        <form id="showroom__form form" action="https://jsonplaceholder.typicode.com/todos/" method="post" class="form-custom flex-child" autocomplete="off">
+        <form id="form" action="https://jsonplaceholder.typicode.com/todos/" method="post" class="form-custom flex-child" autocomplete="off">
           <fieldset class="fieldset fieldset-reset form__fieldset">
             <legend class="legend form__legend visually-hidden">Ваши данные</legend>
             <ul class="form__list list-reset">
               <li class="form__item">
-                <label class="form__label" for="name" aria-label="Как вас зовут?">
-                    <input type="text" class="form__input" id="name" name="name" placeholder="Имя*" autocomplete="off">
-                </label>
+                <label class="form__label" for="name" aria-label="Как вас зовут?"></label>
+                <input type="text" class="form__input" id="name" name="name" placeholder="Имя*" autocomplete="off">
               </li>
               <li class="form__item">
-                <label class="label__form" for="inputMask" aria-label="Укажите ваш телефон">
-                    <input type="tel" class="form__input" id="inputMask" name="tel" placeholder="Телефон*" autocomplete="off">
-                </label>
+                <label class="label__form" for="inputMask" aria-label="Укажите ваш телефон"></label>
+                <input type="tel" class="form__input" id="inputMask" name="tel" placeholder="Телефон*" autocomplete="off">
               </li>
               <li class="form__item-btn">
                 <button class="btn btn-reset form__btn btn--stroke" id="submit-btn" type="submit">Заказать обратный звонок</button>
@@ -1013,10 +1094,10 @@
           </h3>
           <ul class="showroom__list social list-reset">
             <li class="social__item flex-center">
-              <a class="social__icon social__icon--watsapp" href="#" aria-label="Связаться с нами через WatsApp"></a>
+              <a class="social__icon flex-center social__icon--watsapp" href="#" aria-label="Связаться с нами через WatsApp"></a>
             </li>
             <li class="social__item flex-center">
-              <a class="social__icon social__icon--telegram" href="#" aria-label="Связаться с нами через Telegram"></a>
+              <a class="social__icon flex-center social__icon--telegram" href="#" aria-label="Связаться с нами через Telegram"></a>
             </li>
           </ul>
         </div>
@@ -1076,6 +1157,8 @@
   <!-- Map -->
   <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
   <script src="js/map.js"></script>
+
+
   <!-- Aria -->
   <!-- <script src="js/aria.js "></script> -->
 </body>
