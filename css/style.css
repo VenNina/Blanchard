@@ -195,10 +195,6 @@ body {
   color: var(--color-white);
 }
 
-.link-btn.focus-visible:hover {
-  color: var(--color-white);
-}
-
 .link-btn.focus-visible::before {
   background-color: #7943a4;
 }

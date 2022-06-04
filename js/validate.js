@@ -1,40 +1,60 @@
-// Для маскирования
-let selector = document.querySelector("input[type='tel']");
-let im = new Inputmask("+7(999)999-99-99");
-im.mask(selector);
+console.log('Init!');
 
-const phone = selector.inputmask.unmaskedvalue();
+// inputmask
+const form = document.querySelector('.form');
+const telSelector = form.querySelector('input[type="tel"]');
+const inputMask = new Inputmask('+7 (999) 999-99-99');
+inputMask.mask(telSelector);
 
-// Для валидации
-const validation = new JustValidate('#form', {
-  errorLabelCssClass: 'is-label-invalid',
-  errorLabelStyle: {
-    color: '#d11616',
-  },
-});
+const validation = new JustValidate('.form');
 
 validation
-  .addField('#name', [{
+  .addField('.input-name', [{
       rule: 'minLength',
       value: 3,
-      errorMessage: 'Как вас зовут?',
     },
     {
       rule: 'maxLength',
       value: 30,
-      errorMessage: 'Как вас зовут?',
     },
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: 'Введите имя!'
+    }
   ])
-  .addField('#inputMask', [{
-    rule: 'required',
-    errorMessage: 'Укажите ваш телефон',
-  }, ])
-  .addField('#inputMask', [{
-    errorMessage: 'Укажите ваш телефон',
-    validator: (value) => {
-      // храним не маскированный телефон
-      const phone = selector.inputmask.unmaskedvalue()
-      console.log(phone);
-      return Number(phone) && phone.length === 10
+  .addField('.input-tel', [{
+      rule: 'required',
+      value: true,
+      errorMessage: 'Телефон обязателен',
     },
-  }, ]);
+    {
+      rule: 'function',
+      validator: function() {
+        const phone = telSelector.inputmask.unmaskedvalue();
+        return Number(phone) && phone.length === 10;
+      },
+      errorMessage: 'Введите корректный телефон',
+    },
+  ]).onSuccess((event) => {
+    console.log('Validation passes and form submitted', event);
+
+    let formData = new FormData(event.target);
+
+    console.log(...formData);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.log('Отправлено');
+        }
+      }
+    }
+
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+
+    event.target.reset();
+  });

@@ -42,17 +42,17 @@
   color: var(--color-grey);
 }
 
-.form__input.just-validate-error-field {
+.just-validate-error-field {
   border-color: #d11616;
+}
+
+.just-validate-error-label {
+  position: absolute;
+  top: -35%;
+  left: 25px;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-}
-
-.is-label-invalid.just-validate-error-label {
-  position: absolute;
-  top: calc(100% - 83px);
-  left: 20px;
 }
 
 .form__input.focus-visible {
@@ -64,7 +64,7 @@
   background-color: var(--color-form);
 }
 
-.shoowroom__subtitle {
+.showroom__subtitle {
   margin-bottom: 8px;
 }
 

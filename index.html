@@ -29,13 +29,30 @@
   <link rel="stylesheet" href="css/showroom.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <!-- полифил состояния focus-visible для Safari  -->
-  <script src="js/focus-visible.js" defer></script>
+  <script src="libs/focus-visible.js" defer></script>
   <!-- открытие закрытие меню dropdown-->
   <script src="js/dropdownOpenClose.js" defer></script>
+  <!-- Swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js" defer></script>
+  <!-- Choices -->
+  <script src="libs/choices.min.js" defer></script>
+  <script src="js/customChoices.js" defer></script>
+  <!-- Accordion -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js" defer></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" defer></script>
+  <script src="js/accordion.js" defer></script>
+  <!-- Tabs -->
+  <script src="js/tabs.js" defer></script>
+  <!-- Map -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU" defer></script>
+  <script src="js/map.js" defer></script>
+  <!-- Aria -->
+  <!-- <script src="libs/aria.js "></script> -->
   <!-- маскирование инпутов -->
-  <script src="js/inputmask.js" defer></script>
+  <script src="libs/inputmask.min.js" defer></script>
   <!-- валидация -->
-  <script src="https://unpkg.com/just-validate@2.0.0-beta.12/dist/just-validate.production.min.js" defer></script>
+  <script src="libs/just-validate3.3.3.min.js" defer></script>
   <!-- <script src="js/inputmask.min.js" defer></script> -->
   <script src="js/validate.js" defer></script>
 
@@ -85,7 +102,7 @@
             </li>
           </ul>
         </nav>
-        <a href="#" class="header__link-enter link-enter link-btn">
+        <a href="#" class="header__link-enter link link-enter link-btn">
           <svg class="link-enter__icon link__icon" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"/>
           </svg>
@@ -94,8 +111,8 @@
       </div>
     </div>
     <div class="header-bottom">
-      <div class="container header-bottom__container">
-        <ul class="header__main-menu main-menu main-menu__list list-reset">
+      <div class="container header-bottom__container main-menu">
+        <ul class="header__main-menu  main-menu__list list-reset">
           <li class="main-menu__item">
             <button class="main-menu__btn main-menu-btn link-btn btn-reset" type="button">
               <span class="main-menu-btn__text link-btn__text">Реализм</span>
@@ -164,11 +181,11 @@
           </li>
           <li class="main-menu__item">
             <button class="main-menu__btn main-menu-btn link-btn btn-reset">
-              <span class="main-menu-btn__text link-btn__text">Авангард<span>
+              <span class="main-menu-btn__text link-btn__text">Авангард</span>
               <svg class="main-menu-btn__icon link-btn__icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11 1L6 6L1 1"/>
               </svg>
-              </button>
+            </button>
             <ul class="main-menu__dropdown main-menu-dropdown list-reset">
               <li class="main-menu-dropdown__item main-menu-dropdown__item--bg4-1">
                 <a class="main-menu-dropdown__link" href="#">Кандинский</a>
@@ -184,9 +201,8 @@
               </li>
             </ul>
           </li>
-          </li>
           <li class="main-menu__item">
-            <button class="main-menu__btn main-menu-btn link-btn btn-reset" href="#">
+            <button class="main-menu__btn main-menu-btn link-btn btn-reset">
               <span class="main-menu-btn__text link-btn__text">Футуризм</span>
               <svg class="main-menu-btn__icon link-btn__icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11 1L6 6L1 1"/>
@@ -309,7 +325,7 @@
               </div>
               <div class="swiper-slide swiper-slide-second">
                 <div class="swiper-zoom-container">
-                  <img class="swiper-img gallery__swiper-img" src="img/gallery2@2x.jpg" alt="Женщина с граблями - Казимир Малевич" />
+                  <img class="swiper-img gallery__swiper-img" src="img/gallery2@1x.jpg" alt="Женщина с граблями - Казимир Малевич" />
                 </div>
               </div>
               <div class="swiper-slide swiper-slide-second">
@@ -816,7 +832,7 @@
                       <div class="card-events__name">
                         <p class="descr card-events__descr-datatime">Музей им. Щусева</p>
                         <p class="descr card-events__descr-datatime">
-                          <time datatime="2022-04-20">с&nbsp;20&nbsp;марта</time> <time datatime="2022-04-30">по&nbsp;30&nbsp;апреля</time>
+                          <time datetime="2022-03-20">с&nbsp;20&nbsp;марта</time> <time datetime="2022-04-30">по&nbsp;30&nbsp;апреля</time>
                         </p>
                       </div>
                       <h3 class="subtitle card-events__subtitle">Книжная гравюра в&nbsp;живом восприятии</h3>
@@ -843,7 +859,7 @@
                           <abbr title="Московский музей современного искусства">ММОМА</abbr>
                         </p>
                         <p class="descr card-events__descr-datatime">
-                          <time datatime="2022-03-24T19:00">24 марта 19:00</time>
+                          <time datetime="2022-03-24T19:00">24 марта 19:00</time>
                         </p>
                       </div>
                       <h3 class="subtitle card-events__subtitle">&laquo;Открытая дискуссия&raquo;. Дмитрий Петров и&nbsp;Сергей Ильин.</h3>
@@ -864,13 +880,13 @@
               <article class="events__swiper-acticle">
                 <div class="card-events card-events--three">
                   <div class="card-events__inner">
-                    <div class="card-evets__inner-top">
+                    <div class="card-events__inner-top">
                       <div class="card-events__name">
                         <p class="descr card-events__descr-datatime">
                           Еврейский музей
                         </p>
                         <p class="descr card-events__descr-datatime">
-                          <time datatime="2022-03-31">с&nbsp;31&nbsp;марта</time> <time datatime="2022-03-21">по&nbsp;21&nbsp;апреля</time>
+                          <time datetime="2022-03-31">с&nbsp;31&nbsp;марта</time> <time datetime="2022-03-21">по&nbsp;21&nbsp;апреля</time>
                         </p>
                       </div>
                       <h3 class="subtitle card-events__subtitle">Выставка &laquo;Формация 2020&raquo;</h3>
@@ -897,7 +913,7 @@
                           <abbr title="Мультимедиа Арт Музей">ММАМ</abbr>
                         </p>
                         <p class="descr card-events__descr-datatime">
-                          <time datatime="2022-04-08">с&nbsp;8&nbsp;апреля</time> <time datatime="2022-05-20">по&nbsp;20&nbsp;мая</time>
+                          <time datetime="2022-04-08">с&nbsp;8&nbsp;апреля</time> <time datetime="2022-05-20">по&nbsp;20&nbsp;мая</time>
                         </p>
                       </div>
                       <h3 class="subtitle card-events__subtitle">Джон Винзор. Фотографии из&nbsp;серии &laquo;Метафора серебра&raquo;</h3>
@@ -924,7 +940,7 @@
                           Третьяковка на&nbsp;Крымском валу
                         </p>
                         <p class="card-events__descr-datatime">
-                          <time datatime="2022-03-30">с&nbsp;30&nbsp;марта</time> <time datatime="2022-04-30">по&nbsp;30&nbsp;апреля</time>
+                          <time datetime="2022-03-30">с&nbsp;30&nbsp;марта</time> <time datetime="2022-04-30">по&nbsp;30&nbsp;апреля</time>
                         </p>
                       </div>
                       <h3 class="subtitle card-events__subtitle">XXIV Международная биеннале молодого искусства</h3>
@@ -949,7 +965,7 @@
     <section class="prodjects" id="prodjects">
       <div class="container prodjects__container">
         <h2 class="title prodjects__title">Проекты</h2>
-        <p class="descr prodject__descr descr--width">
+        <p class="descr prodjects__descr descr--width">
           Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени
           совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское обеспечение
           <span class="tooltip">
@@ -972,7 +988,7 @@
               В&nbsp;стремлении повысить качество
             </span>
           </span> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными
-          до&nbsp;степени совершенной неузнаваемости. Подробнее: <a href="#" class="prodject__link-btn prodject-link-btn link-btn"><span class="prodject-link-btn__text link-btn__text">blanchard-art.ru/projects</span></a>
+          до&nbsp;степени совершенной неузнаваемости. Подробнее: <a href="#" class="prodjects__link-btn prodject-link-btn link-btn"><span class="prodject-link-btn__text link-btn__text">blanchard-art.ru/projects</span></a>
         </p>
 
         <aside class="prodjects__aside">
@@ -985,74 +1001,74 @@
             <div class="prodjects__swiper-wrapper swiper-wrapper">
               <div class="prodjects__swiper-slide swiper-slide">
                 <article class="prodjects__article">
-                  <h4 class="visually-hidden">Компания партнер Freelands Foundation</h2>
-                    <a class="prodjects__swiper-link" href="#">
-                      <img class="prodjects__swiper-img" src="img/partners-slide-1.png" alt="Логотип Freelands Foundation">
-                    </a>
+                  <h4 class="visually-hidden">Компания партнер Freelands Foundation</h4>
+                  <a class="prodjects__swiper-link" href="#">
+                    <img class="prodjects__swiper-img" src="img/partners-slide-1.png" alt="Логотип Freelands Foundation">
+                  </a>
                 </article>
               </div>
               <div class="prodjects__swiper-slide swiper-slide">
                 <article class="prodjects__article">
-                  <h4 class="visually-hidden">Компания партнерInstitute for Contemporary Art</h2>
-                    <a class="prodjects__swiper-link" href="#">
-                      <img class="prodjects__swiper-img" src="img/partners-slide-2.png" alt="Логотип Institute for Contemporary Art">
-                    </a>
+                  <h4 class="visually-hidden">Компания партнерInstitute for Contemporary Art</h4>
+                  <a class="prodjects__swiper-link" href="#">
+                    <img class="prodjects__swiper-img" src="img/partners-slide-2.png" alt="Логотип Institute for Contemporary Art">
+                  </a>
                 </article>
               </div>
               <div class="prodjects__swiper-slide swiper-slide">
                 <article class="prodjects__article">
-                  <h4 class="visually-hidden">Компания партнер Workhouse</h2>
-                    <a class="prodjects__swiper-link" href="#">
-                      <img class="prodjects__swiper-img" src="img/partners-slide-3.png" alt="Логотип Workhouse">
-                    </a>
+                  <h4 class="visually-hidden">Компания партнер Workhouse</h4>
+                  <a class="prodjects__swiper-link" href="#">
+                    <img class="prodjects__swiper-img" src="img/partners-slide-3.png" alt="Логотип Workhouse">
+                  </a>
                 </article>
               </div>
               <div class="prodjects__swiper-slide swiper-slide">
                 <article class="prodjects__article">
-                  <h4 class="visually-hidden">Компания партнер 1849</h2>
-                    <a class="prodjects__swiper-link" href="#">
-                      <img class="prodjects__swiper-img" src="img/partners-slide-4.png" alt="Логотип 1849">
-                    </a>
+                  <h4 class="visually-hidden">Компания партнер 1849</h4>
+                  <a class="prodjects__swiper-link" href="#">
+                    <img class="prodjects__swiper-img" src="img/partners-slide-4.png" alt="Логотип 1849">
+                  </a>
                 </article>
               </div>
               <div class="prodjects__swiper-slide swiper-slide">
                 <article class="prodjects__article">
-                  <h4 class="visually-hidden">Компания партнер Hiscox</h2>
-                    <a class="prodjects__swiper-link" href="#">
-                      <img class="prodjects__swiper-img" src="img/partners-slide-5.png" alt="Логотип Hiscox">
-                    </a>
+                  <h4 class="visually-hidden">Компания партнер Hiscox</h4>
+                  <a class="prodjects__swiper-link" href="#">
+                    <img class="prodjects__swiper-img" src="img/partners-slide-5.png" alt="Логотип Hiscox">
+                  </a>
                 </article>
               </div>
               <div class="prodjects__swiper-slide swiper-slide">
                 <article class="prodjects__article">
-                  <h4 class="visually-hidden">Компания партнер Camden arts centre</h2>
-                    <a class="prodjects__swiper-link" href="#">
-                      <img class="prodjects__swiper-img" src="img/partners-slide-6.png" alt="Логотип Camden arts centre">
-                    </a>
+                  <h4 class="visually-hidden">Компания партнер Camden arts centre</h4>
+                  <a class="prodjects__swiper-link" href="#">
+                    <img class="prodjects__swiper-img" src="img/partners-slide-6.png" alt="Логотип Camden arts centre">
+                  </a>
                 </article>
               </div>
               <div class="prodjects__swiper-slide swiper-slide">
                 <article class="prodjects__article">
-                  <h4 class="visually-hidden">Компания партнер Camden Stassen</h2>
-                    <a class="prodjects__swiper-link" href="#">
-                      <img class="prodjects__swiper-img" src="img/partners-slide-7.png" alt="Логотип Camden Stassen">
-                    </a>
+                  <h4 class="visually-hidden">Компания партнер Camden Stassen</h4>
+                  <a class="prodjects__swiper-link" href="#">
+                    <img class="prodjects__swiper-img" src="img/partners-slide-7.png" alt="Логотип Camden Stassen">
+                  </a>
                 </article>
               </div>
               <div class="prodjects__swiper-slide swiper-slide">
                 <article class="prodjects__article">
-                  <h4 class="visually-hidden">Компания партнер Watts gallery artists village</h2>
-                    <a class="prodjects__swiper-link" href="#">
-                      <img class="prodjects__swiper-img" src="img/partners-slide-8.png" alt="Логотип Watts gallery artists village">
-                    </a>
+                  <h4 class="visually-hidden">Компания партнер Watts gallery artists village</h4>
+                  <a class="prodjects__swiper-link" href="#">
+                    <img class="prodjects__swiper-img" src="img/partners-slide-8.png" alt="Логотип Watts gallery artists village">
+                  </a>
                 </article>
               </div>
               <div class="prodjects__swiper-slide swiper-slide">
                 <article class="prodjects__article">
-                  <h4 class="visually-hidden">Компания партнер Esad</h2>
-                    <a class="prodjects__swiper-link" href="#">
-                      <img class="prodjects__swiper-img" src="img/partners-slide-9.png" alt="Логотип Esad">
-                    </a>
+                  <h4 class="visually-hidden">Компания партнер Esad</h4>
+                  <a class="prodjects__swiper-link" href="#">
+                    <img class="prodjects__swiper-img" src="img/partners-slide-9.png" alt="Логотип Esad">
+                  </a>
                 </article>
               </div>
 
@@ -1069,17 +1085,17 @@
           <address class="showroom__address">Леонтьевский переулок, дом 5/1</address>
         </div>
 
-        <form id="form" action="https://jsonplaceholder.typicode.com/todos/" method="post" class="form-custom flex-child" autocomplete="off">
+        <form id="form" action="https://jsonplaceholder.typicode.com/todos/" method="post" class="form-custom flex-child form" autocomplete="off">
           <fieldset class="fieldset fieldset-reset form__fieldset">
             <legend class="legend form__legend visually-hidden">Ваши данные</legend>
             <ul class="form__list list-reset">
               <li class="form__item">
                 <label class="form__label" for="name" aria-label="Как вас зовут?"></label>
-                <input type="text" class="form__input" id="name" name="name" placeholder="Имя*" autocomplete="off">
+                <input type="text" class="form__input input-name" id="name" name="name" placeholder="Имя*" autocomplete="off">
               </li>
               <li class="form__item">
-                <label class="label__form" for="inputMask" aria-label="Укажите ваш телефон"></label>
-                <input type="tel" class="form__input" id="inputMask" name="tel" placeholder="Телефон*" autocomplete="off">
+                <label class="form__label" for="inputMask" aria-label="Укажите ваш телефон"></label>
+                <input type="tel" class="form__input input-tel" id="inputMask" name="tel" placeholder="Телефон*" autocomplete="off">
               </li>
               <li class="form__item-btn">
                 <button class="btn btn-reset form__btn btn--stroke" id="submit-btn" type="submit">Заказать обратный звонок</button>
@@ -1089,7 +1105,7 @@
         </form>
 
         <div class="showroom__social">
-          <h3 class="subtitle shoowroom__subtitle">
+          <h3 class="subtitle showroom__subtitle">
             Связаться в&nbsp;один клик
           </h3>
           <ul class="showroom__list social list-reset">
@@ -1142,25 +1158,6 @@
     </div>
   </footer>
 
-  <!-- Swiper -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js "></script>
-  <script src="js/swiper.js "></script>
-  <!-- Choices -->
-  <script src="js/choices.min.js "></script>
-  <script src="js/customChoices.js "></script>
-  <!-- Accordion -->
-  <script src="https://code.jquery.com/jquery-1.12.4.js "></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js "></script>
-  <script src="js/accordion.js "></script>
-  <!-- Tabs -->
-  <script src="js/tabs.js "></script>
-  <!-- Map -->
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
-  <script src="js/map.js"></script>
-
-
-  <!-- Aria -->
-  <!-- <script src="js/aria.js "></script> -->
 </body>
 
 </html>

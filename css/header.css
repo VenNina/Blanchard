@@ -78,7 +78,7 @@
   padding-top: 5px;
 }
 
-.main-menu {
+.main-menu__list {
   display: flex;
   gap: 98px;
 }

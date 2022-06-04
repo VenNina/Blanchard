@@ -32,7 +32,7 @@
     document.addEventListener('click', (e) => {
       // если элемент по которому произошел клик не являются потомками меню,
       // то мы закрываем меню, удаляем все классы active
-      if (!e.target.closest('.main-menu')) {
+      if (!e.target.closest('.main-menu__list')) {
         menuBtns.forEach(el => {
           el.classList.remove('main-menu-btn--active');
         });
