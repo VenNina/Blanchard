@@ -204,34 +204,38 @@
   height: 350px;
 }
 
-.swiper-zoom-container>.swiper-img {
+.gallery__swiper-link>.swiper-img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.swiper-zoom-container {
+.gallery__swiper-link {
   position: relative;
   z-index: 0;
+  cursor: pointer;
 }
 
-.swiper-zoom-container::before {
+.gallery__swiper-link::before,
+.gallery__swiper-link::after {
   content: "";
   position: absolute;
   z-index: 100;
+  opacity: 0;
+  transition: opacity .3s ease-in;
+}
+
+.gallery__swiper-link::before {
   top: 25px;
   right: 25px;
   bottom: 25px;
   left: 25px;
   background-color: #000;
-  opacity: .5;
+  /* opacity: .5; */
 }
 
-.swiper-zoom-container::after {
-  content: "";
-  position: absolute;
-  z-index: 100;
+.gallery__swiper-link::after {
   top: 0;
   right: 0;
   bottom: 0;
@@ -240,6 +244,14 @@
   background-repeat: no-repeat;
   background-size: 81px 79px;
   background-position: center;
+}
+
+.gallery__swiper-link:hover::before {
+  opacity: .5;
+}
+
+.gallery__swiper-link:hover::after {
+  opacity: 1;
 }
 
 .gallery__slide-btn {
@@ -307,3 +319,134 @@
 .swiper-button-prev.swiper-button-disabled {
   opacity: .5;
 }
+
+
+/* popup */
+
+.popup {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+}
+
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup__figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: max(900px, 50%);
+  color: var(--color-main);
+  background-color: var(--color-white);
+}
+
+.popup__img,
+.popup__figcapture {
+  position: relative;
+  z-index: 100;
+}
+
+.popup__figcapture {
+  position: relative;
+}
+
+.popup__close::before {
+  position: fixed;
+  z-index: 50;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+  content: "";
+  cursor: default;
+}
+
+
+/* .lightbox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+} */
+
+
+/* Открываем lightbox */
+
+
+/* .lightbox:target {
+  visibility: visible;
+  opacity: 1;
+} */
+
+
+/* Содержимое lightbox  */
+
+
+/* .lightbox figcaption {
+  width: 25rem;
+  position: relative;
+  padding: 1.5em;
+  background-color: lightpink;
+} */
+
+
+/* Кнопка закрытия */
+
+
+/* .lightbox .close {
+  position: relative;
+  display: block;
+}
+
+.lightbox .close::after {
+  right: -1rem;
+  top: -1rem;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  content: "×";
+  cursor: pointer;
+} */
+
+
+/* Обёртка lightbox  */
+
+
+/* .lightbox .close::before {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, .7);
+  content: "";
+  cursor: default;
+} */

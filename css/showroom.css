@@ -107,11 +107,11 @@
 }
 
 .social__icon--watsapp {
-  background-image: url(../img/whatsapp-Icon.svg);
+  background-image: url(../img/whatsapp-icon.svg);
 }
 
 .social__icon--telegram {
-  background-image: url(../img/telegram-Icon.svg);
+  background-image: url(../img/telegram-icon.svg);
 }
 
 .social__icon.focus-visible {

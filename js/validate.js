@@ -1,4 +1,4 @@
-console.log('Init!');
+// console.log('Init!');
 
 // inputmask
 const form = document.querySelector('.form');
@@ -6,7 +6,13 @@ const telSelector = form.querySelector('input[type="tel"]');
 const inputMask = new Inputmask('+7 (999) 999-99-99');
 inputMask.mask(telSelector);
 
-const validation = new JustValidate('.form');
+// const validation = new JustValidate('.form');
+
+const validation = new JustValidate('.form', {
+  errorLabelStyle: {
+    color: '#d11616',
+  },
+});
 
 validation
   .addField('.input-name', [{
