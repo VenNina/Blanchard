@@ -326,16 +326,13 @@
 .popup {
   position: fixed;
   z-index: 100;
+  left: 0;
   top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
+  right: 0;
+  bottom: 0;
   opacity: 0;
   visibility: hidden;
-  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+  transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
 }
 
 .popup:target {
@@ -343,110 +340,65 @@
   visibility: visible;
 }
 
+.popup__wrap {
+  width: min(900px, 50%);
+}
+
+.popup__close {
+  position: relative;
+  display: block;
+}
+
+.popup__close::before {
+  content: url(../img/popup-close.svg);
+  position: absolute;
+  z-index: 200;
+  top: 16px;
+  right: 22px;
+  width: 16px;
+  height: 16px;
+}
+
+.popup__close::after {
+  content: "";
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .7);
+  cursor: pointer;
+}
+
 .popup__figure {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  z-index: 100;
   margin: 0;
-  width: max(900px, 50%);
   color: var(--color-main);
   background-color: var(--color-white);
 }
 
-.popup__img,
-.popup__figcapture {
+.popup__figure>* {
   position: relative;
   z-index: 100;
 }
 
 .popup__figcapture {
-  position: relative;
-}
-
-.popup__close::before {
-  position: fixed;
-  z-index: 50;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .7);
-  content: "";
-  cursor: default;
-}
-
-
-/* .lightbox {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
-} */
-
-
-/* Открываем lightbox */
-
-
-/* .lightbox:target {
-  visibility: visible;
-  opacity: 1;
-} */
-
-
-/* Содержимое lightbox  */
-
-
-/* .lightbox figcaption {
-  width: 25rem;
-  position: relative;
-  padding: 1.5em;
-  background-color: lightpink;
-} */
-
-
-/* Кнопка закрытия */
-
-
-/* .lightbox .close {
-  position: relative;
-  display: block;
+  flex-direction: column;
+  padding: 50px;
+  padding-top: 55px;
 }
 
-.lightbox .close::after {
-  right: -1rem;
-  top: -1rem;
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
+.popup__subtitle {
   display: flex;
-  z-index: 1;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-  border-radius: 50%;
-  color: white;
-  content: "×";
-  cursor: pointer;
-} */
+  flex-direction: column;
+  margin-bottom: 40px;
+}
 
-
-/* Обёртка lightbox  */
-
-
-/* .lightbox .close::before {
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background-color: rgba(0, 0, 0, .7);
-  content: "";
-  cursor: default;
-} */
+.popup__subtitle-text {
+  margin-bottom: 0px;
+  font-size: 16px;
+  line-height: 22px;
+}

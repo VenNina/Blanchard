@@ -107,6 +107,13 @@ body {
   width: 68%
 }
 
+.descr-time {
+  color: var(--color-caca);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
 .btn {
   display: inline-block;
   padding: 21px 34px;
