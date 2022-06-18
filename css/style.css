@@ -189,7 +189,7 @@ body {
   content: "";
   position: absolute;
   z-index: 0;
-  top: 0;
+  top: -3px;
   right: -8px;
   bottom: -3px;
   left: -8px;

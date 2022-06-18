@@ -172,10 +172,12 @@
   max-height: 369px;
 }
 
-.tabs-inner__item {
-  flex: 0 0 33%;
+
+/* .tabs-inner__item {
+  flex-shrink: calc(100% / 3);
+   flex: 0 0 33%;
   width: 33%;
-}
+} */
 
 .card__figure {
   margin: 0;

@@ -1,4 +1,9 @@
-const swiperFirst = new Swiper('.swiper-first', {
+const swiperFirst = document.querySelector('.swiper-first');
+const swiperSecond = document.querySelector('.swiper-second');
+const swiperThree = document.querySelector('.swiper-three');
+const swiperFour = document.querySelector('.swiper-four');
+
+let mySwiperFirst = new Swiper(swiperFirst, {
   effect: 'fade',
   fadeEffect: {
     crossFade: true
@@ -8,29 +13,38 @@ const swiperFirst = new Swiper('.swiper-first', {
   },
 });
 
-const swiperSecond = new Swiper('.swiper-second', {
-  slidesPerView: 3,
+let mySwiperSecond = new Swiper(swiperSecond, {
+  slidesPerView: 1,
   spaceBetween: 50,
   slidesPerGroup: 3,
-  zoom: true,
+  // loop: true,
   navigation: {
     nextEl: '.gallery__swiper-button-next',
     prevEl: '.gallery__swiper-button-prev',
+  },
+  a11y: {
+    paginationBulletMessage: 'Перейти к слайду {{index}}',
   },
   pagination: {
     el: '.swiper-pagination',
     type: 'fraction',
   },
-  a11y: {
-    paginationBulletMessage: 'Перейти к слайду {{index}}',
-  },
-  zoom: {
-    maxRatio: 5,
+  breakpoints: {
+    // when window width is >= 320px
+    480: {
+      slidesPerView: 1,
+    },
+    800: {
+      slidesPerView: 2,
+    },
+    1150: {
+      slidesPerView: 3,
+    },
   },
 });
 
-const swiperThree = new Swiper('.swiper-three', {
-  slidesPerView: 3,
+let mySwiperThree = new Swiper(swiperThree, {
+  slidesPerView: 1,
   spaceBetween: 50,
   slidesPerGroup: 3,
   // loop: true,
@@ -41,10 +55,22 @@ const swiperThree = new Swiper('.swiper-three', {
   a11y: {
     paginationBulletMessage: 'Перейти к слайду {{index}}',
   },
+  breakpoints: {
+    // when window width is >= 320px
+    480: {
+      slidesPerView: 1,
+    },
+    1200: {
+      slidesPerView: 2,
+    },
+    1400: {
+      slidesPerView: 3,
+    },
+  },
 });
 
-const swiperFourth = new Swiper('.swiper-fourth', {
-  slidesPerView: 3,
+let mySwiperFour = new Swiper(swiperFour, {
+  slidesPerView: 1,
   spaceBetween: 50,
   slidesPerGroup: 3,
   // loop: true,
@@ -54,5 +80,17 @@ const swiperFourth = new Swiper('.swiper-fourth', {
   },
   a11y: {
     paginationBulletMessage: 'Перейти к слайду {{index}}',
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    480: {
+      slidesPerView: 1,
+    },
+    1200: {
+      slidesPerView: 2,
+    },
+    1400: {
+      slidesPerView: 3,
+    },
   },
 });

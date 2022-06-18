@@ -8,18 +8,13 @@
 }
 
 .swiper-three {
-  width: 1600px;
+  max-width: 1600px;
   height: 700px;
 }
 
 .events__swiper-acticle {
   height: 100%;
 }
-
-
-/* .events__slide-btn {
-  position: relative;
-} */
 
 .events__slide-btn .events__swiper-button-next,
 .events__slide-btn .events__swiper-button-prev {

@@ -8,7 +8,6 @@
 
 .gallery__container {
   display: flex;
-  justify-content: space-between;
   padding-top: 80px;
   padding-bottom: 81px;
 }
@@ -16,12 +15,17 @@
 .gallery__left {
   display: flex;
   flex-direction: column;
-  width: 28%;
+  flex-grow: 1;
+  min-width: 280px;
+  margin-right: 50px;
 }
 
 .gallery__right {
   padding-top: 23px;
-  width: 72%;
+}
+
+.gallery__slide-wrap {
+  max-width: 1150px;
 }
 
 .gallery__content {
@@ -43,10 +47,6 @@
 
 
 /* choices*/
-
-.choices {
-  width: 400px;
-}
 
 .choices.focus-visible {
   background-color: rgba(255, 255, 255, 0.2);
@@ -200,7 +200,7 @@
 /* swiper */
 
 .swiper-second {
-  width: 1150px;
+  max-width: 1150px;
   height: 350px;
 }
 
@@ -325,11 +325,11 @@
 
 .popup {
   position: fixed;
-  z-index: 100;
-  left: 0;
+  z-index: 200;
   top: 0;
   right: 0;
   bottom: 0;
+  left: 0;
   opacity: 0;
   visibility: hidden;
   transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
@@ -341,7 +341,7 @@
 }
 
 .popup__wrap {
-  width: min(900px, 50%);
+  width: min(50%, 900px);
 }
 
 .popup__close {
@@ -350,13 +350,17 @@
 }
 
 .popup__close::before {
-  content: url(../img/popup-close.svg);
+  content: "";
   position: absolute;
   z-index: 200;
-  top: 16px;
+  top: 22px;
   right: 22px;
-  width: 16px;
-  height: 16px;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/popup-close.svg);
+  background-position: center;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
 }
 
 .popup__close::after {
@@ -374,6 +378,9 @@
 .popup__figure {
   position: relative;
   z-index: 100;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   margin: 0;
   color: var(--color-main);
   background-color: var(--color-white);
@@ -382,6 +389,12 @@
 .popup__figure>* {
   position: relative;
   z-index: 100;
+}
+
+.popup__img {
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
 }
 
 .popup__figcapture {
