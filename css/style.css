@@ -2,8 +2,19 @@
 
 html {
   scroll-behavior: smooth;
+  /* scroll-behavior: auto; */
   box-sizing: border-box;
 }
+
+
+/* main {
+  scroll-behavior: smooth;
+} */
+
+
+/* section {
+  scroll-behavior: smooth;
+} */
 
 *,
 *::before,
@@ -40,6 +51,7 @@ a {
 body {
   /* position: relative;
   overflow-x: hidden; */
+  /* scroll-behavior: smooth; */
   font-family: "OpenSans", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -90,6 +102,17 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.disable-scroll {
+  position: relative;
+  overflow: hidden;
+  /* для айфонов */
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 .subtitle {

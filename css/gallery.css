@@ -200,25 +200,27 @@
 /* swiper */
 
 .swiper-second {
-  max-width: 1150px;
+  width: 1150px;
   height: 350px;
 }
 
-.gallery__swiper-link>.swiper-img {
+.gallery__swiper-btn>.swiper-img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.gallery__swiper-link {
+.gallery__swiper-btn {
   position: relative;
   z-index: 0;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
 }
 
-.gallery__swiper-link::before,
-.gallery__swiper-link::after {
+.gallery__swiper-btn::before,
+.gallery__swiper-btn::after {
   content: "";
   position: absolute;
   z-index: 100;
@@ -226,16 +228,15 @@
   transition: opacity .3s ease-in;
 }
 
-.gallery__swiper-link::before {
+.gallery__swiper-btn::before {
   top: 25px;
   right: 25px;
   bottom: 25px;
   left: 25px;
   background-color: #000;
-  /* opacity: .5; */
 }
 
-.gallery__swiper-link::after {
+.gallery__swiper-btn::after {
   top: 0;
   right: 0;
   bottom: 0;
@@ -246,11 +247,11 @@
   background-position: center;
 }
 
-.gallery__swiper-link:hover::before {
+.gallery__swiper-btn:hover::before {
   opacity: .5;
 }
 
-.gallery__swiper-link:hover::after {
+.gallery__swiper-btn:hover::after {
   opacity: 1;
 }
 
@@ -330,27 +331,33 @@
   right: 0;
   bottom: 0;
   left: 0;
+  display: block;
+  overflow-y: auto;
   opacity: 0;
   visibility: hidden;
+  background-color: rgba(0, 0, 0, .7);
+  cursor: pointer;
   transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
 }
 
-.popup:target {
+.popup--active {
   opacity: 1;
   visibility: visible;
 }
 
 .popup__wrap {
+  display: none;
+  margin: 50px auto;
+  position: relative;
   width: min(50%, 900px);
+  cursor: context-menu;
 }
 
-.popup__close {
-  position: relative;
+.popup__wrap--active {
   display: block;
 }
 
-.popup__close::before {
-  content: "";
+.popup__close {
   position: absolute;
   z-index: 200;
   top: 22px;
@@ -361,18 +368,11 @@
   background-position: center;
   background-size: 16px 16px;
   background-repeat: no-repeat;
+  transition: transform .3s ease-in-out;
 }
 
-.popup__close::after {
-  content: "";
-  position: fixed;
-  z-index: 50;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, .7);
-  cursor: pointer;
+.popup__close:hover {
+  transform: scale(1.5);
 }
 
 .popup__figure {

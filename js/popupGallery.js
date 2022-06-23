@@ -1,35 +1,71 @@
-// (function() {
-//   const gallerySwiper = document.querySelector('.gallery__swiper-wrapper');
+(function() {
+  const btns = document.querySelectorAll('.popup-open'),
+    popup = document.querySelector('.popup'),
+    popupWrap = document.querySelectorAll('.popup__wrap'),
+    html = document.documentElement,
+    body = document.body;
 
-//   gallerySwiper.addEventListener('click', function(event) {
-//     let galleryTarget = event.target;
-//     console.log(galleryTarget.tagName);
-//   });
-// })();
+  // отключение скролла
+  let disableScroll = function() {
+    let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+    // сохраняем в переменную значение текущего скролла
+    let pagePosition = window.scrollY;
+    // меняем значение padding right у body, чтобы сайт не прыгал
+    body.style.paddingRight = paddingOffset;
+    // добавляем класс, который отключает скролл, и бросает стр на верх
+    body.classList.add('disable-scroll');
+    // отключаем плавный скролл
+    html.style.scrollBehavior = 'auto';
+    // устанавливаем у body атрибут date-position со значением pagePosition
+    body.dataset.position = pagePosition;
+    // сайт прыгаем на верх но мы его возращаем назад на минус это значение
+    body.style.top = -pagePosition + 'px';
+  }
 
+  // включение скролла
+  let enableScroll = function() {
+    // значение по умолчанию строка, мы переводим его в число
+    let pagePosition = parseInt(document.body.dataset.position, 10);
+    // убираем предыдущие значение top у body
+    body.style.top = 'auto';
+    body.classList.remove('disable-scroll');
+    body.style.paddingRight = '0px';
+    // отправляем пользователя обратно через функцию JS
+    window.scroll({ top: pagePosition, left: 0 });
+    // удаляем атрибут
+    body.removeAttribute('data-position');
+    // включаем плавный скролл
+    html.style.scrollBehavior = 'smooth';
+  }
 
-// function showTarget(ev) {
-//   // события настроены на всплытие
-//   // target это конечный элемент, на котором произошло событие, на которое мы подписались
-//   // currentTarget это текущий элемент, на котором мы перехватили событие, на определенной его стадии, всплытие или погружение
-//   console.log('target:', ev.target, '\ncurrentTarget:', ev.currentTarget);
-// }
-// document.querySelector('body').addEventListener('click', showTarget);
-// document.querySelector('.gallery__container').addEventListener('click', showTarget);
+  // на все кнопки(img) навешиваем событие клик, по клику через атрубут data находим img которую нужно показать
+  btns.forEach((el) => {
+    el.addEventListener('click', (e) => {
 
-// (function() {
-//   document
-//     .querySelector('.gallery__slider')
-//     .addEventListener('click', function(ev) {
-//       if (ev.target.children[0].tagName === 'IMG') {
-//         console.log('это img');
-//         let img = ev.target.children[0];
-//         let igmSrc = img.getAttribute('src');
-//         console.log(igmSrc);
-//         let igmAlt = img.getAttribute('alt');
-//         console.log(igmAlt);
-//         let imgTitle = img.getAttribute('title');
-//         console.log(imgTitle);
-//       }
-//     })
-// })();
+      disableScroll(); // отключаем скролл, при клике по img
+
+      let path = e.currentTarget.getAttribute('data-path');
+
+      popupWrap.forEach((el) => {
+        el.classList.remove('popup--active');
+      });
+
+      document.querySelector(`[data-target="${path}"]`).classList.add('popup__wrap--active');
+      popup.classList.add('popup--active');
+    });
+  });
+
+  // закрываем модальное окно, если происходит клик по popup или по кнопки
+  popup.addEventListener('click', (e) => {
+    if (e.target == popup || e.target.tagName === 'BUTTON') {
+
+      enableScroll(); // включаем скролл
+
+      popup.classList.remove('popup--active');
+      popupWrap.forEach((el) => {
+        el.classList.remove('popup__wrap--active');
+      });
+    }
+  });
+
+})();

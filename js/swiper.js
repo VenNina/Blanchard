@@ -33,14 +33,29 @@ let mySwiperSecond = new Swiper(swiperSecond, {
     // when window width is >= 320px
     480: {
       slidesPerView: 1,
+      spaceBetween: 50,
+      slidesPerGroup: 3,
     },
-    800: {
+    1000: {
       slidesPerView: 2,
+      spaceBetween: 50,
+      slidesPerGroup: 3,
+
     },
-    1150: {
+    1200: {
       slidesPerView: 3,
+      spaceBetween: 50,
+      slidesPerGroup: 3,
+
     },
   },
+});
+
+window.addEventListener('resize', () => {
+  let windowWidth = window.innerWidth;
+  if (windowWidth > 1200) {
+    mySwiperSecond.update();
+  }
 });
 
 let mySwiperThree = new Swiper(swiperThree, {
