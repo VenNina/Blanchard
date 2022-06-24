@@ -359,6 +359,7 @@
 }
 
 .popup__close {
+  display: flex;
   position: absolute;
   z-index: 200;
   top: 22px;
@@ -369,7 +370,7 @@
   background-position: center;
   background-size: 16px 16px;
   background-repeat: no-repeat;
-  transition: transform .3s ease-in-out;
+  transition: transform .2s linear;
 }
 
 .popup__close:hover {
