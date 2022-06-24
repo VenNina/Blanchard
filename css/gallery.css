@@ -331,7 +331,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  display: block;
+  display: grid;
+  place-items: center;
   overflow-y: auto;
   opacity: 0;
   visibility: hidden;
@@ -347,7 +348,7 @@
 
 .popup__wrap {
   display: none;
-  margin: 50px auto;
+  margin: 10px auto;
   position: relative;
   width: min(50%, 900px);
   cursor: context-menu;

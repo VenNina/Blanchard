@@ -2,19 +2,8 @@
 
 html {
   scroll-behavior: smooth;
-  /* scroll-behavior: auto; */
   box-sizing: border-box;
 }
-
-
-/* main {
-  scroll-behavior: smooth;
-} */
-
-
-/* section {
-  scroll-behavior: smooth;
-} */
 
 *,
 *::before,
@@ -51,7 +40,6 @@ a {
 body {
   /* position: relative;
   overflow-x: hidden; */
-  /* scroll-behavior: smooth; */
   font-family: "OpenSans", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -239,4 +227,28 @@ body {
 
 .link-btn:active {
   color: var(--color-active);
+}
+
+
+/* scrollbar */
+
+.simplebar-track.simplebar-vertical {
+  top: 40px;
+  bottom: 40px;
+  right: 20px;
+  width: 2px;
+  background-color: var(--color-black);
+}
+
+.simplebar-scrollbar::before {
+  left: 0;
+  right: 0;
+  width: 2px;
+  /* height: 28px; */
+  border-radius: 0;
+  background-color: var(--color-white);
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1;
 }

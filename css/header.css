@@ -108,9 +108,10 @@
   left: 0;
   display: flex;
   flex-direction: column;
-  gap: 23px;
   padding: 40px;
   width: 300px;
+  /* высота фиксированна для демонстрации скролла */
+  max-height: 314px;
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
   visibility: hidden;
@@ -121,61 +122,6 @@
   opacity: 1;
   visibility: visible;
 }
-
-
-/* ! general-link focus, hover, active**********************************************/
-
-
-/* .main-menu__list .main-menu__item.focus-within .main-menu-dropdown {
-  opacity: 1;
-  visibility: visible;
-} */
-
-
-/* .main-menu__list .main-menu__item:focus-within .main-menu__btn .main-menu-btn__icon {
-  transform: rotate(180deg);
-} */
-
-
-/* .main-menu__list .main-menu__item:focus-within .main-menu__btn::before {
-  background-color: var(--color-amethyst);
-} */
-
-
-/* .main-menu__list:hover .main-menu__item:focus-within .main-menu-dropdown {
-  opacity: 0;
-  visibility: hidden;
-} */
-
-
-/* .main-menu__list:hover .main-menu__item:hover .main-menu-dropdown {
-  opacity: 1;
-  visibility: visible;
-} */
-
-
-/* .main-menu__list:focus-within .main-menu__item:focus-within .main-menu__btn:hover {
-  color: var(--color-white);
-} */
-
-
-/*! отменить это соотояние*/
-
-
-/* .main-menu__item:hover .main-menu__btn {
-  color: var(--color-hover);
-} */
-
-
-/*!*/
-
-
-/* .main-menu__list:hover .main-menu__item:hover .main-menu__link-btn .main-menu-link-btn__icon {
-  transform: rotate(180deg);
-} */
-
-
-/* ! ******************************************************/
 
 .main-menu-dropdown__item {
   position: relative;
@@ -188,6 +134,10 @@
   background-position: center;
   background-repeat: no-repeat;
   transition: border-color .3s ease, opacity 1s ease;
+}
+
+.main-menu-dropdown__item:not(:last-child) {
+  margin-bottom: 23px;
 }
 
 .main-menu-dropdown__item::after {

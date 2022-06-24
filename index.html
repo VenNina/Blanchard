@@ -16,8 +16,19 @@
   <link rel="stylesheet" href="css/fonts.css">
   <!-- Подключаем стили для библиотек -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="libs/swiper.min.css">
+  <link rel="stylesheet" href="libscss/swiper.min.css">
   <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="libscss/simplebar.css">
+  <noscript>
+		<style>
+			/**
+    * Reinstate scrolling for non-JS clients
+    */
+			.simplebar-content-wrapper {
+				overflow: auto;
+			}
+		</style>
+	</noscript>
   <!-- Подключаем наши стили -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header.css">
@@ -52,12 +63,24 @@
   <!-- <script src="libs/aria.js"></script> -->
   <!-- маскирование инпутов -->
   <script src="libs/inputmask.min.js" defer></script>
-  <!-- валидация -->
+  <!-- валидация формы-->
   <script src="libs/just-validate3.3.3.min.js" defer></script>
   <script src="js/validate.js" defer></script>
   <!-- модальное окно в галереи -->
   <script src="js/popupGallery.js" defer></script>
-
+  <!-- скролл в выпадающем меню -->
+  <script src="libs/simplebar.js" defer></script>
+  <script src="js/simplebarCustom.js" defer></script>
+  <noscript>
+		<style>
+			/**
+    * Reinstate scrolling for non-JS clients
+    */
+			.simplebar-content-wrapper {
+				overflow: auto;
+			}
+		</style>
+	</noscript>
 </head>
 
 <body>
@@ -124,7 +147,7 @@
                 <path d="M11 1L6 6L1 1"/>
               </svg>
             </button>
-            <ul class="main-menu__dropdown main-menu-dropdown list-reset">
+            <ul class="main-menu__dropdown main-menu-dropdown list-reset my-elements">
               <li class="main-menu-dropdown__item main-menu-dropdown__item--bg1-1">
                 <a class="main-menu-dropdown__link" href="#">Тинторетто</a>
               </li>
@@ -147,7 +170,7 @@
                 <path d="M11 1L6 6L1 1"/>
               </svg>
             </button>
-            <ul class="main-menu__dropdown main-menu-dropdown list-reset">
+            <ul class="main-menu__dropdown main-menu-dropdown list-reset my-elements">
               <li class="main-menu-dropdown__item main-menu-dropdown__item--bg2-1">
                 <a class="main-menu-dropdown__link" href="#">Моне</a>
               </li>
@@ -170,7 +193,7 @@
                 <path d="M11 1L6 6L1 1"/>
               </svg>
             </button>
-            <ul class="main-menu__dropdown main-menu-dropdown list-reset">
+            <ul class="main-menu__dropdown main-menu-dropdown list-reset my-elements">
               <li class="main-menu-dropdown__item main-menu-dropdown__item--bg3-1">
                 <a class="main-menu-dropdown__link" href="#">Ван Гог</a>
               </li>
@@ -193,7 +216,7 @@
                 <path d="M11 1L6 6L1 1"/>
               </svg>
             </button>
-            <ul class="main-menu__dropdown main-menu-dropdown list-reset">
+            <ul class="main-menu__dropdown main-menu-dropdown list-reset my-elements">
               <li class="main-menu-dropdown__item main-menu-dropdown__item--bg4-1">
                 <a class="main-menu-dropdown__link" href="#">Кандинский</a>
               </li>
@@ -216,7 +239,7 @@
                 <path d="M11 1L6 6L1 1"/>
               </svg>
             </button>
-            <ul class="main-menu__dropdown main-menu-dropdown list-reset">
+            <ul class="main-menu__dropdown main-menu-dropdown list-reset my-elements">
               <li class="main-menu-dropdown__item main-menu-dropdown__item--bg5-1">
                 <a class="main-menu-dropdown__link" href="#">Карра</a>
               </li>
@@ -1275,7 +1298,7 @@
             <svg class="footer__icon" width="45" height="45" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M20.2148 25C20.2148 27.6428 22.3572 29.7852 25 29.7852C27.6428 29.7852 29.7852 27.6428 29.7852 25C29.7852 22.3572 27.6428 20.2148 25 20.2148C22.3572 20.2148 20.2148 22.3572 20.2148 25Z"
-                fill="#CACACA" />
+                fill="#CACACA"/>
               <path d="M13.8096 16.5333C14.0397 15.91 14.4066 15.3458 14.8835 14.8827C15.3466 14.4059 15.9104 14.0389 16.5341 13.8089C17.0399 13.6124 17.7998 13.3786 19.1994 13.3149C20.7135 13.2458 21.1674 13.231 25.0004 13.231C28.8338 13.231 29.2878
                   13.2455 30.8014 13.3145C32.201 13.3786 32.9613 13.6124 33.4668 13.8089C34.0905 14.0389 34.6547 14.4059 35.1174 14.8827C35.5942 15.3458 35.9612 15.9096 36.1916 16.5333C36.3881 17.0392 36.6219 17.7994 36.6856 19.1991C36.7547 20.7127 36.7695
                   21.1667 36.7695 25.0001C36.7695 28.8331 36.7547 29.287 36.6856 30.8011C36.6219 32.2007 36.3881 32.9606 36.1916 33.4664C35.9612 34.0901 35.5946 34.6539 35.1178 35.117C34.6547 35.5939 34.0909 35.9608 33.4671 36.1909C32.9613 36.3877 32.201
@@ -1290,7 +1313,7 @@
                   13.7711 36.9457 13.0543C36.2289 12.3238 35.3611 11.7588 34.4032 11.3983C33.49 11.0435 32.4467 10.8009 30.9185 10.7311C29.3877 10.6613 28.8986 10.6445 25 10.6445C21.1014 10.6445 20.6123 10.6613 19.0815 10.7315C17.5533 10.8009 16.51 11.0435
                   15.5968 11.3979C14.6389 11.7584 13.7711 12.3238 13.0539 13.0543C12.3238 13.7714 11.7584 14.6389 11.3983 15.5968C11.0432 16.51 10.8006 17.5533 10.7307 19.0815C10.6609 20.6123 10.6445 21.1014 10.6445 25C10.6445 28.8986 10.6609 29.3877 10.7311
                   30.9185Z"
-                fill="#CACACA" />
+                fill="#CACACA"/>
             </svg>
           </a>
         </li>
@@ -1300,7 +1323,7 @@
               <path
                 d="M22.5 0C10.125 0 0 10.1431 0 22.6355C0 33.9307 8.23499 43.3057 18.99 45V29.1867H13.275V22.6355H18.99V17.6431C18.99 11.9729 22.3425 8.85542 27.495 8.85542C29.9475 8.85542 32.5125 9.28464 32.5125 9.28464V14.8645H29.6775C26.8875 14.8645
                   26.01 16.6039 26.01 18.3886V22.6355H32.265L31.2525 29.1867H26.01V45C31.312 44.1593 36.1399 41.4432 39.6223 37.342C43.1047 33.2408 45.012 28.0248 44.9999 22.6355C44.9999 10.1431 34.875 0 22.5 0Z"
-                fill="#CACACA" />
+                fill="#CACACA"/>
             </svg>
           </a>
         </li>
