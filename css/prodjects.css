@@ -127,8 +127,15 @@
   margin-bottom: 23px;
 }
 
+.prodjects__slide-btn {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
 .swiper-four {
-  width: 1450px;
+  /* max-width: 1450px; */
+  width: 91%;
 }
 
 .prodjects__article {
@@ -197,7 +204,7 @@
 
 .prodjects__slide-btn .prodjects__swiper-button-prev,
 .prodjects__slide-btn .prodjects__swiper-button-next {
-  top: 62%;
+  top: 86px;
 }
 
 .prodjects__slide-btn .prodjects__swiper-button-prev {

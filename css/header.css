@@ -108,8 +108,7 @@
   left: 0;
   padding: 40px;
   width: 300px;
-  /* высота фиксированна для демонстрации скролла */
-  /* max-height: 325px; */
+  cursor: context-menu;
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
   visibility: hidden;
@@ -191,6 +190,7 @@
   left: 0;
   background-color: var(--color-hover);
   opacity: 0;
+  cursor: pointer;
 }
 
 .main-menu-dropdown__item--bg1-1 {

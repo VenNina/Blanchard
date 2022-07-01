@@ -35,6 +35,7 @@ a {
   --color-accent: #d1a9f0;
   --color-gallery: #ececec;
   --color-hover: #c283f3;
+  --height-swiper-three: 700px;
 }
 
 body {
@@ -51,13 +52,6 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.btn-reset {
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
 }
 
 .container {
@@ -123,6 +117,13 @@ body {
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .btn {

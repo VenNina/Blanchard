@@ -26,34 +26,26 @@ let mySwiperSecond = new Swiper(swiperSecond, {
     paginationBulletMessage: 'Перейти к слайду {{index}}',
   },
   pagination: {
-    el: '.swiper-pagination',
+    el: '.gallery__swiper-pagination',
     type: 'fraction',
   },
   breakpoints: {
     // when window width is >= 320px
-    480: {
-      slidesPerView: 1,
-      spaceBetween: 50,
-      slidesPerGroup: 3,
-    },
+    // 480: {
+    //   slidesPerView: 1,
+    // },
     1000: {
       slidesPerView: 2,
-      spaceBetween: 50,
-      slidesPerGroup: 3,
-
     },
-    1200: {
+    1680: {
       slidesPerView: 3,
-      spaceBetween: 50,
-      slidesPerGroup: 3,
-
     },
   },
 });
 
 window.addEventListener('resize', () => {
   let windowWidth = window.innerWidth;
-  if (windowWidth > 1200) {
+  if (windowWidth > 1300) {
     mySwiperSecond.update();
   }
 });
@@ -67,18 +59,22 @@ let mySwiperThree = new Swiper(swiperThree, {
     nextEl: '.events__swiper-button-next',
     prevEl: '.events__swiper-button-prev',
   },
+  pagination: {
+    el: '.events__swiper-pagination',
+    clickable: 'true',
+  },
   a11y: {
     paginationBulletMessage: 'Перейти к слайду {{index}}',
   },
   breakpoints: {
     // when window width is >= 320px
-    480: {
-      slidesPerView: 1,
-    },
-    1200: {
+    // 480: {
+    //   slidesPerView: 1,
+    // },
+    400: {
       slidesPerView: 2,
     },
-    1400: {
+    900: {
       slidesPerView: 3,
     },
   },
@@ -98,10 +94,10 @@ let mySwiperFour = new Swiper(swiperFour, {
   },
   breakpoints: {
     // when window width is >= 320px
-    480: {
-      slidesPerView: 1,
-    },
-    1200: {
+    // 600: {
+    //   slidesPerView: 1,
+    // },
+    900: {
       slidesPerView: 2,
     },
     1400: {

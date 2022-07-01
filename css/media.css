@@ -1,0 +1,35 @@
+@media (max-width: 1680px) {
+  .header__picture {
+    margin-right: 100px;
+  }
+  .nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .main-menu__item:not(:last-child) {
+    margin-right: 40px;
+  }
+  .gallery__container {
+    justify-content: space-evenly;
+  }
+  .gallery__left {
+    flex-grow: .3;
+  }
+  .gallery__swiper-pagination {
+    width: 9%;
+  }
+  .swiper-second {
+    max-width: 600px;
+  }
+  .events__slide-btn {
+    display: none;
+  }
+  .events__swiper-pagination {
+    display: block;
+  }
+}
+
+@media (max-width: 1200px) {
+  /* .tabs-inner__list {
+    max-height: fit-content;
+  } */
+}
