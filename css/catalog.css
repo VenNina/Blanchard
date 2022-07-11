@@ -166,9 +166,9 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-top: 22px;
-    padding-bottom: 22px;
-    max-height: 369px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    max-height: 360px;
   }
 
   .tabs-inner__item {

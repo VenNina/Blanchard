@@ -1,5 +1,5 @@
 (function() {
-  const btns = document.querySelectorAll('.popup-open'),
+  const btns = document.querySelectorAll('.popup__btn-open'),
     popup = document.querySelector('.popup'),
     popupWrap = document.querySelectorAll('.popup__wrap'),
     html = document.documentElement,

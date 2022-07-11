@@ -253,3 +253,65 @@ body {
 .simplebar-scrollbar.simplebar-visible:before {
   opacity: 1;
 }
+
+
+/* burger-menu */
+
+.burger {
+  --burger-width: 44px;
+  --burger-height: 44px;
+  --burger-gap: 10px;
+  position: relative;
+  display: none;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  color: var(--color-white);
+  background-color: transparent;
+  transition: color .3s ease-in-out;
+}
+
+.burger__line {
+  --burger-start-left: 13%;
+  --burger-start-top: 0%;
+  --burger-line-height: 3px;
+  position: absolute;
+  left: var(--burger-start-left);
+  display: block;
+  height: var(--burger-line-height);
+  color: currentColor;
+  background-color: currentColor;
+}
+
+.burger__line:nth-child(1) {
+  --burger-line-width: calc(var(--burger-width)*.8);
+  --burger-line-top: calc(var(--burger-start-top) + (var(--burger-gap)*1) + (var(--burger-line-height)*1));
+  top: var(--burger-line-top);
+  width: var(--burger-line-width);
+}
+
+.burger__line:nth-child(2) {
+  --burger-line-width: calc(var(--burger-width)*.6);
+  --burger-line-top: calc(var(--burger-start-top) + (var(--burger-gap)*2) + (var(--burger-line-height)*2));
+  top: var(--burger-line-top);
+  width: var(--burger-line-width);
+}
+
+.burger__line:nth-child(3) {
+  --burger-line-width: calc(var(--burger-width)*.3);
+  --burger-line-top: calc(var(--burger-start-top) + (var(--burger-gap)*3) + (var(--burger-line-height)*3));
+  top: var(--burger-line-top);
+  width: var(--burger-line-width);
+}
+
+.burger.focus-visible {
+  color: var(--color-amethyst);
+  outline: none;
+}
+
+.burger:hover {
+  color: var(--color-amethyst);
+}
+
+.burger:active {
+  color: var(--color-active);
+}

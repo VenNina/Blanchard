@@ -20,15 +20,15 @@
   <link rel="stylesheet" href="css/choices.min.css">
   <link rel="stylesheet" href="libscss/simplebar.css">
   <noscript>
-		<style>
-			/**
+    <style>
+      /**
     * Reinstate scrolling for non-JS clients
     */
-			.simplebar-content-wrapper {
-				overflow: auto;
-			}
-		</style>
-	</noscript>
+      .simplebar-content-wrapper {
+        overflow: auto;
+      }
+    </style>
+  </noscript>
   <!-- Подключаем наши стили -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header.css">
@@ -73,69 +73,80 @@
   <!-- скролл в выпадающем меню -->
   <script src="libs/simplebar.js" defer></script>
   <script src="js/simplebarCustom.js" defer></script>
+  <!-- открытие поиска -->
+  <script src="js/openSeach.js" defer></script>
   <noscript>
-		<style>
-			/**
+    <style>
+      /**
     * Reinstate scrolling for non-JS clients
     */
-			.simplebar-content-wrapper {
-				overflow: auto;
-			}
-		</style>
-	</noscript>
+      .simplebar-content-wrapper {
+        overflow: auto;
+      }
+    </style>
+  </noscript>
 </head>
 
 <body>
   <header class="header">
     <div class="header-top">
       <div class="container header-top__container">
+        <button class="burger btn-reset" type="button" aria-label="Открыть навигацию">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
         <picture class="header__picture flex-center">
           <source srcset="img/logo_header_320_mobile.svg" media="(max-width: 320px)">
           <source srcset="img/logo_header_1024_tablet.svg" media="(max-width: 1024px)">
           <source srcset="img/logo_header_1920_desktop.svg" media="(max-width: 1920px)">
           <img src="img/logo_header_1920_desktop.svg" alt="Логотип галереи Blanchard">
         </picture>
-        <nav class="header__nav nav">
-          <ul class="nav__list list-reset">
-            <li class="nav__item">
-              <a href="#about" class="nav__link link-btn">
-                <span class="link-btn__text">О нас</span>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#gallery" class="nav__link link-btn">
-                <span class="link-btn__text">Галерея</span>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#catalog" class="nav__link link-btn">
-                <span class="link-btn__text">Каталог</span>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#events" class="nav__link link-btn">
-                <span class="link-btn__text">События</span>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#prodjects" class="nav__link link-btn">
-                <span class="link-btn__text">Проекты</span>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#contacts" class="nav__link link-btn">
-                <span class="link-btn__text">Контакты</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <a href="#" class="header__link-enter link link-enter link-btn">
-          <svg class="link-enter__icon link__icon" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"/>
-          </svg>
-          <span class="link-enter__text link-btn__text">Войти</span>
-        </a>
+        <div class="header__popup">
+          <nav class="header__nav nav">
+            <ul class="nav__list list-reset">
+              <li class="nav__item">
+                <a href="#about" class="nav__link link-btn">
+                  <span class="link-btn__text">О нас</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#gallery" class="nav__link link-btn">
+                  <span class="link-btn__text">Галерея</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#catalog" class="nav__link link-btn">
+                  <span class="link-btn__text">Каталог</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#events" class="nav__link link-btn">
+                  <span class="link-btn__text">События</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#prodjects" class="nav__link link-btn">
+                  <span class="link-btn__text">Проекты</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#contacts" class="nav__link link-btn">
+                  <span class="link-btn__text">Контакты</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__link-enter-inner">
+            <a href="#" class="header__link-enter link link-enter link-btn">
+              <svg class="link-enter__icon link__icon" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" />
+              </svg>
+              <span class="link-enter__text link-btn__text">Войти</span>
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
     <div class="header-bottom">
@@ -207,7 +218,7 @@
               <span class="main-menu-btn__text link-btn__text">Импрессионизм</span>
               <svg class="main-menu-btn__icon link-btn__icon" width="12" height="7" viewBox="0 0 12 7" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 1L6 6L1 1"/>
+                <path d="M11 1L6 6L1 1" />
               </svg>
             </button>
             <div class="main-menu__dropdown main-menu-dropdown">
@@ -244,7 +255,7 @@
               <span class="main-menu-btn__text link-btn__text">Постимпрессионизм</span>
               <svg class="main-menu-btn__icon link-btn__icon" width="12" height="7" viewBox="0 0 12 7" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 1L6 6L1 1"/>
+                <path d="M11 1L6 6L1 1" />
               </svg>
             </button>
             <div class="main-menu__dropdown main-menu-dropdown">
@@ -363,9 +374,9 @@
             </div>
           </li>
         </ul>
-        <form class="seach-form" action="#" method="get">
-          <button class="btn-reset seach-form__btn flex-center" type="submit" aria-label="Найти на сайте">
-            <svg class="seach-form__icon" width="23" height="22" viewbox="0 0 23 22" fill="none"
+        <div class="header__btns seach">
+          <button class="btn-reset seach-form__btn-open flex-center btn-loop" aria-label="Открыть Поиск">
+            <svg class="seach-form__icon btn-loop__icon" width="23" height="22" viewbox="0 0 23 22" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <rect width="6.8678" height="1.71695"
                 transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" />
@@ -373,8 +384,11 @@
                 d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" />
             </svg>
           </button>
-          <input class="seach-form__input" placeholder="Поиск по сайту" required />
-        </form>
+          <form class="seach__form seach-form" action="#" method="post">
+            <input class="seach-form__input" placeholder="Поиск по сайту" required />
+            <button class="btn-reset seach-form__btn-close flex-center" type="button"></button>
+          </form>
+        </div>
       </div>
     </div>
   </header>
@@ -458,33 +472,38 @@
           <div class="swiper swiper-second gallery__slider">
             <div class="swiper-wrapper gallery__swiper-wrapper">
               <div class="swiper-slide swiper-slide-second">
-                <button class="gallery__swiper-btn popup-open btn-reset" aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-1">
-                  <img class="swiper-img gallery__swiper-img" src="img/gallery1@1x.jpg" alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
+                <button class="gallery__swiper-btn popup__btn-open btn-reset" aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-1">
+                  <img class="swiper-img gallery__swiper-img" src="img/gallery1@1x.jpg"
+                    alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
-                <button class="gallery__swiper-btn popup-open btn-reset" aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-2">
-                  <img class="swiper-img gallery__swiper-img" src="img/gallery2@1x.jpg" alt="Женщина с граблями - Казимир Малевич">
+                <button class="gallery__swiper-btn popup__btn-open btn-reset" aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-2">
+                  <img class="swiper-img gallery__swiper-img" src="img/gallery2@1x.jpg"
+                    alt="Женщина с граблями - Казимир Малевич">
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
-                <button class="gallery__swiper-btn popup-open btn-reset" aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-3">
-                  <img class="swiper-img gallery__swiper-img" src="img/gallery3@1x.jpg" alt="Taking in the harvest - Казимир Малевич">
+                <button class="gallery__swiper-btn popup__btn-open btn-reset" aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-3">
+                  <img class="swiper-img gallery__swiper-img" src="img/gallery3@1x.jpg"
+                    alt="Taking in the harvest - Казимир Малевич">
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
-                <button class="gallery__swiper-btn popup-open btn-reset" aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-4">
+                <button class="gallery__swiper-btn popup__btn-open btn-reset" aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-4">
                   <img class="swiper-img gallery__swiper-img" src="img/gallery4@1x.jpg" alt="Сюпрематизм - Иван Клюн">
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
-                <button class="gallery__swiper-btn popup-open btn-reset" aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-5">
-                  <img class="swiper-img gallery__swiper-img" src="img/gallery5@1x.jpg" alt="Женщина с ведрами - Казимир Малевич">
+                <button class="gallery__swiper-btn popup__btn-open btn-reset" aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-5">
+                  <img class="swiper-img gallery__swiper-img" src="img/gallery5@1x.jpg"
+                    alt="Женщина с ведрами - Казимир Малевич">
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
-                <button class="gallery__swiper-btn popup-open btn-reset" aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-6">
-                  <img class="swiper-img gallery__swiper-img" src="img/gallery6@1x.jpg" alt="Сюпрематизм - Казимир Малевич">
+                <button class="gallery__swiper-btn popup__btn-open btn-reset" aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-6">
+                  <img class="swiper-img gallery__swiper-img" src="img/gallery6@1x.jpg"
+                    alt="Сюпрематизм - Казимир Малевич">
                 </button>
               </div>
             </div>
@@ -493,14 +512,15 @@
       </div>
       <div class="popup gallery__popup">
         <div class="popup__wrap" data-target="gallery-popup-1">
-          <button class="popup__close popup-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
+          <button class="popup__btn-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
           <figure class="popup__figure flex-center">
             <img class="popup__img" src="img/gallery1@1x.jpg" alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
             <figcaption class="popup__figcapture">
               <h3 class="popup__subtitle subtitle">
                 <span class="popup__subtitle-main">Казимир Малевич</span>
                 <span class="popup__subtitle-text subtitle__text">&laquo;Женщина с&nbsp;граблями&raquo;</span>
-                <span class="popup__subtitle-datetime subtitle__datetime descr-time"><time datetime="1931">1931</time>&nbsp;&mdash;&nbsp;<time datetime="1932">1932</time></span>
+                <span class="popup__subtitle-datetime subtitle__datetime descr-time">
+                  <time datetime="1931">1931</time>&nbsp;&mdash;&nbsp;<time datetime="1932">1932</time></span>
               </h3>
               <p class="descr popup__descr">
                 Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
@@ -509,14 +529,16 @@
           </figure>
         </div>
         <div class="popup__wrap" data-target="gallery-popup-2">
-          <button class="popup__close popup-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
+          <button class="popup__btn-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
           <figure class="popup__figure flex-center">
             <img class="popup__img" src="img/gallerypopup1@1x.jpg" alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
             <figcaption class="popup__figcapture">
               <h3 class="popup__subtitle subtitle">
                 <span class="popup__subtitle-main">Казимир Малевич</span>
                 <span class="popup__subtitle-text subtitle__text">&laquo;Женщина с&nbsp;граблями&raquo;</span>
-                <span class="popup__subtitle-datetime subtitle__datetime descr-time"><time datetime="1931">1931</time>&nbsp;&mdash;&nbsp;<time datetime="1932">1932</time></span>
+                <span class="popup__subtitle-datetime subtitle__datetime descr-time">
+                  <time datetime="1931">1931</time>&nbsp;&mdash;&nbsp;<time datetime="1932">1932</time>
+                </span>
               </h3>
               <p class="descr popup__descr">
                 Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Бросил заманивший, строчка имени инициал она переулка, но даль свое даже жизни маленький? Коварный предложения над своего домах что власти ipsum!
@@ -525,14 +547,16 @@
           </figure>
         </div>
         <div class="popup__wrap" data-target="gallery-popup-3">
-          <button class="popup__close popup-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
+          <button class="popup__btn-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
           <figure class="popup__figure flex-center">
             <img class="popup__img" src="img/gallery3@1x.jpg" alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
             <figcaption class="popup__figcapture">
               <h3 class="popup__subtitle subtitle">
                 <span class="popup__subtitle-main">Казимир Малевич</span>
                 <span class="popup__subtitle-text subtitle__text">&laquo;Женщина с&nbsp;граблями&raquo;</span>
-                <span class="popup__subtitle-datetime subtitle__datetime descr-time"><time datetime="1931">1931</time>&nbsp;&mdash;&nbsp;<time datetime="1932">1932</time></span>
+                <span class="popup__subtitle-datetime subtitle__datetime descr-time">
+                  <time datetime="1931">1931</time>&nbsp;&mdash;&nbsp;<time datetime="1932">1932</time>
+                </span>
               </h3>
               <p class="descr popup__descr">
                 Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
@@ -541,14 +565,16 @@
           </figure>
         </div>
         <div class="popup__wrap" data-target="gallery-popup-4">
-          <button class="popup__close popup-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
+          <button class="popup__btn-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
           <figure class="popup__figure flex-center">
             <img class="popup__img" src="img/gallery4@1x.jpg" alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
             <figcaption class="popup__figcapture">
               <h3 class="popup__subtitle subtitle">
                 <span class="popup__subtitle-main">Казимир Малевич</span>
                 <span class="popup__subtitle-text subtitle__text">&laquo;Женщина с&nbsp;граблями&raquo;</span>
-                <span class="popup__subtitle-datetime subtitle__datetime descr-time"><time datetime="1931">1931</time>&nbsp;&mdash;&nbsp;<time datetime="1932">1932</time></span>
+                <span class="popup__subtitle-datetime subtitle__datetime descr-time">
+                  <time datetime="1931">1931</time>&nbsp;&mdash;&nbsp;<time datetime="1932">1932</time>
+                </span>
               </h3>
               <p class="descr popup__descr">
                 Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Бросил заманивший, строчка имени инициал она переулка, но даль свое даже жизни маленький? Коварный предложения над своего домах что власти ipsum!
@@ -557,14 +583,16 @@
           </figure>
         </div>
         <div class="popup__wrap" data-target="gallery-popup-5">
-          <button class="popup__close popup-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
+          <button class="popup__btn-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
           <figure class="popup__figure flex-center">
             <img class="popup__img" src="img/gallery4@1x.jpg" alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
             <figcaption class="popup__figcapture">
               <h3 class="popup__subtitle subtitle">
                 <span class="popup__subtitle-main">Казимир Малевич</span>
                 <span class="popup__subtitle-text subtitle__text">&laquo;Женщина с&nbsp;граблями&raquo;</span>
-                <span class="popup__subtitle-datetime subtitle__datetime descr-time"><time datetime="1931">1931</time>&nbsp;&mdash;&nbsp;<time datetime="1932">1932</time></span>
+                <span class="popup__subtitle-datetime subtitle__datetime descr-time">
+                  <time datetime="1931">1931</time>&nbsp;&mdash;&nbsp;<time datetime="1932">1932</time>
+                </span>
               </h3>
               <p class="descr popup__descr">
                 Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
@@ -573,14 +601,16 @@
           </figure>
         </div>
         <div class="popup__wrap" data-target="gallery-popup-6">
-          <button class="popup__close popup-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
+          <button class="popup__btn-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
           <figure class="popup__figure flex-center">
             <img class="popup__img" src="img/gallery5@1x.jpg" alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
             <figcaption class="popup__figcapture">
               <h3 class="popup__subtitle subtitle">
                 <span class="popup__subtitle-main">Казимир Малевич</span>
                 <span class="popup__subtitle-text subtitle__text">&laquo;Женщина с&nbsp;граблями&raquo;</span>
-                <span class="popup__subtitle-datetime subtitle__datetime descr-time"><time datetime="1931">1931</time>&nbsp;&mdash;&nbsp;<time datetime="1932">1932</time></span>
+                <span class="popup__subtitle-datetime subtitle__datetime descr-time">
+                  <time datetime="1931">1931</time>&nbsp;&mdash;&nbsp;<time datetime="1932">1932</time>
+                </span>
               </h3>
               <p class="descr popup__descr">
                 Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Бросил заманивший, строчка имени инициал она переулка, но даль свое даже жизни маленький? Коварный предложения над своего домах что власти ipsum!
@@ -588,15 +618,17 @@
             </figcaption>
           </figure>
         </div>
-        <div class="popup__wrap" data-target="gallery-popup-3aria-label=" Открыть модальное окно с увеличенным фото "">
-          <button class="popup__close popup-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
+        <div class="popup__wrap" data-target="gallery-popup-3" aria-label="Открыть модальное окно с увеличенным фото">
+          <button class="popup__btn-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
           <figure class="popup__figure flex-center">
             <img class="popup__img" src="img/gallery6@1x.jpg" alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
             <figcaption class="popup__figcapture">
               <h3 class="popup__subtitle subtitle">
                 <span class="popup__subtitle-main">Казимир Малевич</span>
                 <span class="popup__subtitle-text subtitle__text">&laquo;Женщина с&nbsp;граблями&raquo;</span>
-                <span class="popup__subtitle-datetime subtitle__datetime descr-time"><time datetime="1931">1931</time>&nbsp;&mdash;&nbsp;<time datetime="1932">1932</time></span>
+                <span class="popup__subtitle-datetime subtitle__datetime descr-time">
+                  <time datetime="1931">1931</time>&nbsp;&mdash;&nbsp;<time datetime="1932">1932</time>
+                </span>
               </h3>
               <p class="descr popup__descr">
                 Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Бросил заманивший, строчка имени инициал она переулка, но даль свое даже жизни маленький? Коварный предложения над своего домах что власти ipsum!
@@ -791,171 +823,171 @@
               <ul class="tabs-inner__list list-reset">
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="one" type="button" aria-controls="one-tab" data-path="one">
-                      <span class="link-btn__text">
-                        Бенедетто ди Биндо
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Бенедетто ди Биндо
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="two" type="button" aria-controls="two-tab" data-path="two">
-                      <span class="link-btn__text">
-                        Бергоньоне, Амброджо
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Бергоньоне, Амброджо
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="three" type="button" aria-controls="three-tab" data-path="three">
-                      <span class="link-btn__text">
-                        Биссоло, Франческо
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Биссоло, Франческо
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="four" type="button" aria-controls="four-tab" data-path="four">
-                      <span class="link-btn__text">
-                        Больтраффио, Джованни
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Больтраффио, Джованни
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="five" type="button" aria-controls="five-tab" data-path="five">
-                      <span class="link-btn__text">
-                        Бонсиньори, Франческо
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Бонсиньори, Франческо
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="six" type="button" aria-controls="six-tab" data-path="six">
-                      <span class="link-btn__text">
-                        Боттичини, Рафаэлло
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Боттичини, Рафаэлло
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="seven" type="button" aria-controls="seven-tab" data-path="seven">
-                      <span class="link-btn__text">
-                        Брамантино
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Брамантино
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="eight" type="button" aria-controls="eight-tab" data-path="eight">
-                      <span class="link-btn__text">
-                        Бреа, Людовико
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Бреа, Людовико
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="nine" type="button" aria-controls="nine-tab" data-path="nine">
-                      <span class="link-btn__text">
-                        Бьяджо д’Антонио Туччи
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Бьяджо д’Антонио Туччи
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="ten" type="button" aria-controls="ten-tab" data-path="ten">
-                      <span class="link-btn__text">
-                        Веккьетта
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Веккьетта
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="eleven" type="button" aria-controls="eleven-tab" data-path="eleven">
-                      <span class="link-btn__text">
-                        Андреа Верроккьо
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Андреа Верроккьо
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset tabs__btn--active" id="twelve" type="button" aria-controls="twelve-tab" data-path="twelve">
-                      <span class="link-btn__text">
-                        Доменико Гирландайо
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Доменико Гирландайо
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="thirteen" type="button" aria-controls="thirteen-tab" data-path="thirteen">
-                      <span class="link-btn__text">
-                        Беноццо Гоццоли
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Беноццо Гоццоли
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="fourteen" type="button" aria-controls="fourteen-tab" data-path="fourteen">
-                      <span class="link-btn__text">
-                        Граначчи, Франческо
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Граначчи, Франческо
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="fifteen" type="button" aria-controls="fifteen-tab" data-path="fifteen">
-                      <span class="link-btn__text">
-                        Грегорио ди Чекко
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Грегорио ди Чекко
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="sixteen" type="button" aria-controls="sixteen-tab" data-path="sixteen">
-                      <span class="link-btn__text">
-                        Джованни да Удине
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Джованни да Удине
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="seventeen" type="button" aria-controls="seventeen-tab" data-path="seventeen">
-                      <span class="link-btn__text">
-                        Джованни ди Паоло
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Джованни ди Паоло
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="eighteen" type="button" aria-controls="eighteen-tab" data-path="eighteen">
-                      <span class="link-btn__text">
-                        Джорджоне
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Джорджоне
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="nineteen" type="button" aria-controls="nineteen-tab" data-path="nineteen">
-                      <span class="link-btn__text">
-                        Парентино, Бернардо
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Парентино, Бернардо
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="twenty" type="button" aria-controls="twenty-tab" data-path="twenty">
-                      <span class="link-btn__text">
-                        Пезеллино
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Пезеллино
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="twenty-one" type="button" aria-controls="twenty-one-tab" data-path="twenty-one">
-                      <span class="link-btn__text">
-                        Пьетро Перуджино
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Пьетро Перуджино
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="twenty-twoo" type="button" aria-controls="twenty-twoo-tab" data-path="twenty-twoo">
-                      <span class="link-btn__text">
-                        Перуцци, Бальдассаре
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Перуцци, Бальдассаре
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="twenty-three" type="button" aria-controls="twenty-three-tab" data-path="twenty-three">
-                      <span class="link-btn__text">
-                        Пизанелло
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Пизанелло
+                    </span>
+                  </button>
                 </li>
                 <li class="tabs-inner__item">
                   <button class="tabs__btn link-btn btn-reset" id="twenty-four" type="button" aria-controls="twenty-four-tab" data-path="twenty-four">
-                      <span class="link-btn__text">
-                        Пинтуриккьо
-                      </span>
-                    </button>
+                    <span class="link-btn__text">
+                      Пинтуриккьо
+                    </span>
+                  </button>
                 </li>
               </ul>
             </li>
@@ -1078,135 +1110,126 @@
         <div class="swiper swiper-three">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <article class="events__swiper-acticle">
-                <div class="card-events card-events--one">
-                  <div class="card-events__inner">
-                    <div class="card-events__inner-top">
-                      <div class="card-events__name">
-                        <p class="descr card-events__descr-datatime">Музей им. Щусева</p>
-                        <p class="descr card-events__descr-datatime">
-                          <time datetime="2022-03-20">с&nbsp;20&nbsp;марта</time> <time datetime="2022-04-30">по&nbsp;30&nbsp;апреля</time>
-                        </p>
-                      </div>
-                      <h3 class="subtitle card-events__subtitle">Книжная гравюра в&nbsp;живом восприятии</h3>
-                      <p class="descr card-events__descr">
-                        Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.
+              <article class="events__article">
+                <div class="events__card events-card events__card--one">
+                  <div class="events-card__top">
+                    <div class="events-card__name">
+                      <p class="descr events-card__descr-datatime">Музей им. Щусева</p>
+                      <p class="descr events-card___descr-datatime">
+                        <time datetime="2022-03-20">с&nbsp;20&nbsp;марта</time> <time datetime="2022-04-30">по&nbsp;30&nbsp;апреля</time>
                       </p>
                     </div>
-                    <div class="card-events__inner-bottom">
-                      <a href="#" class="card-events__link card-events-link link-btn">
-                        <span class="card-events-link__text link-btn__text">Подробнее</span>
-                      </a>
-                    </div>
+                    <h3 class="subtitle events-card__subtitle">Книжная гравюра в&nbsp;живом восприятии</h3>
+                    <p class="descr events-card__descr">
+                      Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.
+                    </p>
+                  </div>
+                  <div class="events-card__bottom">
+                    <a href="#" class="events-card__link events-card-link link-btn">
+                      <span class="events-card-link__text link-btn__text">Подробнее</span>
+                    </a>
                   </div>
                 </div>
               </article>
             </div>
             <div class="swiper-slide">
-              <article class="events__swiper-acticle">
-                <div class="card-events card-events--two">
-                  <div class="card-events__inner">
-                    <div class="card-events__inner-top">
-                      <div class="card-events__name">
-                        <p class="descr card-events__descr-datatime">
-                          <abbr title="Московский музей современного искусства">ММОМА</abbr>
-                        </p>
-                        <p class="descr card-events__descr-datatime">
-                          <time datetime="2022-03-24T19:00">24 марта 19:00</time>
-                        </p>
-                      </div>
-                      <h3 class="subtitle card-events__subtitle">&laquo;Открытая дискуссия&raquo;. Дмитрий Петров и&nbsp;Сергей Ильин.</h3>
-                      <p class="descr card-events__descr">
-                        Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
+              <article class="events__article">
+                <div class="events__card events-card events__card--two">
+                  <div class="events-card__top">
+                    <div class="events-card__name">
+                      <p class="descr events-card__descr-datatime"><abbr title="Московский музей современного искусства">ММОМА</abbr></p>
+                      <p class="descr events-card___descr-datatime">
+                        <time datetime="2022-03-24T19:00">24 марта 19:00</time>
                       </p>
                     </div>
-                    <div class="card-events__inner-bottom">
-                      <a href="#" class="card-events__link card-events-link link-btn">
-                        <span class="card-events-link__text link-btn__text">Подробнее</span>
-                      </a>
-                    </div>
+                    <h3 class="subtitle events-card__subtitle">&laquo;Открытая дискуссия&raquo;. Дмитрий Петров и&nbsp;Сергей Ильин.</h3>
+                    <p class="descr events-card__descr">
+                      Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
+                    </p>
+                  </div>
+                  <div class="events-card__bottom">
+                    <a href="#" class="events-card__link events-card-link link-btn">
+                      <span class="events-card-link__text link-btn__text">Подробнее</span>
+                    </a>
                   </div>
                 </div>
               </article>
             </div>
             <div class="swiper-slide">
-              <article class="events__swiper-acticle">
-                <div class="card-events card-events--three">
-                  <div class="card-events__inner">
-                    <div class="card-events__inner-top">
-                      <div class="card-events__name">
-                        <p class="descr card-events__descr-datatime">
-                          Еврейский музей
-                        </p>
-                        <p class="descr card-events__descr-datatime">
-                          <time datetime="2022-03-31">с&nbsp;31&nbsp;марта</time> <time datetime="2022-03-21">по&nbsp;21&nbsp;апреля</time>
-                        </p>
-                      </div>
-                      <h3 class="subtitle card-events__subtitle">Выставка &laquo;Формация 2020&raquo;</h3>
-                      <p class="descr card-events__descr">
-                        Идейные соображения высшего порядка, а&nbsp;также современная методология разработки играет важную роль в&nbsp;формировании глубокомысленных рассуждений.
+              <article class="events__article">
+                <div class="events__card events-card events__card--three">
+                  <div class="events-card__top">
+                    <div class="events-card__name">
+                      <p class="descr events-card__descr-datatime">Еврейский музей</p>
+                      <p class="descr events-card___descr-datatime">
+                        <time datetime="2022-03-31">с&nbsp;31&nbsp;марта</time> <time datetime="2022-03-21">по&nbsp;21&nbsp;апреля</time>
                       </p>
                     </div>
-                    <div class="card-events__inner-bottom">
-                      <a href="#" class="card-events__link card-events-link link-btn">
-                        <span class="card-events-link__text link-btn__text">Подробнее</span>
-                      </a>
-                    </div>
+                    <h3 class="subtitle events-card__subtitle">
+                      Выставка &laquo;Формация 2020&raquo;
+                    </h3>
+                    <p class="descr events-card__descr">
+                      Идейные соображения высшего порядка, а&nbsp;также современная методология разработки играет важную роль в&nbsp;формировании глубокомысленных рассуждений.
+                    </p>
+                  </div>
+                  <div class="events-card__bottom">
+                    <a href="#" class="events-card__link events-card-link link-btn">
+                      <span class="events-card-link__text link-btn__text">Подробнее</span>
+                    </a>
                   </div>
                 </div>
               </article>
             </div>
             <div class="swiper-slide">
-              <article class="events__swiper-acticle">
-                <div class="card-events card-events--four">
-                  <div class="card-events__inner">
-                    <div class="card-events__inner-top">
-                      <div class="card-events__name">
-                        <p class="descr card-events__descr-datatime">
-                          <abbr title="Мультимедиа Арт Музей">ММАМ</abbr>
-                        </p>
-                        <p class="descr card-events__descr-datatime">
-                          <time datetime="2022-04-08">с&nbsp;8&nbsp;апреля</time> <time datetime="2022-05-20">по&nbsp;20&nbsp;мая</time>
-                        </p>
-                      </div>
-                      <h3 class="subtitle card-events__subtitle">Джон Винзор. Фотографии из&nbsp;серии &laquo;Метафора серебра&raquo;
-                      </h3>
-                      <p class="descr card-events__descr">
-                        Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.
+              <article class="events__article">
+                <div class="events__card events-card events__card--four">
+                  <div class="events-card__top">
+                    <div class="events-card__name">
+                      <p class="descr events-card__descr-datatime">
+                        <abbr title="Мультимедиа Арт Музей">ММАМ</abbr>
+                      </p>
+                      <p class="descr events-card___descr-datatime">
+                        <time datetime="2022-04-08">с&nbsp;8&nbsp;апреля</time> <time datetime="2022-05-20">по&nbsp;20&nbsp;мая</time>
                       </p>
                     </div>
-                    <div class="card-events__inner-bottom">
-                      <a href="#" class="card-events__link card-events-link link-btn">
-                        <span class="card-events-link__text link-btn__text">Подробнее</span>
-                      </a>
-                    </div>
+                    <h3 class="subtitle events-card__subtitle">
+                      Джон Винзор. Фотографии из&nbsp;серии &laquo;Метафора серебра&raquo;
+                    </h3>
+                    <p class="descr events-card__descr">
+                      Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.
+                    </p>
+                  </div>
+                  <div class="events-card__bottom">
+                    <a href="#" class="events-card__link events-card-link link-btn">
+                      <span class="events-card-link__text link-btn__text">Подробнее</span>
+                    </a>
                   </div>
                 </div>
               </article>
             </div>
             <div class="swiper-slide">
-              <article class="events__swiper-acticle">
-                <div class="card-events card-events--five">
-                  <div class="card-events__inner">
-                    <div class="card-events__inner-top">
-                      <div class="card-events__name">
-                        <p class="descr card-events__descr-datatime">
-                          Третьяковка на&nbsp;Крымском валу
-                        </p>
-                        <p class="card-events__descr-datatime">
-                          <time datetime="2022-03-30">с&nbsp;30&nbsp;марта</time> <time datetime="2022-04-30">по&nbsp;30&nbsp;апреля</time>
-                        </p>
-                      </div>
-                      <h3 class="subtitle card-events__subtitle">XXIV Международная биеннале молодого искусства</h3>
-                      <p class="descr card-events__descr">
-                        Внезапно, реплицированные с&nbsp;зарубежных источников, современные исследования.
+              <article class="events__article">
+                <div class="events__card events-card events__card--five">
+                  <div class="events-card__top">
+                    <div class="events-card__name">
+                      <p class="descr events-card__descr-datatime">
+                        Третьяковка на&nbsp;Крымском валу
+                      </p>
+                      <p class="descr events-card___descr-datatime">
+                        <time datetime="2022-03-30">с&nbsp;30&nbsp;марта</time> <time datetime="2022-04-30">по&nbsp;30&nbsp;апреля</time>
                       </p>
                     </div>
-                    <div class="card-events__inner-bottom">
-                      <a href="#" class="card-events__link card-events-link link-btn">
-                        <span class="card-events-link__text link-btn__text">Подробнее</span>
-                      </a>
-                    </div>
+                    <h3 class="subtitle events-card__subtitle">
+                      XXIV Международная биеннале молодого искусства
+                    </h3>
+                    <p class="descr events-card__descr">
+                      Внезапно, реплицированные с&nbsp;зарубежных источников, современные исследования.
+                    </p>
+                  </div>
+                  <div class="events-card__bottom">
+                    <a href="#" class="events-card__link events-card-link link-btn">
+                      <span class="events-card-link__text link-btn__text">Подробнее</span>
+                    </a>
                   </div>
                 </div>
               </article>
@@ -1243,7 +1266,8 @@
               В&nbsp;стремлении повысить качество
             </span>
           </span> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными
-          до&nbsp;степени совершенной неузнаваемости. Подробнее: <a href="#" class="prodjects__link-btn prodject-link-btn link-btn"><span class="prodject-link-btn__text link-btn__text">blanchard-art.ru/projects</span></a>
+          до&nbsp;степени совершенной неузнаваемости. Подробнее: <a href="#" class="prodjects__link-btn prodject-link-btn link-btn"><span
+              class="prodject-link-btn__text link-btn__text">blanchard-art.ru/projects</span></a>
         </p>
 
         <aside class="prodjects__aside">
@@ -1407,7 +1431,7 @@
             <svg class="footer__icon" width="45" height="45" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M20.2148 25C20.2148 27.6428 22.3572 29.7852 25 29.7852C27.6428 29.7852 29.7852 27.6428 29.7852 25C29.7852 22.3572 27.6428 20.2148 25 20.2148C22.3572 20.2148 20.2148 22.3572 20.2148 25Z"
-                fill="#CACACA"/>
+                fill="#CACACA" />
               <path d="M13.8096 16.5333C14.0397 15.91 14.4066 15.3458 14.8835 14.8827C15.3466 14.4059 15.9104 14.0389 16.5341 13.8089C17.0399 13.6124 17.7998 13.3786 19.1994 13.3149C20.7135 13.2458 21.1674 13.231 25.0004 13.231C28.8338 13.231 29.2878
               13.2455 30.8014 13.3145C32.201 13.3786 32.9613 13.6124 33.4668 13.8089C34.0905 14.0389 34.6547 14.4059 35.1174 14.8827C35.5942 15.3458 35.9612 15.9096 36.1916 16.5333C36.3881 17.0392 36.6219 17.7994 36.6856 19.1991C36.7547 20.7127 36.7695
               21.1667 36.7695 25.0001C36.7695 28.8331 36.7547 29.287 36.6856 30.8011C36.6219 32.2007 36.3881 32.9606 36.1916 33.4664C35.9612 34.0901 35.5946 34.6539 35.1178 35.117C34.6547 35.5939 34.0909 35.9608 33.4671 36.1909C32.9613 36.3877 32.201 36.6215
@@ -1421,7 +1445,7 @@
               35.3611 38.6013 34.4032C38.9561 33.4904 39.1991 32.4467 39.2685 30.9189C39.3391 29.3877 39.3555 28.8986 39.3555 25C39.3555 21.1014 39.3391 20.6123 39.2689 19.0815C39.1994 17.5533 38.9568 16.51 38.6021 15.5968C38.2416 14.6389 37.6762 13.7711
               36.9457 13.0543C36.2289 12.3238 35.3611 11.7588 34.4032 11.3983C33.49 11.0435 32.4467 10.8009 30.9185 10.7311C29.3877 10.6613 28.8986 10.6445 25 10.6445C21.1014 10.6445 20.6123 10.6613 19.0815 10.7315C17.5533 10.8009 16.51 11.0435 15.5968
               11.3979C14.6389 11.7584 13.7711 12.3238 13.0539 13.0543C12.3238 13.7714 11.7584 14.6389 11.3983 15.5968C11.0432 16.51 10.8006 17.5533 10.7307 19.0815C10.6609 20.6123 10.6445 21.1014 10.6445 25C10.6445 28.8986 10.6609 29.3877 10.7311 30.9185Z"
-                fill="#CACACA"/>
+                fill="#CACACA" />
             </svg>
           </a>
         </li>
@@ -1431,7 +1455,7 @@
               <path
                 d="M22.5 0C10.125 0 0 10.1431 0 22.6355C0 33.9307 8.23499 43.3057 18.99 45V29.1867H13.275V22.6355H18.99V17.6431C18.99 11.9729 22.3425 8.85542 27.495 8.85542C29.9475 8.85542 32.5125 9.28464 32.5125 9.28464V14.8645H29.6775C26.8875 14.8645
               26.01 16.6039 26.01 18.3886V22.6355H32.265L31.2525 29.1867H26.01V45C31.312 44.1593 36.1399 41.4432 39.6223 37.342C43.1047 33.2408 45.012 28.0248 44.9999 22.6355C44.9999 10.1431 34.875 0 22.5 0Z"
-                fill="#CACACA"/>
+                fill="#CACACA" />
             </svg>
           </a>
         </li>

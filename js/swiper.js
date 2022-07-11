@@ -6,18 +6,17 @@ const swiperFour = document.querySelector('.swiper-four');
 let mySwiperFirst = new Swiper(swiperFirst, {
   effect: 'fade',
   fadeEffect: {
-    crossFade: true
+    crossFade: true,
   },
-  autoplay: {
-    delay: 2000,
-  },
+  // autoplay: {
+  //   delay: 2000,
+  // },
 });
 
 let mySwiperSecond = new Swiper(swiperSecond, {
   slidesPerView: 1,
   spaceBetween: 50,
   slidesPerGroup: 3,
-  // loop: true,
   navigation: {
     nextEl: '.gallery__swiper-button-next',
     prevEl: '.gallery__swiper-button-prev',

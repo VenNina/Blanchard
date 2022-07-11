@@ -224,36 +224,51 @@
 .gallery__swiper-btn::after {
   content: "";
   position: absolute;
-  z-index: 100;
   opacity: 0;
-  transition: opacity .3s ease-in;
+  transition: opacity .3s ease-in, outline .3s ease-in;
 }
 
 .gallery__swiper-btn::before {
+  z-index: 100;
   top: 25px;
   right: 25px;
   bottom: 25px;
   left: 25px;
-  background-color: #000;
-}
-
-.gallery__swiper-btn::after {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  background-color: rgba(0, 0, 0, .5);
   background-image: url(../img/zoom.png);
   background-repeat: no-repeat;
   background-size: 81px 79px;
   background-position: center;
 }
 
-.gallery__swiper-btn:hover::before {
-  opacity: .5;
+.gallery__swiper-btn::after {
+  z-index: 80;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-accent);
+  opacity: 0;
 }
 
-.gallery__swiper-btn:hover::after {
+.gallery__swiper-btn:focus {
+  outline: none;
+}
+
+.gallery__swiper-btn.focus-visible {
+  outline: 3px solid var(--color-active);
+}
+
+.gallery__swiper-btn:hover::before {
   opacity: 1;
+}
+
+.gallery__swiper-btn:active::before {
+  opacity: 1;
+}
+
+.gallery__swiper-btn:active::after {
+  opacity: .4;
 }
 
 .gallery__slide-btn {
@@ -359,7 +374,7 @@
   display: block;
 }
 
-.popup__close {
+.popup__btn-close {
   display: flex;
   position: absolute;
   z-index: 200;
@@ -367,23 +382,26 @@
   right: 22px;
   width: 25px;
   height: 25px;
-  background-image: url(../img/popup-close.svg);
+  background-image: url(../img/popup-btn-close.svg);
   background-position: center;
   background-size: 16px 16px;
   background-repeat: no-repeat;
-  transition: transform .1s linear;
+  transition: background-image .3s ease;
 }
 
-.popup__close:hover {
-  transform: scale(1.5);
+.popup__btn-close.focus-visible,
+.popup__btn-close:hover {
+  background-image: url(../img/popup-btn-close--hover.svg);
+}
+
+.popup__btn-close:active {
+  background-image: url(../img/popup-btn-close--active.svg);
 }
 
 .popup__figure {
   position: relative;
   z-index: 100;
   display: flex;
-  /* justify-content: flex-start; */
-  /* align-items: center; */
   margin: 0;
   color: var(--color-main);
   background-color: var(--color-white);
