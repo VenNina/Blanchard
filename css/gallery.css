@@ -366,7 +366,7 @@
   display: none;
   margin: 10px auto;
   position: relative;
-  width: clamp(249px, 90%, 900px);
+  width: clamp(249px, 57%, 900px);
   cursor: context-menu;
 }
 
@@ -423,7 +423,7 @@
   flex-direction: column;
   flex: 1 1 50%;
   padding: 50px;
-  padding-top: 55px;
+  padding-top: 122px;
 }
 
 .popup__subtitle {

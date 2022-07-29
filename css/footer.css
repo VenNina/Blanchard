@@ -13,7 +13,10 @@
 .footer__list {
   display: flex;
   align-items: center;
-  gap: 20px;
+}
+
+.footer__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .footer__icon path {

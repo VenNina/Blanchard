@@ -6,12 +6,13 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
-  
+
   .hero__container {
     height: 100%;
     display: flex;
     justify-content: flex-start;
     padding-top: 239px;
+    padding-bottom: 50px;
   }
 
   .swiper-first {
@@ -26,6 +27,18 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  .hero__swiper-slide--one {
+    background-image: url(../img/hero-bg1@1x.jpg);
+  }
+
+  .hero__swiper-slide--two {
+    background-image: url(../img/hero-bg2@1x.jpg);
+  }
+
+  .hero__swiper-slide--three {
+    background-image: url(../img/hero-bg3@1x.jpg);
   }
 
   .hero__content {
@@ -48,6 +61,7 @@
 
   .hero__descr {
     margin-bottom: 92px;
+    /* max-width: 38%; */
     font-weight: 700;
     font-size: 18px;
     line-height: 30px;

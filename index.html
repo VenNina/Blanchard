@@ -75,6 +75,8 @@
   <script src="js/simplebarCustom.js" defer></script>
   <!-- открытие поиска -->
   <script src="js/openSeach.js" defer></script>
+  <!-- открытие бургера -->
+  <script src="js/openBurger.js" defer></script>
   <noscript>
     <style>
       /**
@@ -88,62 +90,66 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header absolute-block">
     <div class="header-top">
       <div class="container header-top__container">
-        <button class="burger btn-reset" type="button" aria-label="Открыть навигацию">
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-          </button>
         <picture class="header__picture flex-center">
           <source srcset="img/logo_header_320_mobile.svg" media="(max-width: 320px)">
-          <source srcset="img/logo_header_1024_tablet.svg" media="(max-width: 1024px)">
+          <source srcset="img/logo_header_1024_tablet.svg" media="(max-width: 1045px)">
           <source srcset="img/logo_header_1920_desktop.svg" media="(max-width: 1920px)">
           <img src="img/logo_header_1920_desktop.svg" alt="Логотип галереи Blanchard">
         </picture>
         <div class="header__popup">
-          <nav class="header__nav nav">
-            <ul class="nav__list list-reset">
-              <li class="nav__item">
-                <a href="#about" class="nav__link link-btn">
-                  <span class="link-btn__text">О нас</span>
-                </a>
-              </li>
-              <li class="nav__item">
-                <a href="#gallery" class="nav__link link-btn">
-                  <span class="link-btn__text">Галерея</span>
-                </a>
-              </li>
-              <li class="nav__item">
-                <a href="#catalog" class="nav__link link-btn">
-                  <span class="link-btn__text">Каталог</span>
-                </a>
-              </li>
-              <li class="nav__item">
-                <a href="#events" class="nav__link link-btn">
-                  <span class="link-btn__text">События</span>
-                </a>
-              </li>
-              <li class="nav__item">
-                <a href="#prodjects" class="nav__link link-btn">
-                  <span class="link-btn__text">Проекты</span>
-                </a>
-              </li>
-              <li class="nav__item">
-                <a href="#contacts" class="nav__link link-btn">
-                  <span class="link-btn__text">Контакты</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="header__link-enter-inner">
-            <a href="#" class="header__link-enter link link-enter link-btn">
-              <svg class="link-enter__icon link__icon" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" />
-              </svg>
-              <span class="link-enter__text link-btn__text">Войти</span>
-            </a>
+          <button class="burger btn-reset" type="button" aria-label="Открыть навигацию">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
+          <div class="header__popup-wrap">
+            <nav class="header__nav nav">
+              <ul class="nav__list list-reset">
+                <li class="nav__item">
+                  <a href="#about-us" class="nav__link link-btn">
+                    <span class="link-btn__text">О нас</span>
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#gallery" class="nav__link link-btn">
+                    <span class="link-btn__text">Галерея</span>
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#catalog" class="nav__link link-btn">
+                    <span class="link-btn__text">Каталог</span>
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#events" class="nav__link link-btn">
+                    <span class="link-btn__text">События</span>
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#prodjects" class="nav__link link-btn">
+                    <span class="link-btn__text">Проекты</span>
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#shoowroom" class="nav__link link-btn">
+                    <span class="link-btn__text">Контакты</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__link-enter-inner">
+              <a href="#" class="header__link-enter link link-enter link-btn">
+                <svg class="link-enter__icon link__icon" width="13" height="13" viewBox="0 0 13 13" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" />
+                </svg>
+                <span class="link-enter__text link-btn__text">Войти</span>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -157,7 +163,7 @@
               <span class="main-menu-btn__text link-btn__text">Реализм</span>
               <svg class="main-menu-btn__icon link-btn__icon" width="12" height="7" viewBox="0 0 12 7" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 1L6 6L1 1"/>
+                <path d="M11 1L6 6L1 1" />
               </svg>
             </button>
             <div class="main-menu__dropdown main-menu-dropdown">
@@ -292,7 +298,7 @@
               <span class="main-menu-btn__text link-btn__text">Авангард</span>
               <svg class="main-menu-btn__icon link-btn__icon" width="12" height="7" viewBox="0 0 12 7" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 1L6 6L1 1"/>
+                <path d="M11 1L6 6L1 1" />
               </svg>
             </button>
             <div class="main-menu__dropdown main-menu-dropdown">
@@ -329,7 +335,7 @@
               <span class="main-menu-btn__text link-btn__text">Футуризм</span>
               <svg class="main-menu-btn__icon link-btn__icon" width="12" height="7" viewBox="0 0 12 7" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 1L6 6L1 1"/>
+                <path d="M11 1L6 6L1 1" />
               </svg>
             </button>
             <div class="main-menu__dropdown main-menu-dropdown">
@@ -374,20 +380,22 @@
             </div>
           </li>
         </ul>
-        <div class="header__btns seach">
-          <button class="btn-reset seach-form__btn-open flex-center btn-loop" aria-label="Открыть Поиск">
-            <svg class="seach-form__icon btn-loop__icon" width="23" height="22" viewbox="0 0 23 22" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <rect width="6.8678" height="1.71695"
-                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" />
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" />
-            </svg>
-          </button>
-          <form class="seach__form seach-form" action="#" method="post">
-            <input class="seach-form__input" placeholder="Поиск по сайту" required />
-            <button class="btn-reset seach-form__btn-close flex-center" type="button"></button>
-          </form>
+        <div class="header__btns seach flex-center">
+          <div class="header__btns-inner flex-center">
+            <button class="btn-reset seach-form__btn-open flex-center btn-loop" aria-label="Открыть Поиск">
+              <svg class="seach-form__icon btn-loop__icon" width="23" height="22" viewbox="0 0 23 22" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="6.8678" height="1.71695"
+                  transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" />
+              </svg>
+            </button>
+            <form class="seach__form seach-form" action="#" method="post">
+              <input class="seach-form__input" placeholder="Поиск по сайту" required />
+              <button class="btn-reset seach-form__btn-close flex-center" type="button"></button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -397,9 +405,9 @@
     <section class="hero">
       <div class="swiper swiper-first hero__slider">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" style="background-image: url(img/hero-bg1@1x.jpg)"></div>
-          <div class="swiper-slide" style="background-image: url(img/hero-bg2@1x.jpg)"></div>
-          <div class="swiper-slide" style="background-image: url(img/hero-bg3@1x.jpg)"></div>
+          <div class="hero__swiper-slide hero__swiper-slide--one swiper-slide"></div>
+          <div class="hero__swiper-slide hero__swiper-slide--two swiper-slide"></div>
+          <div class="hero__swiper-slide hero__swiper-slide-three swiper-slide"></div>
         </div>
       </div>
       <div class="container hero__container">
@@ -407,7 +415,8 @@
           <h1 class="visually-hidden">Blanchard - художественная галерея</h1>
           <p class="main-descr">Прикоснитесь к&nbsp;прекрасному</p>
           <p class="descr hero__descr">
-            Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
+            Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки
+            для новых предложений.
           </p>
           <a href="#shoowroom" class="btn hero__btn btn--fill">Подписаться на&nbsp;рассылку</a>
         </div>
@@ -418,9 +427,15 @@
       <div class="container about-us__container">
         <h2 class="title about-us__title">О нас</h2>
         <p class="descr about-us__descr descr--width">
-          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать,
-          что высококачественный прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный
-          план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных
+          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
+          участника как способного принимать собственные решения касаемо распределения внутренних резервов
+          и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать,
+          что высококачественный прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации
+          модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт
+          необходимость включения в&nbsp;производственный
+          план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов
+          и&nbsp;ресурсов. В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают
+          популярность среди определенных
           слоев населения, а&nbsp;значит, должны быть разоблачены.
         </p>
       </div>
@@ -472,36 +487,42 @@
           <div class="swiper swiper-second gallery__slider">
             <div class="swiper-wrapper gallery__swiper-wrapper">
               <div class="swiper-slide swiper-slide-second">
-                <button class="gallery__swiper-btn popup__btn-open btn-reset" aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-1">
+                <button class="gallery__swiper-btn popup__btn-open btn-reset"
+                  aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-1">
                   <img class="swiper-img gallery__swiper-img" src="img/gallery1@1x.jpg"
                     alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
-                <button class="gallery__swiper-btn popup__btn-open btn-reset" aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-2">
+                <button class="gallery__swiper-btn popup__btn-open btn-reset"
+                  aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-2">
                   <img class="swiper-img gallery__swiper-img" src="img/gallery2@1x.jpg"
                     alt="Женщина с граблями - Казимир Малевич">
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
-                <button class="gallery__swiper-btn popup__btn-open btn-reset" aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-3">
+                <button class="gallery__swiper-btn popup__btn-open btn-reset"
+                  aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-3">
                   <img class="swiper-img gallery__swiper-img" src="img/gallery3@1x.jpg"
                     alt="Taking in the harvest - Казимир Малевич">
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
-                <button class="gallery__swiper-btn popup__btn-open btn-reset" aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-4">
+                <button class="gallery__swiper-btn popup__btn-open btn-reset"
+                  aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-4">
                   <img class="swiper-img gallery__swiper-img" src="img/gallery4@1x.jpg" alt="Сюпрематизм - Иван Клюн">
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
-                <button class="gallery__swiper-btn popup__btn-open btn-reset" aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-5">
+                <button class="gallery__swiper-btn popup__btn-open btn-reset"
+                  aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-5">
                   <img class="swiper-img gallery__swiper-img" src="img/gallery5@1x.jpg"
                     alt="Женщина с ведрами - Казимир Малевич">
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
-                <button class="gallery__swiper-btn popup__btn-open btn-reset" aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-6">
+                <button class="gallery__swiper-btn popup__btn-open btn-reset"
+                  aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-6">
                   <img class="swiper-img gallery__swiper-img" src="img/gallery6@1x.jpg"
                     alt="Сюпрематизм - Казимир Малевич">
                 </button>
@@ -510,11 +531,18 @@
           </div>
         </div>
       </div>
-      <div class="popup gallery__popup">
+      <div class="popup">
         <div class="popup__wrap" data-target="gallery-popup-1">
           <button class="popup__btn-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
-          <figure class="popup__figure flex-center">
-            <img class="popup__img" src="img/gallery1@1x.jpg" alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
+          <figure class="popup__figure">
+            <picture class="popup__picture flex-center">
+              <source srcset="img/gallerypopup1@1x-290w.jpg" media="(max-width: 320px)">
+              <source srcset="img/gallerypopup1@1x-301w.jpg" media="(max-width: 768px)">
+              <source srcset="img/gallerypopup1@1x-264w.jpg" media="(max-width: 1045px)">
+              <source srcset="img/gallerypopup1@1x.jpg" media="(max-width: 1920px)">
+              <img class="popup__img" src="img/gallerypopup1@1x.jpg"
+                alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
+            </picture>
             <figcaption class="popup__figcapture">
               <h3 class="popup__subtitle subtitle">
                 <span class="popup__subtitle-main">Казимир Малевич</span>
@@ -523,15 +551,24 @@
                   <time datetime="1931">1931</time>&nbsp;&mdash;&nbsp;<time datetime="1932">1932</time></span>
               </h3>
               <p class="descr popup__descr">
-                Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+                Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся
+                за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после
+                Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
               </p>
             </figcaption>
           </figure>
         </div>
         <div class="popup__wrap" data-target="gallery-popup-2">
           <button class="popup__btn-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
-          <figure class="popup__figure flex-center">
-            <img class="popup__img" src="img/gallerypopup1@1x.jpg" alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
+          <figure class="popup__figure">
+            <picture class="popup__picture flex-center">
+              <source srcset="img/gallerypopup1@1x-290w.jpg" media="(max-width: 320px)">
+              <source srcset="img/gallerypopup1@1x-301w.jpg" media="(max-width: 768px)">
+              <source srcset="img/gallerypopup1@1x-264w.jpg" media="(max-width: 1045px)">
+              <source srcset="img/gallerypopup1@1x.jpg" media="(max-width: 1920px)">
+              <img class="popup__img" src="img/gallerypopup1@1x.jpg"
+                alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
+            </picture>
             <figcaption class="popup__figcapture">
               <h3 class="popup__subtitle subtitle">
                 <span class="popup__subtitle-main">Казимир Малевич</span>
@@ -541,15 +578,24 @@
                 </span>
               </h3>
               <p class="descr popup__descr">
-                Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Бросил заманивший, строчка имени инициал она переулка, но даль свое даже жизни маленький? Коварный предложения над своего домах что власти ipsum!
+                Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Бросил заманивший,
+                строчка имени инициал она переулка, но даль свое даже жизни маленький? Коварный предложения над своего
+                домах что власти ipsum!
               </p>
             </figcaption>
           </figure>
         </div>
         <div class="popup__wrap" data-target="gallery-popup-3">
           <button class="popup__btn-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
-          <figure class="popup__figure flex-center">
-            <img class="popup__img" src="img/gallery3@1x.jpg" alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
+          <figure class="popup__figure">
+            <picture class="popup__picture flex-center">
+              <source srcset="img/gallerypopup1@1x-290w.jpg" media="(max-width: 320px)">
+              <source srcset="img/gallerypopup1@1x-301w.jpg" media="(max-width: 768px)">
+              <source srcset="img/gallerypopup1@1x-264w.jpg" media="(max-width: 1045px)">
+              <source srcset="img/gallerypopup1@1x.jpg" media="(max-width: 1920px)">
+              <img class="popup__img" src="img/gallerypopup1@1x.jpg"
+                alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
+            </picture>
             <figcaption class="popup__figcapture">
               <h3 class="popup__subtitle subtitle">
                 <span class="popup__subtitle-main">Казимир Малевич</span>
@@ -559,15 +605,24 @@
                 </span>
               </h3>
               <p class="descr popup__descr">
-                Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+                Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся
+                за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после
+                Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
               </p>
             </figcaption>
           </figure>
         </div>
         <div class="popup__wrap" data-target="gallery-popup-4">
           <button class="popup__btn-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
-          <figure class="popup__figure flex-center">
-            <img class="popup__img" src="img/gallery4@1x.jpg" alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
+          <figure class="popup__figure">
+            <picture class="popup__picture flex-center">
+              <source srcset="img/gallerypopup1@1x-290w.jpg" media="(max-width: 320px)">
+              <source srcset="img/gallerypopup1@1x-301w.jpg" media="(max-width: 768px)">
+              <source srcset="img/gallerypopup1@1x-264w.jpg" media="(max-width: 1045px)">
+              <source srcset="img/gallerypopup1@1x.jpg" media="(max-width: 1920px)">
+              <img class="popup__img" src="img/gallerypopup1@1x.jpg"
+                alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
+            </picture>
             <figcaption class="popup__figcapture">
               <h3 class="popup__subtitle subtitle">
                 <span class="popup__subtitle-main">Казимир Малевич</span>
@@ -577,15 +632,24 @@
                 </span>
               </h3>
               <p class="descr popup__descr">
-                Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Бросил заманивший, строчка имени инициал она переулка, но даль свое даже жизни маленький? Коварный предложения над своего домах что власти ipsum!
+                Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Бросил заманивший,
+                строчка имени инициал она переулка, но даль свое даже жизни маленький? Коварный предложения над своего
+                домах что власти ipsum!
               </p>
             </figcaption>
           </figure>
         </div>
         <div class="popup__wrap" data-target="gallery-popup-5">
           <button class="popup__btn-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
-          <figure class="popup__figure flex-center">
-            <img class="popup__img" src="img/gallery4@1x.jpg" alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
+          <figure class="popup__figure">
+            <picture class="popup__picture flex-center">
+              <source srcset="img/gallerypopup1@1x-290w.jpg" media="(max-width: 320px)">
+              <source srcset="img/gallerypopup1@1x-301w.jpg" media="(max-width: 768px)">
+              <source srcset="img/gallerypopup1@1x-264w.jpg" media="(max-width: 1045px)">
+              <source srcset="img/gallerypopup1@1x.jpg" media="(max-width: 1920px)">
+              <img class="popup__img" src="img/gallerypopup1@1x.jpg"
+                alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
+            </picture>
             <figcaption class="popup__figcapture">
               <h3 class="popup__subtitle subtitle">
                 <span class="popup__subtitle-main">Казимир Малевич</span>
@@ -595,15 +659,24 @@
                 </span>
               </h3>
               <p class="descr popup__descr">
-                Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+                Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся
+                за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после
+                Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
               </p>
             </figcaption>
           </figure>
         </div>
         <div class="popup__wrap" data-target="gallery-popup-6">
           <button class="popup__btn-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
-          <figure class="popup__figure flex-center">
-            <img class="popup__img" src="img/gallery5@1x.jpg" alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
+          <figure class="popup__figure">
+            <picture class="popup__picture flex-center">
+              <source srcset="img/gallerypopup1@1x-290w.jpg" media="(max-width: 320px)">
+              <source srcset="img/gallerypopup1@1x-301w.jpg" media="(max-width: 768px)">
+              <source srcset="img/gallerypopup1@1x-264w.jpg" media="(max-width: 1045px)">
+              <source srcset="img/gallerypopup1@1x.jpg" media="(max-width: 1920px)">
+              <img class="popup__img" src="img/gallerypopup1@1x.jpg"
+                alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
+            </picture>
             <figcaption class="popup__figcapture">
               <h3 class="popup__subtitle subtitle">
                 <span class="popup__subtitle-main">Казимир Малевич</span>
@@ -613,25 +686,9 @@
                 </span>
               </h3>
               <p class="descr popup__descr">
-                Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Бросил заманивший, строчка имени инициал она переулка, но даль свое даже жизни маленький? Коварный предложения над своего домах что власти ipsum!
-              </p>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="popup__wrap" data-target="gallery-popup-3" aria-label="Открыть модальное окно с увеличенным фото">
-          <button class="popup__btn-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
-          <figure class="popup__figure flex-center">
-            <img class="popup__img" src="img/gallery6@1x.jpg" alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
-            <figcaption class="popup__figcapture">
-              <h3 class="popup__subtitle subtitle">
-                <span class="popup__subtitle-main">Казимир Малевич</span>
-                <span class="popup__subtitle-text subtitle__text">&laquo;Женщина с&nbsp;граблями&raquo;</span>
-                <span class="popup__subtitle-datetime subtitle__datetime descr-time">
-                  <time datetime="1931">1931</time>&nbsp;&mdash;&nbsp;<time datetime="1932">1932</time>
-                </span>
-              </h3>
-              <p class="descr popup__descr">
-                Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Бросил заманивший, строчка имени инициал она переулка, но даль свое даже жизни маленький? Коварный предложения над своего домах что власти ipsum!
+                Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся
+                за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после
+                Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
               </p>
             </figcaption>
           </figure>
@@ -643,23 +700,30 @@
       <div class="container catalog__container">
         <h2 class="title catalog__title">Каталог</h2>
         <p class="descr catalog__descr descr--width">
-          Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь всеголишь частью общей картины, стремящиеся
-          вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть функционально разнесены на&nbsp;независимые элементы.
+          Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+          политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь
+          всеголишь частью общей картины, стремящиеся
+          вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые
+          жаждут быть функционально разнесены на&nbsp;независимые элементы.
         </p>
         <div class="catalog__content">
           <div class="catalog__card card">
             <div class="card__items" id="one-tab" aria-labelledby="one" data-target="one">
               <figure class="card__figure">
                 <div class="card__inner">
-                  <img class="card__img" src="img/Benedetto_Madonna_humility.jpg" alt="Мадонна Смирение и св. Иероним, переводящий евангелие от Иоанна художник Бенедетто ди Биндо">
+                  <img class="card__img" src="img/Benedetto_Madonna_humility.jpg"
+                    alt="Мадонна Смирение и св. Иероним, переводящий евангелие от Иоанна художник Бенедетто ди Биндо">
                 </div>
                 <figcaption class="card__figcaption">
                   <h3 class="subtitle card__subtitle">Бенедетто ди Биндо</h3>
                   <p class="card__descr-time descr-time">
-                    <time class="card__time" datetime="1380">1380</time> &mdash; <time class="card__time" datetime="1417">1417</time>
+                    <time class="card__time" datetime="1380">1380</time> &mdash; <time class="card__time"
+                      datetime="1417">1417</time>
                   </p>
                   <p class="descr card__descr">
-                    Бенедетто ди&nbsp;Биндо остался в&nbsp;истории искусства как сиенский художник, так сказать, &laquo;второго ряда&raquo;, несмотря на&nbsp;то, что за&nbsp;свою короткую жизнь он&nbsp;выполнил ряд весьма престижных заказов, включая работы в&nbsp;Сиенском
+                    Бенедетто ди&nbsp;Биндо остался в&nbsp;истории искусства как сиенский художник, так сказать,
+                    &laquo;второго ряда&raquo;, несмотря на&nbsp;то, что за&nbsp;свою короткую жизнь он&nbsp;выполнил
+                    ряд весьма престижных заказов, включая работы в&nbsp;Сиенском
                     (работы в&nbsp;главном соборе республики второстепенным художникам не&nbsp;поручались).
                   </p>
                 </figcaption>
@@ -668,63 +732,77 @@
             <div class="card__items" id="two-tab" aria-labelledby="two" data-target="two">
               <figure class="card__figure">
                 <div class="card__inner">
-                  <img class="card__img" src="img/Bergonone_Madonna.jpg" alt="Мадонна с Младенцем со святой Екатериной и блаженным Стефано Макони художник Бергоньоне Амброджо">
+                  <img class="card__img" src="img/Bergonone_Madonna.jpg"
+                    alt="Мадонна с Младенцем со святой Екатериной и блаженным Стефано Макони художник Бергоньоне Амброджо">
                 </div>
                 <figcaption class="card__figcaption">
                   <h3 class="subtitle card__subtitle">Бергоньоне, Амброджо</h3>
                   <p class="card__descr-time descr-time">
-                    <time class="card__time" datetime="1453">1453</time> &mdash; <time class="card__time" datetime="1523">1523</time>
+                    <time class="card__time" datetime="1453">1453</time> &mdash; <time class="card__time"
+                      datetime="1523">1523</time>
                   </p>
                   <p class="descr card__descr">
-                    Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Наш путь имени родного журчит первую необходимыми бросил залетают своего запятой то маленькая гор океана последний рыбного свое, проектах ведущими, там эта домах решила.
-                    Вскоре дороге рот ручеек, заголовок единственное пунктуация на берегу снова речью скатился назад семантика от всех продолжил ему.
+                    Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Наш путь имени
+                    родного журчит первую необходимыми бросил залетают своего запятой то маленькая гор океана последний
+                    рыбного свое, проектах ведущими, там эта домах решила.
+                    Вскоре дороге рот ручеек, заголовок единственное пунктуация на берегу снова речью скатился назад
+                    семантика от всех продолжил ему.
                   </p>
                 </figcaption>
               </figure>
             </div>
             <div class="card__items empty-author" id="three-tab" aria-labelledby="three" data-target="three">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link">В галлерею</a>
             </div>
             <div class="card__items empty-author" id="four-tab" aria-labelledby="four" data-target="four">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link">В галлерею</a>
             </div>
             <div class="card__items empty-author" id="five-tab" aria-labelledby="five" data-target="five">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link">В галлерею</a>
             </div>
             <div class="card__items empty-author" id="six-tab" aria-labelledby="six" data-target="six">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link">В галлерею</a>
             </div>
             <div class="card__items empty-author" id="seven-tab" aria-labelledby="seven" data-target="seven">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link">В галлерею</a>
             </div>
             <div class="card__items empty-author" id="eight-tab" aria-labelledby="eight" data-target="eight">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link">В галлерею</a>
             </div>
             <div class="card__items empty-author" id="nine-tab" aria-labelledby="nine" data-target="nine">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link">В галлерею</a>
             </div>
             <div class="card__items empty-author" id="ten-tab" aria-labelledby="ten" data-target="ten">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link">В галлерею</a>
             </div>
             <div class="card__items empty-author" id="eleven-tab" aria-labelledby="eleven" data-target="eleven">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link">В галлерею</a>
             </div>
             <div class="card__items card__items--active" id="twelve-tab" aria-labelledby="twelve" data-target="twelve">
@@ -741,72 +819,94 @@
                 <figcaption class="card__figcaption">
                   <h3 class="subtitle card__subtitle">Доменико Гирландайо</h3>
                   <p class="card__descr-time descr-time">
-                    <time class="card__time" datetime="1448-06-02">2&nbsp;июня 1448</time> &mdash; <time class="card__time" datetime="1494-01-11">11&nbsp;января 1494</time>
+                    <time class="card__time" datetime="1448-06-02">2&nbsp;июня 1448</time> &mdash; <time
+                      class="card__time" datetime="1494-01-11">11&nbsp;января 1494</time>
                   </p>
                   <p class="descr card__descr">
-                    Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными
-                    навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени). </p>
+                    Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии,
+                    которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный
+                    Микеланджело в&nbsp;течение года овладевал профессиональными
+                    навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями
+                    показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане
+                    Флоренции в&nbsp;костюмах того времени). </p>
                 </figcaption>
               </figure>
             </div>
             <div class="card__items empty-author" id="thirteen-tab" aria-labelledby="thirteen" data-target="thirteen">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link empty-link">В галлерею</a>
             </div>
             <div class="card__items empty-author" id="fourteen-tab" aria-labelledby="fourteen" data-target="fourteen">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link empty-link">В галлерею</a>
             </div>
             <div class="card__items empty-author" id="fifteen-tab" aria-labelledby="fifteen" data-target="fifteen">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link empty-link">В галлерею</a>
             </div>
             <div class="card__items empty-author" id="sixteen-tab" aria-labelledby="sixteen" data-target="sixteen">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link empty-link">В галлерею</a>
             </div>
-            <div class="card__items empty-author" id="seventeen-tab" aria-labelledby="seventeen" data-target="seventeen">
+            <div class="card__items empty-author" id="seventeen-tab" aria-labelledby="seventeen"
+              data-target="seventeen">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link empty-link">В галлерею</a>
             </div>
             <div class="card__items empty-author" id="eighteen-tab" aria-labelledby="eighteen" data-target="eighteen">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link empty-link">В галлерею</a>
             </div>
             <div class="card__items empty-author" id="nineteen-tab" aria-labelledby="nineteen" data-target="nineteen">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link empty-link">В галлерею</a>
             </div>
             <div class="card__items empty-author" id="twenty-tab" aria-labelledby="twenty" data-target="twenty">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link empty-link">В галлерею</a>
             </div>
-            <div class="card__items empty-author" id="twenty-one-tab" aria-labelledby="twenty-one" data-target="twenty-one">
+            <div class="card__items empty-author" id="twenty-one-tab" aria-labelledby="twenty-one"
+              data-target="twenty-one">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link empty-link">В галлерею</a>
             </div>
-            <div class="card__items empty-author" id="twenty-twoo-tab" aria-labelledby="twenty-twoo" data-target="twenty-twoo">
+            <div class="card__items empty-author" id="twenty-twoo-tab" aria-labelledby="twenty-twoo"
+              data-target="twenty-twoo">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link empty-link">В галлерею</a>
             </div>
-            <div class="card__items empty-author" id="twenty-three-tab" aria-labelledby="twenty-three" data-target="twenty-three">
+            <div class="card__items empty-author" id="twenty-three-tab" aria-labelledby="twenty-three"
+              data-target="twenty-three">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link empty-link">В галлерею</a>
             </div>
-            <div class="card__items empty-author" id="twenty-four-tab" aria-labelledby="twenty-four" data-target="twenty-four">
+            <div class="card__items empty-author" id="twenty-four-tab" aria-labelledby="twenty-four"
+              data-target="twenty-four">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
-              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <p class="descr empty-author__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть
+                на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link empty-link">В галлерею</a>
             </div>
           </div>
@@ -822,168 +922,192 @@
               </div>
               <ul class="tabs-inner__list list-reset">
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="one" type="button" aria-controls="one-tab" data-path="one">
+                  <button class="tabs__btn link-btn btn-reset" id="one" type="button" aria-controls="one-tab"
+                    data-path="one">
                     <span class="link-btn__text">
                       Бенедетто ди Биндо
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="two" type="button" aria-controls="two-tab" data-path="two">
+                  <button class="tabs__btn link-btn btn-reset" id="two" type="button" aria-controls="two-tab"
+                    data-path="two">
                     <span class="link-btn__text">
                       Бергоньоне, Амброджо
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="three" type="button" aria-controls="three-tab" data-path="three">
+                  <button class="tabs__btn link-btn btn-reset" id="three" type="button" aria-controls="three-tab"
+                    data-path="three">
                     <span class="link-btn__text">
                       Биссоло, Франческо
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="four" type="button" aria-controls="four-tab" data-path="four">
+                  <button class="tabs__btn link-btn btn-reset" id="four" type="button" aria-controls="four-tab"
+                    data-path="four">
                     <span class="link-btn__text">
                       Больтраффио, Джованни
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="five" type="button" aria-controls="five-tab" data-path="five">
+                  <button class="tabs__btn link-btn btn-reset" id="five" type="button" aria-controls="five-tab"
+                    data-path="five">
                     <span class="link-btn__text">
                       Бонсиньори, Франческо
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="six" type="button" aria-controls="six-tab" data-path="six">
+                  <button class="tabs__btn link-btn btn-reset" id="six" type="button" aria-controls="six-tab"
+                    data-path="six">
                     <span class="link-btn__text">
                       Боттичини, Рафаэлло
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="seven" type="button" aria-controls="seven-tab" data-path="seven">
+                  <button class="tabs__btn link-btn btn-reset" id="seven" type="button" aria-controls="seven-tab"
+                    data-path="seven">
                     <span class="link-btn__text">
                       Брамантино
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="eight" type="button" aria-controls="eight-tab" data-path="eight">
+                  <button class="tabs__btn link-btn btn-reset" id="eight" type="button" aria-controls="eight-tab"
+                    data-path="eight">
                     <span class="link-btn__text">
                       Бреа, Людовико
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="nine" type="button" aria-controls="nine-tab" data-path="nine">
+                  <button class="tabs__btn link-btn btn-reset" id="nine" type="button" aria-controls="nine-tab"
+                    data-path="nine">
                     <span class="link-btn__text">
                       Бьяджо д’Антонио Туччи
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="ten" type="button" aria-controls="ten-tab" data-path="ten">
+                  <button class="tabs__btn link-btn btn-reset" id="ten" type="button" aria-controls="ten-tab"
+                    data-path="ten">
                     <span class="link-btn__text">
                       Веккьетта
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="eleven" type="button" aria-controls="eleven-tab" data-path="eleven">
+                  <button class="tabs__btn link-btn btn-reset" id="eleven" type="button" aria-controls="eleven-tab"
+                    data-path="eleven">
                     <span class="link-btn__text">
                       Андреа Верроккьо
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset tabs__btn--active" id="twelve" type="button" aria-controls="twelve-tab" data-path="twelve">
+                  <button class="tabs__btn link-btn btn-reset tabs__btn--active" id="twelve" type="button"
+                    aria-controls="twelve-tab" data-path="twelve">
                     <span class="link-btn__text">
                       Доменико Гирландайо
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="thirteen" type="button" aria-controls="thirteen-tab" data-path="thirteen">
+                  <button class="tabs__btn link-btn btn-reset" id="thirteen" type="button" aria-controls="thirteen-tab"
+                    data-path="thirteen">
                     <span class="link-btn__text">
                       Беноццо Гоццоли
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="fourteen" type="button" aria-controls="fourteen-tab" data-path="fourteen">
+                  <button class="tabs__btn link-btn btn-reset" id="fourteen" type="button" aria-controls="fourteen-tab"
+                    data-path="fourteen">
                     <span class="link-btn__text">
                       Граначчи, Франческо
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="fifteen" type="button" aria-controls="fifteen-tab" data-path="fifteen">
+                  <button class="tabs__btn link-btn btn-reset" id="fifteen" type="button" aria-controls="fifteen-tab"
+                    data-path="fifteen">
                     <span class="link-btn__text">
                       Грегорио ди Чекко
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="sixteen" type="button" aria-controls="sixteen-tab" data-path="sixteen">
+                  <button class="tabs__btn link-btn btn-reset" id="sixteen" type="button" aria-controls="sixteen-tab"
+                    data-path="sixteen">
                     <span class="link-btn__text">
                       Джованни да Удине
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="seventeen" type="button" aria-controls="seventeen-tab" data-path="seventeen">
+                  <button class="tabs__btn link-btn btn-reset" id="seventeen" type="button"
+                    aria-controls="seventeen-tab" data-path="seventeen">
                     <span class="link-btn__text">
                       Джованни ди Паоло
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="eighteen" type="button" aria-controls="eighteen-tab" data-path="eighteen">
+                  <button class="tabs__btn link-btn btn-reset" id="eighteen" type="button" aria-controls="eighteen-tab"
+                    data-path="eighteen">
                     <span class="link-btn__text">
                       Джорджоне
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="nineteen" type="button" aria-controls="nineteen-tab" data-path="nineteen">
+                  <button class="tabs__btn link-btn btn-reset" id="nineteen" type="button" aria-controls="nineteen-tab"
+                    data-path="nineteen">
                     <span class="link-btn__text">
                       Парентино, Бернардо
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="twenty" type="button" aria-controls="twenty-tab" data-path="twenty">
+                  <button class="tabs__btn link-btn btn-reset" id="twenty" type="button" aria-controls="twenty-tab"
+                    data-path="twenty">
                     <span class="link-btn__text">
                       Пезеллино
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="twenty-one" type="button" aria-controls="twenty-one-tab" data-path="twenty-one">
+                  <button class="tabs__btn link-btn btn-reset" id="twenty-one" type="button"
+                    aria-controls="twenty-one-tab" data-path="twenty-one">
                     <span class="link-btn__text">
                       Пьетро Перуджино
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="twenty-twoo" type="button" aria-controls="twenty-twoo-tab" data-path="twenty-twoo">
+                  <button class="tabs__btn link-btn btn-reset" id="twenty-twoo" type="button"
+                    aria-controls="twenty-twoo-tab" data-path="twenty-twoo">
                     <span class="link-btn__text">
                       Перуцци, Бальдассаре
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="twenty-three" type="button" aria-controls="twenty-three-tab" data-path="twenty-three">
+                  <button class="tabs__btn link-btn btn-reset" id="twenty-three" type="button"
+                    aria-controls="twenty-three-tab" data-path="twenty-three">
                     <span class="link-btn__text">
                       Пизанелло
                     </span>
                   </button>
                 </li>
                 <li class="tabs-inner__item">
-                  <button class="tabs__btn link-btn btn-reset" id="twenty-four" type="button" aria-controls="twenty-four-tab" data-path="twenty-four">
+                  <button class="tabs__btn link-btn btn-reset" id="twenty-four" type="button"
+                    aria-controls="twenty-four-tab" data-path="twenty-four">
                     <span class="link-btn__text">
                       Пинтуриккьо
                     </span>
@@ -1003,7 +1127,8 @@
               <div class="tabs-inner__empty-content empty-content">
                 <div class="empty-content__inner">
                   <h4 class="subtitle">Здесь пока пусто</h4>
-                  <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                  <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
+                    интересное для себя</p>
                   <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
                 </div>
               </div>
@@ -1020,7 +1145,8 @@
               <div class="tabs-inner__empty-content empty-content">
                 <div class="empty-content__inner">
                   <h4 class="subtitle empty-content__subtitle">Здесь пока пусто</h4>
-                  <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                  <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
+                    интересное для себя</p>
                   <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
                 </div>
               </div>
@@ -1037,7 +1163,8 @@
               <div class="tabs-inner__empty-content empty-content">
                 <div class="empty-content__inner">
                   <h4 class="subtitle">Здесь пока пусто</h4>
-                  <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                  <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
+                    интересное для себя</p>
                   <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
                 </div>
               </div>
@@ -1054,7 +1181,8 @@
               <div class="tabs-inner__empty-content empty-content">
                 <div class="empty-content__inner">
                   <h4 class="subtitle">Здесь пока пусто</h4>
-                  <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                  <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
+                    интересное для себя
                   </p>
                   <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
                 </div>
@@ -1072,7 +1200,8 @@
               <div class="tabs-inner__empty-content empty-content">
                 <div class="empty-content__inner">
                   <h4 class="subtitle">Здесь пока пусто</h4>
-                  <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                  <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
+                    интересное для себя
                   </p>
                   <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
                 </div>
@@ -1090,7 +1219,8 @@
               <div class="tabs-inner__empty-content empty-content">
                 <div class="empty-content__inner">
                   <h4 class="subtitle">Здесь пока пусто</h4>
-                  <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                  <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
+                    интересное для себя</p>
                   <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
                 </div>
               </div>
@@ -1116,12 +1246,14 @@
                     <div class="events-card__name">
                       <p class="descr events-card__descr-datatime">Музей им. Щусева</p>
                       <p class="descr events-card___descr-datatime">
-                        <time datetime="2022-03-20">с&nbsp;20&nbsp;марта</time> <time datetime="2022-04-30">по&nbsp;30&nbsp;апреля</time>
+                        <time datetime="2022-03-20">с&nbsp;20&nbsp;марта</time> <time
+                          datetime="2022-04-30">по&nbsp;30&nbsp;апреля</time>
                       </p>
                     </div>
                     <h3 class="subtitle events-card__subtitle">Книжная гравюра в&nbsp;живом восприятии</h3>
                     <p class="descr events-card__descr">
-                      Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.
+                      Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии,
+                      которую продолжили его брат Давид и&nbsp;сын Ридольфо.
                     </p>
                   </div>
                   <div class="events-card__bottom">
@@ -1137,14 +1269,17 @@
                 <div class="events__card events-card events__card--two">
                   <div class="events-card__top">
                     <div class="events-card__name">
-                      <p class="descr events-card__descr-datatime"><abbr title="Московский музей современного искусства">ММОМА</abbr></p>
+                      <p class="descr events-card__descr-datatime"><abbr
+                          title="Московский музей современного искусства">ММОМА</abbr></p>
                       <p class="descr events-card___descr-datatime">
                         <time datetime="2022-03-24T19:00">24 марта 19:00</time>
                       </p>
                     </div>
-                    <h3 class="subtitle events-card__subtitle">&laquo;Открытая дискуссия&raquo;. Дмитрий Петров и&nbsp;Сергей Ильин.</h3>
+                    <h3 class="subtitle events-card__subtitle">&laquo;Открытая дискуссия&raquo;. Дмитрий Петров
+                      и&nbsp;Сергей Ильин.</h3>
                     <p class="descr events-card__descr">
-                      Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
+                      Высокий уровень вовлечения представителей целевой аудитории является четким доказательством
+                      простого факта.
                     </p>
                   </div>
                   <div class="events-card__bottom">
@@ -1162,14 +1297,16 @@
                     <div class="events-card__name">
                       <p class="descr events-card__descr-datatime">Еврейский музей</p>
                       <p class="descr events-card___descr-datatime">
-                        <time datetime="2022-03-31">с&nbsp;31&nbsp;марта</time> <time datetime="2022-03-21">по&nbsp;21&nbsp;апреля</time>
+                        <time datetime="2022-03-31">с&nbsp;31&nbsp;марта</time> <time
+                          datetime="2022-03-21">по&nbsp;21&nbsp;апреля</time>
                       </p>
                     </div>
                     <h3 class="subtitle events-card__subtitle">
                       Выставка &laquo;Формация 2020&raquo;
                     </h3>
                     <p class="descr events-card__descr">
-                      Идейные соображения высшего порядка, а&nbsp;также современная методология разработки играет важную роль в&nbsp;формировании глубокомысленных рассуждений.
+                      Идейные соображения высшего порядка, а&nbsp;также современная методология разработки играет важную
+                      роль в&nbsp;формировании глубокомысленных рассуждений.
                     </p>
                   </div>
                   <div class="events-card__bottom">
@@ -1189,14 +1326,16 @@
                         <abbr title="Мультимедиа Арт Музей">ММАМ</abbr>
                       </p>
                       <p class="descr events-card___descr-datatime">
-                        <time datetime="2022-04-08">с&nbsp;8&nbsp;апреля</time> <time datetime="2022-05-20">по&nbsp;20&nbsp;мая</time>
+                        <time datetime="2022-04-08">с&nbsp;8&nbsp;апреля</time> <time
+                          datetime="2022-05-20">по&nbsp;20&nbsp;мая</time>
                       </p>
                     </div>
                     <h3 class="subtitle events-card__subtitle">
                       Джон Винзор. Фотографии из&nbsp;серии &laquo;Метафора серебра&raquo;
                     </h3>
                     <p class="descr events-card__descr">
-                      Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.
+                      Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии,
+                      которую продолжили его брат Давид и&nbsp;сын Ридольфо.
                     </p>
                   </div>
                   <div class="events-card__bottom">
@@ -1216,7 +1355,8 @@
                         Третьяковка на&nbsp;Крымском валу
                       </p>
                       <p class="descr events-card___descr-datatime">
-                        <time datetime="2022-03-30">с&nbsp;30&nbsp;марта</time> <time datetime="2022-04-30">по&nbsp;30&nbsp;апреля</time>
+                        <time datetime="2022-03-30">с&nbsp;30&nbsp;марта</time> <time
+                          datetime="2022-04-30">по&nbsp;30&nbsp;апреля</time>
                       </p>
                     </div>
                     <h3 class="subtitle events-card__subtitle">
@@ -1244,15 +1384,19 @@
       <div class="container prodjects__container">
         <h2 class="title prodjects__title">Проекты</h2>
         <p class="descr prodjects__descr descr--width">
-          Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени
-          совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское обеспечение
+          Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
+          фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны
+          с&nbsp;не&nbsp;уникальными данными до&nbsp;степени
+          совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное
+          информационно-пропагандистское обеспечение
           <span class="tooltip">
             <button class="tooltip__btn btn-reset" id="toolltip-btn" aria-describedby="tooltip-1"></button>
             <span class="tooltip__text" role="tooltip" id="tooltip-1">
               Пример современных тенденций&nbsp;&mdash; современная методология разработки
             </span>
           </span>
-          нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены
+          нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений.
+          И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены
           <span class="tooltip">
             <button class="tooltip__btn btn-reset" aria-describedby="tooltip-2"></button>
             <span class="tooltip__text" role="tooltip" id="tooltip-2">
@@ -1265,8 +1409,11 @@
             <span class="tooltip__text" role="tooltip" id="tooptip-3">
               В&nbsp;стремлении повысить качество
             </span>
-          </span> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными
-          до&nbsp;степени совершенной неузнаваемости. Подробнее: <a href="#" class="prodjects__link-btn prodject-link-btn link-btn"><span
+          </span> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных
+          социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны
+          с&nbsp;не&nbsp;уникальными данными
+          до&nbsp;степени совершенной неузнаваемости. Подробнее: <a href="#"
+            class="prodjects__link-btn prodject-link-btn link-btn"><span
               class="prodject-link-btn__text link-btn__text">blanchard-art.ru/projects</span></a>
         </p>
 
@@ -1282,15 +1429,27 @@
                 <article class="prodjects__article">
                   <h4 class="visually-hidden">Компания партнер Freelands Foundation</h4>
                   <a class="prodjects__swiper-link" href="#">
-                    <img class="prodjects__swiper-img" src="img/partners-slide-1.png" alt="Логотип Freelands Foundation">
+                    <picture class="prodjects__swiper-picture flex-center">
+                      <source srcset="img/partners-slide-1-modile.png" media="(max-width: 320px)">
+                      <source srcset="img/partners-slide-1-tablet.png" media="(max-width: 1250px)">
+                      <source srcset="img/partners-slide-1.png" media="(max-width: 1920px)">
+                      <img class="prodjects__swiper-img" src="img/partners-slide-1.png"
+                        alt="Логотип компании партнера Freelands Foundation">
+                    </picture>
                   </a>
                 </article>
               </div>
               <div class="prodjects__swiper-slide swiper-slide">
                 <article class="prodjects__article">
-                  <h4 class="visually-hidden">Компания партнерInstitute for Contemporary Art</h4>
+                  <h4 class="visually-hidden">Компания партнер Institute for Contemporary Art</h4>
                   <a class="prodjects__swiper-link" href="#">
-                    <img class="prodjects__swiper-img" src="img/partners-slide-2.png" alt="Логотип Institute for Contemporary Art">
+                    <picture class="prodjects__swiper-picture flex-center">
+                      <source srcset="img/partners-slide-2-modile.png" media="(max-width: 320px)">
+                      <source srcset="img/partners-slide-2-tablet.png" media="(max-width: 1250px)">
+                      <source srcset="img/partners-slide-2.png" media="(max-width: 1920px)">
+                      <img class="prodjects__swiper-img" src="img/partners-slide-2.png"
+                        alt="Логотип компании партнера Institute for Contemporary Art">
+                    </picture>
                   </a>
                 </article>
               </div>
@@ -1298,7 +1457,13 @@
                 <article class="prodjects__article">
                   <h4 class="visually-hidden">Компания партнер Workhouse</h4>
                   <a class="prodjects__swiper-link" href="#">
-                    <img class="prodjects__swiper-img" src="img/partners-slide-3.png" alt="Логотип Workhouse">
+                    <picture class="prodjects__swiper-picture flex-center">
+                      <source srcset="img/partners-slide-3-modile.png" media="(max-width: 320px)">
+                      <source srcset="img/partners-slide-3-tablet.png" media="(max-width: 1250px)">
+                      <source srcset="img/partners-slide-3.png" media="(max-width: 1920px)">
+                      <img class="prodjects__swiper-img" src="img/partners-slide-3.png"
+                        alt="Логотип компании партнера Workhouse">
+                    </picture>
                   </a>
                 </article>
               </div>
@@ -1306,7 +1471,13 @@
                 <article class="prodjects__article">
                   <h4 class="visually-hidden">Компания партнер 1849</h4>
                   <a class="prodjects__swiper-link" href="#">
-                    <img class="prodjects__swiper-img" src="img/partners-slide-4.png" alt="Логотип 1849">
+                    <picture class="prodjects__swiper-picture flex-center">
+                      <source srcset="img/partners-slide-4-modile.png" media="(max-width: 320px)">
+                      <source srcset="img/partners-slide-4-tablet.png" media="(max-width: 1250px)">
+                      <source srcset="img/partners-slide-4.png" media="(max-width: 1920px)">
+                      <img class="prodjects__swiper-img" src="img/partners-slide-4.png"
+                        alt="Логотип компании партнера 1849">
+                    </picture>
                   </a>
                 </article>
               </div>
@@ -1314,7 +1485,13 @@
                 <article class="prodjects__article">
                   <h4 class="visually-hidden">Компания партнер Hiscox</h4>
                   <a class="prodjects__swiper-link" href="#">
-                    <img class="prodjects__swiper-img" src="img/partners-slide-5.png" alt="Логотип Hiscox">
+                    <picture class="prodjects__swiper-picture flex-center">
+                      <source srcset="img/partners-slide-5-modile.png" media="(max-width: 320px)">
+                      <source srcset="img/partners-slide-5-tablet.png" media="(max-width: 1250px)">
+                      <source srcset="img/partners-slide-5.png" media="(max-width: 1920px)">
+                      <img class="prodjects__swiper-img" src="img/partners-slide-5.png"
+                        alt="Логотип компании партнера Hiscox">
+                    </picture>
                   </a>
                 </article>
               </div>
@@ -1322,7 +1499,13 @@
                 <article class="prodjects__article">
                   <h4 class="visually-hidden">Компания партнер Camden arts centre</h4>
                   <a class="prodjects__swiper-link" href="#">
-                    <img class="prodjects__swiper-img" src="img/partners-slide-6.png" alt="Логотип Camden arts centre">
+                    <picture class="prodjects__swiper-picture flex-center">
+                      <source srcset="img/partners-slide-6-modile.png" media="(max-width: 320px)">
+                      <source srcset="img/partners-slide-6-tablet.png" media="(max-width: 1250px)">
+                      <source srcset="img/partners-slide-6.png" media="(max-width: 1920px)">
+                      <img class="prodjects__swiper-img" src="img/partners-slide-6.png"
+                        alt="Логотип компании партнера Camden arts centre">
+                    </picture>
                   </a>
                 </article>
               </div>
@@ -1330,7 +1513,13 @@
                 <article class="prodjects__article">
                   <h4 class="visually-hidden">Компания партнер Camden Stassen</h4>
                   <a class="prodjects__swiper-link" href="#">
-                    <img class="prodjects__swiper-img" src="img/partners-slide-7.png" alt="Логотип Camden Stassen">
+                    <picture class="prodjects__swiper-picture flex-center">
+                      <source srcset="img/partners-slide-7-modile.png" media="(max-width: 320px)">
+                      <source srcset="img/partners-slide-7-tablet.png" media="(max-width: 1250px)">
+                      <source srcset="img/partners-slide-7.png" media="(max-width: 1920px)">
+                      <img class="prodjects__swiper-img" src="img/partners-slide-7.png"
+                        alt="Логотип компании партнера Camden Stassen">
+                    </picture>
                   </a>
                 </article>
               </div>
@@ -1338,7 +1527,13 @@
                 <article class="prodjects__article">
                   <h4 class="visually-hidden">Компания партнер Watts gallery artists village</h4>
                   <a class="prodjects__swiper-link" href="#">
-                    <img class="prodjects__swiper-img" src="img/partners-slide-8.png" alt="Логотип Watts gallery artists village">
+                    <picture class="prodjects__swiper-picture flex-center">
+                      <source srcset="img/partners-slide-8-modile.png" media="(max-width: 320px)">
+                      <source srcset="img/partners-slide-8-tablet.png" media="(max-width: 1250px)">
+                      <source srcset="img/partners-slide-8.png" media="(max-width: 1920px)">
+                      <img class="prodjects__swiper-img" src="img/partners-slide-8.png"
+                        alt="Логотип компании партнера Watts gallery artists village">
+                    </picture>
                   </a>
                 </article>
               </div>
@@ -1346,11 +1541,16 @@
                 <article class="prodjects__article">
                   <h4 class="visually-hidden">Компания партнер Esad</h4>
                   <a class="prodjects__swiper-link" href="#">
-                    <img class="prodjects__swiper-img" src="img/partners-slide-9.png" alt="Логотип Esad">
+                    <picture class="prodjects__swiper-picture flex-center">
+                      <source srcset="img/partners-slide-9-modile.png" media="(max-width: 320px)">
+                      <source srcset="img/partners-slide-9-tablet.png" media="(max-width: 1250px)">
+                      <source srcset="img/partners-slide-9.png" media="(max-width: 1920px)">
+                      <img class="prodjects__swiper-img" src="img/partners-slide-9.png"
+                        alt="Логотип компании партнера Esad">
+                    </picture>
                   </a>
                 </article>
               </div>
-
             </div>
           </div>
         </aside>
@@ -1364,17 +1564,20 @@
           <address class="showroom__address">Леонтьевский переулок, дом 5/1</address>
         </div>
 
-        <form id="form" action="https://jsonplaceholder.typicode.com/todos/" method="post" class="form-custom flex-child form" autocomplete="off">
+        <form id="form" action="https://jsonplaceholder.typicode.com/todos/" method="post"
+          class="form-custom flex-child form" autocomplete="off">
           <fieldset class="fieldset fieldset-reset form__fieldset">
             <legend class="legend form__legend visually-hidden">Ваши данные</legend>
             <ul class="form__list list-reset">
               <li class="form__item">
                 <label class="form__label" for="name" aria-label="Как вас зовут?"></label>
-                <input type="text" class="form__input input-name" id="name" name="name" placeholder="Имя*" autocomplete="off">
+                <input type="text" class="form__input input-name" id="name" name="name" placeholder="Имя*"
+                  autocomplete="off">
               </li>
               <li class="form__item">
                 <label class="form__label" for="inputMask" aria-label="Укажите ваш телефон"></label>
-                <input type="tel" class="form__input input-tel" id="inputMask" name="tel" placeholder="Телефон*" autocomplete="off">
+                <input type="tel" class="form__input input-tel" id="inputMask" name="tel" placeholder="Телефон*"
+                  autocomplete="off">
               </li>
               <li class="form__item-btn">
                 <button class="btn btn-reset form__btn btn--stroke" id="submit-btn" type="submit">Заказать обратный
@@ -1390,10 +1593,12 @@
           </h3>
           <ul class="showroom__list social list-reset">
             <li class="social__item flex-center">
-              <a class="social__icon flex-center social__icon--watsapp" href="#" aria-label="Связаться с нами через WatsApp"></a>
+              <a class="social__icon flex-center social__icon--watsapp" href="#"
+                aria-label="Связаться с нами через WatsApp"></a>
             </li>
             <li class="social__item flex-center">
-              <a class="social__icon flex-center social__icon--telegram" href="#" aria-label="Связаться с нами через Telegram"></a>
+              <a class="social__icon flex-center social__icon--telegram" href="#"
+                aria-label="Связаться с нами через Telegram"></a>
             </li>
           </ul>
         </div>
@@ -1414,7 +1619,8 @@
       <ul class="footer__list list-reset">
         <li class="footer__item">
           <a href="#" class="footer__link flex-center" aria-label="Связаться с нами В контакте">
-            <svg class="footer__icon" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="footer__icon" width="45" height="45" viewBox="0 0 45 45" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <path d="M22.5 0C10.074 0 0 10.0736 0 22.5C0 34.9264 10.074 45 22.5 45C34.926 45 45 34.9264 45 22.5C45 10.0736 34.926 0 22.5 0ZM33.9132 24.9335C34.9619 25.9577 36.0714 26.9217 37.0128 28.0519C37.4299 28.5519 37.823 29.0688 38.1222 29.6503C38.5495
               30.4794 38.1637 31.3886 37.4216 31.4379L32.812 31.4369C31.6215 31.5354 30.6741 31.0553 29.8754 30.2414C29.2378 29.5927 28.6462 28.8999 28.0321 28.2292C27.7812 27.9539 27.517 27.6947 27.2021 27.4907C26.5737 27.0819 26.0277 27.2072 25.6677 27.8636C25.3008
               28.5316 25.217 29.2719 25.182 30.0153C25.1319 31.1022 24.8041 31.3863 23.7135 31.4374C21.3832 31.5465 19.1721 31.1929 17.117 30.0181C15.3041 28.9818 13.901 27.5193 12.6783 25.8634C10.2973 22.6353 8.47381 19.0924 6.8354 15.4478C6.46665 14.627
@@ -1428,7 +1634,8 @@
         </li>
         <li class="footer__item">
           <a href="#" class="footer__link flex-center" aria-label="Связаться с нами в Инстаграмм">
-            <svg class="footer__icon" width="45" height="45" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="footer__icon" width="45" height="45" viewBox="0 0 50 50" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M20.2148 25C20.2148 27.6428 22.3572 29.7852 25 29.7852C27.6428 29.7852 29.7852 27.6428 29.7852 25C29.7852 22.3572 27.6428 20.2148 25 20.2148C22.3572 20.2148 20.2148 22.3572 20.2148 25Z"
                 fill="#CACACA" />
@@ -1438,7 +1645,8 @@
               30.8014 36.6852C29.2878 36.7543 28.8342 36.7688 25.0008 36.7688C21.167 36.7688 20.7131 36.7543 19.1998 36.6852C17.8002 36.6215 17.0399 36.3877 16.5341 36.1909C15.2821 35.7079 14.2926 34.7184 13.8096 33.4664C13.6132 32.9606 13.3793 32.2007
               13.3152 30.8011C13.2462 29.287 13.2317 28.8331 13.2317 25.0001C13.2317 21.1667 13.2462 20.7127 13.3152 19.1991C13.379 17.7994 13.6128 17.0392 13.8096 16.5333ZM25.0004 32.3712C29.0719 32.3712 32.3723 29.0711 32.3723 24.9997C32.3723 20.9283
               29.0719 17.6282 25.0004 17.6282C20.9294 17.6282 17.6289 20.9283 17.6289 24.9997C17.6289 29.0711 20.9294 32.3712 25.0004 32.3712ZM17.3375 19.0594C18.2888 19.0594 19.0602 18.2881 19.0602 17.3367C19.0602 16.3853 18.2888 15.614 17.3375 15.614C16.3861
-              15.614 15.6147 16.3853 15.6147 17.3367C15.6151 18.2881 16.3861 19.0594 17.3375 19.0594Z" fill="#CACACA" />
+              15.614 15.6147 16.3853 15.6147 17.3367C15.6151 18.2881 16.3861 19.0594 17.3375 19.0594Z"
+                fill="#CACACA" />
               <path
                 d="M25 0C38.805 0 50 11.195 50 25C50 38.805 38.805 50 25 50C11.195 50 0 38.805 0 25C0 11.195 11.195 0 25 0ZM10.7311 30.9185C10.8006 32.4467 11.0435 33.49 11.3983 34.4032C12.1441 36.3316 13.6684 37.8559 15.5968 38.6017C16.5096 38.9565
               17.5533 39.1991 19.0811 39.2689C20.612 39.3387 21.101 39.3555 24.9996 39.3555C28.8986 39.3555 29.3873 39.3387 30.9185 39.2689C32.4463 39.1991 33.49 38.9565 34.4028 38.6017C35.3611 38.2412 36.2286 37.6762 36.9457 36.9457C37.6759 36.2289 38.2408
@@ -1451,7 +1659,8 @@
         </li>
         <li class="footer__item">
           <a href="#" class="footer__link flex-center" aria-label="Связаться с нами через Файсбук">
-            <svg class="footer__icon" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="footer__icon" width="45" height="45" viewBox="0 0 45 45" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M22.5 0C10.125 0 0 10.1431 0 22.6355C0 33.9307 8.23499 43.3057 18.99 45V29.1867H13.275V22.6355H18.99V17.6431C18.99 11.9729 22.3425 8.85542 27.495 8.85542C29.9475 8.85542 32.5125 9.28464 32.5125 9.28464V14.8645H29.6775C26.8875 14.8645
               26.01 16.6039 26.01 18.3886V22.6355H32.265L31.2525 29.1867H26.01V45C31.312 44.1593 36.1399 41.4432 39.6223 37.342C43.1047 33.2408 45.012 28.0248 44.9999 22.6355C44.9999 10.1431 34.875 0 22.5 0Z"

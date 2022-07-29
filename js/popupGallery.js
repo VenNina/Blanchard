@@ -8,7 +8,7 @@
   // отключение скролла
   let disableScroll = function() {
     let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
-    // сохраняем в переменную значение текущего скролла
+    // сохраняем в переменную ширину текущего скролла
     let pagePosition = window.scrollY;
     // меняем значение padding right у body, чтобы сайт не прыгал
     body.style.paddingRight = paddingOffset;

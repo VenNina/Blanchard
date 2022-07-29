@@ -35,9 +35,11 @@ let mySwiperSecond = new Swiper(swiperSecond, {
     // },
     1000: {
       slidesPerView: 2,
+      spaceBetween: 34,
     },
     1680: {
       slidesPerView: 3,
+      spaceBetween: 45,
     },
   },
 });
@@ -75,6 +77,11 @@ let mySwiperThree = new Swiper(swiperThree, {
     },
     900: {
       slidesPerView: 3,
+      spaceBetween: 27,
+    },
+    1240: {
+      slidesPerView: 3,
+      spaceBetween: 50,
     },
   },
 });
