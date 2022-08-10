@@ -33,8 +33,14 @@ let mySwiperSecond = new Swiper(swiperSecond, {
     // 480: {
     //   slidesPerView: 1,
     // },
-    1000: {
+    500: {
+      slidesPerView: 'auto',
+      slidesPerGroup: 2,
+      spaceBetween: 34,
+    },
+    1010: {
       slidesPerView: 2,
+      slidesPerGroup: 2,
       spaceBetween: 34,
     },
     1680: {
@@ -44,18 +50,12 @@ let mySwiperSecond = new Swiper(swiperSecond, {
   },
 });
 
-window.addEventListener('resize', () => {
-  let windowWidth = window.innerWidth;
-  if (windowWidth > 1300) {
-    mySwiperSecond.update();
-  }
-});
 
 let mySwiperThree = new Swiper(swiperThree, {
   slidesPerView: 1,
   spaceBetween: 50,
   slidesPerGroup: 3,
-  // loop: true,
+  autoHeight: true,
   navigation: {
     nextEl: '.events__swiper-button-next',
     prevEl: '.events__swiper-button-prev',
@@ -74,8 +74,10 @@ let mySwiperThree = new Swiper(swiperThree, {
     // },
     400: {
       slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 34,
     },
-    900: {
+    1000: {
       slidesPerView: 3,
       spaceBetween: 27,
     },
@@ -103,11 +105,22 @@ let mySwiperFour = new Swiper(swiperFour, {
     // 600: {
     //   slidesPerView: 1,
     // },
-    900: {
+    600: {
       slidesPerView: 2,
     },
     1400: {
       slidesPerView: 3,
     },
   },
+});
+
+window.addEventListener('resize', () => {
+  let windowWidth = window.innerWidth;
+  if (windowWidth > 1300) {
+    mySwiperSecond.update();
+    mySwiperThree.update();
+  }
+  if (windowWidth < 1300) {
+    mySwiperThree.update();
+  }
 });

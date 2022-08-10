@@ -11,7 +11,7 @@
     height: 100%;
     display: flex;
     justify-content: flex-start;
-    padding-top: 239px;
+    padding-top: 235px;
     padding-bottom: 50px;
   }
 
@@ -53,10 +53,9 @@
 
   .main-descr {
     margin: 0;
-    margin-bottom: 19px;
     font-weight: 700;
     font-size: 72px;
-    line-height: 84px;
+    line-height: 96px;
   }
 
   .hero__descr {

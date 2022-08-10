@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding-top: 35px;
+  padding-top: 40px;
   padding-bottom: 35px;
 }
 
@@ -22,11 +22,14 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  gap: 22px;
 }
 
 .form__item {
   position: relative;
+}
+
+.form__item:not(:last-child) {
+  margin-right: 22px;
 }
 
 .form__input {
@@ -40,6 +43,10 @@
 
 .form__input::placeholder {
   color: var(--color-grey);
+}
+
+.form__btn {
+  white-space: nowrap;
 }
 
 .just-validate-error-field {
@@ -62,10 +69,6 @@
 
 .form__input:hover {
   background-color: var(--color-form);
-}
-
-.showroom__subtitle {
-  margin-bottom: 8px;
 }
 
 .showroom__list {

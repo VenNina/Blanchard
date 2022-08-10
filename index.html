@@ -429,14 +429,12 @@
         <p class="descr about-us__descr descr--width">
           Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
           участника как способного принимать собственные решения касаемо распределения внутренних резервов
-          и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать,
-          что высококачественный прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации
-          модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт
-          необходимость включения в&nbsp;производственный
-          план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов
-          и&nbsp;ресурсов. В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают
-          популярность среди определенных
-          слоев населения, а&nbsp;значит, должны быть разоблачены.
+          и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечёт
+          за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что
+          высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого
+          ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов.
+          В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность
+          среди определённых слоёв населения, а&nbsp;значит, должны быть разоблачены.
         </p>
       </div>
     </section>
@@ -489,42 +487,85 @@
               <div class="swiper-slide swiper-slide-second">
                 <button class="gallery__swiper-btn popup__btn-open btn-reset"
                   aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-1">
-                  <img class="swiper-img gallery__swiper-img" src="img/gallery1@1x.jpg"
-                    alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
+                  <picture class="swiper-img gallery__swiper-img flex-center">
+                    <source srcset="img/gallery1-320@1x.jpg 1x, img/gallery1-320@2x.jpg 2x" media="(max-width: 320px)">
+                    <source srcset="img/gallery1-768@1x.jpg 1x, img/gallery1-768@2x.jpg 2x" media="(max-width: 1000px)">
+                    <source srcset="img/gallery1-1024@1x.jpg 1x, img/gallery1-1024@2x.jpg 2x"
+                      media="(max-width: 1250px)">
+                    <source srcset="img/gallery1-1920@1x.jpg 1x, img/gallery1-1920@2x.jpg 2x"
+                      media="(max-width: 1680px)">
+                    <img src="img/gallery1-1920@1x.jpg" alt="Торс (Фигура с розовым лицом) - Казимир Малевич">
+                  </picture>
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
                 <button class="gallery__swiper-btn popup__btn-open btn-reset"
                   aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-2">
-                  <img class="swiper-img gallery__swiper-img" src="img/gallery2@1x.jpg"
-                    alt="Женщина с граблями - Казимир Малевич">
+                  <picture class="swiper-img gallery__swiper-img flex-center">
+                    <source srcset="img/gallery2-320@1x.jpg 1x, img/gallery2-320@2x.jpg 2x" media="(max-width: 320px)">
+                    <source srcset="img/gallery2-768@1x.jpg 1x, img/gallery2-768@2x.jpg 2x" media="(max-width: 1000px)">
+                    <source srcset="img/gallery2-1024@1x.jpg 1x, img/gallery2-1024@2x.jpg 2x"
+                      media="(max-width: 1250px)">
+                    <source srcset="img/gallery2-1920@1x.jpg 1x, img/gallery2-1920@2x.jpg 2x"
+                      media="(max-width: 1680px)">
+                    <img src="img/gallery2-1920@1x.jpg" alt="Женщина с граблями - Казимир Малевич">
+                  </picture>
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
                 <button class="gallery__swiper-btn popup__btn-open btn-reset"
                   aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-3">
-                  <img class="swiper-img gallery__swiper-img" src="img/gallery3@1x.jpg"
-                    alt="Taking in the harvest - Казимир Малевич">
+                  <picture class="swiper-img gallery__swiper-img flex-center">
+                    <source srcset="img/gallery3-320@1x.jpg 1x, img/gallery3-320@2x.jpg 2x" media="(max-width: 320px)">
+                    <source srcset="img/gallery3-768@1x.jpg 1x, img/gallery3-768@2x.jpg 2x" media="(max-width: 1000px)">
+                    <source srcset="img/gallery3-1024@1x.jpg 1x, img/gallery3-1024@2x.jpg 2x"
+                      media="(max-width: 1250px)">
+                    <source srcset="img/gallery3-1920@1x.jpg 1x, img/gallery3-1920@2x.jpg 2x"
+                      media="(max-width: 1680px)">
+                    <img src="img/gallery3-1920@1x.jpg" alt="Taking in the harvest - Казимир Малевич">
+                  </picture>
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
                 <button class="gallery__swiper-btn popup__btn-open btn-reset"
                   aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-4">
-                  <img class="swiper-img gallery__swiper-img" src="img/gallery4@1x.jpg" alt="Сюпрематизм - Иван Клюн">
+                  <picture class="swiper-img gallery__swiper-img flex-center">
+                    <source srcset="img/gallery4-320@1x.jpg 1x, img/gallery4-320@2x.jpg 2x" media="(max-width: 320px)">
+                    <source srcset="img/gallery4-768@1x.jpg 1x, img/gallery4-768@2x.jpg 2x" media="(max-width: 1000px)">
+                    <source srcset="img/gallery4-1024@1x.jpg 1x, img/gallery4-1024@2x.jpg 2x"
+                      media="(max-width: 1250px)">
+                    <source srcset="img/gallery4-1920@1x.jpg 1x, img/gallery4-1920@2x.jpg 2x"
+                      media="(max-width: 1680px)">
+                    <img src="img/gallery4-1920@1x.jpg" alt="Сюпрематизм - Иван Клюн">
+                  </picture>
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
                 <button class="gallery__swiper-btn popup__btn-open btn-reset"
                   aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-5">
-                  <img class="swiper-img gallery__swiper-img" src="img/gallery5@1x.jpg"
-                    alt="Женщина с ведрами - Казимир Малевич">
+                  <picture class="swiper-img gallery__swiper-img flex-center">
+                    <source srcset="img/gallery5-320@1x.jpg 1x, img/gallery5-320@2x.jpg 2x" media="(max-width: 320px)">
+                    <source srcset="img/gallery5-768@1x.jpg 1x, img/gallery5-768@2x.jpg 2x" media="(max-width: 1000px)">
+                    <source srcset="img/gallery5-1024@1x.jpg 1x, img/gallery5-1024@2x.jpg 2x"
+                      media="(max-width: 1250px)">
+                    <source srcset="img/gallery5-1920@1x.jpg 1x, img/gallery5-1920@2x.jpg 2x"
+                      media="(max-width: 1680px)">
+                    <img src="img/gallery5-1920@1x.jpg" alt="Женщина с ведрами - Казимир Малевич">
+                  </picture>
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
                 <button class="gallery__swiper-btn popup__btn-open btn-reset"
                   aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-6">
-                  <img class="swiper-img gallery__swiper-img" src="img/gallery6@1x.jpg"
-                    alt="Сюпрематизм - Казимир Малевич">
+                  <picture class="swiper-img gallery__swiper-img flex-center">
+                    <source srcset="img/gallery5-320@1x.jpg 1x, img/gallery5-320@2x.jpg 2x" media="(max-width: 320px)">
+                    <source srcset="img/gallery6-768@1x.jpg 1x, img/gallery6-768@2x.jpg 2x" media="(max-width: 1000px)">
+                    <source srcset="img/gallery6-1024@1x.jpg 1x, img/gallery6-1024@2x.jpg 2x"
+                      media="(max-width: 1250px)">
+                    <source srcset="img/gallery6-1920@1x.jpg 1x, img/gallery6-1920@2x.jpg 2x"
+                      media="(max-width: 1680px)">
+                    <img src="img/gallery6-1920@1x.jpg" alt="Сюпрематизм - Казимир Малевич">
+                  </picture>
                 </button>
               </div>
             </div>
@@ -703,7 +744,8 @@
           Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
           политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь
           всеголишь частью общей картины, стремящиеся
-          вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые
+          вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов,
+          которые
           жаждут быть функционально разнесены на&nbsp;независимые элементы.
         </p>
         <div class="catalog__content">
@@ -810,8 +852,8 @@
                 <div class="card__inner">
                   <picture class="card__picture">
                     <source srcset="img/Domeniko320@1x.jpg 1x, img/Domeniko320@2x.jpg 2x" media="(max-width: 320px)">
-                    <source srcset="img/Domeniko768@1x.jpg 1x,img/Domeniko768@2x.jpg 2x" media="(max-width: 768px)">
-                    <source srcset="img/Domeniko1024@1x.jpg 1x, img/Domeniko1024@2x.jpg 2x" media="(max-width: 1024px)">
+                    <source srcset="img/Domeniko768@1x.jpg 1x,img/Domeniko768@2x.jpg 2x" media="(max-width: 1010px)">
+                    <source srcset="img/Domeniko1024@1x.jpg 1x, img/Domeniko1024@2x.jpg 2x" media="(max-width: 1300px)">
                     <source srcset="img/Domeniko@1x.jpg 1x, img/Domeniko@2x.jpg 2x" media="(max-width: 1920px)">
                     <img src="img/Domeniko@1x.jpg" alt="Доменико Гирландайо" class="card__img">
                   </picture>
@@ -828,7 +870,8 @@
                     Микеланджело в&nbsp;течение года овладевал профессиональными
                     навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями
                     показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане
-                    Флоренции в&nbsp;костюмах того времени). </p>
+                    Флоренции в&nbsp;костюмах того времени).
+                  </p>
                 </figcaption>
               </figure>
             </div>
@@ -1125,12 +1168,10 @@
                 <span class="tabs-inner__icon"></span>
               </div>
               <div class="tabs-inner__empty-content empty-content">
-                <div class="empty-content__inner">
-                  <h4 class="subtitle">Здесь пока пусто</h4>
-                  <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
-                    интересное для себя</p>
-                  <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
-                </div>
+                <h4 class="subtitle">Здесь пока пусто</h4>
+                <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
+                  интересное для себя</p>
+                <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
               </div>
             </li>
             <li class="tabs__item tabs-inner">
@@ -1143,12 +1184,10 @@
                 <span class="tabs-inner__icon"></span>
               </div>
               <div class="tabs-inner__empty-content empty-content">
-                <div class="empty-content__inner">
-                  <h4 class="subtitle empty-content__subtitle">Здесь пока пусто</h4>
-                  <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
-                    интересное для себя</p>
-                  <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
-                </div>
+                <h4 class="subtitle empty-content__subtitle">Здесь пока пусто</h4>
+                <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
+                  интересное для себя</p>
+                <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
               </div>
             </li>
             <li class="tabs__item tabs-inner">
@@ -1161,12 +1200,10 @@
                 <span class="tabs-inner__icon"></span>
               </div>
               <div class="tabs-inner__empty-content empty-content">
-                <div class="empty-content__inner">
-                  <h4 class="subtitle">Здесь пока пусто</h4>
-                  <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
-                    интересное для себя</p>
-                  <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
-                </div>
+                <h4 class="subtitle">Здесь пока пусто</h4>
+                <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
+                  интересное для себя</p>
+                <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
               </div>
             </li>
             <li class="tabs__item tabs-inner">
@@ -1179,13 +1216,11 @@
                 <span class="tabs-inner__icon"></span>
               </div>
               <div class="tabs-inner__empty-content empty-content">
-                <div class="empty-content__inner">
-                  <h4 class="subtitle">Здесь пока пусто</h4>
-                  <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
-                    интересное для себя
-                  </p>
-                  <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
-                </div>
+                <h4 class="subtitle">Здесь пока пусто</h4>
+                <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
+                  интересное для себя
+                </p>
+                <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
               </div>
             </li>
             <li class="tabs__item tabs-inner">
@@ -1198,13 +1233,11 @@
                 <span class="tabs-inner__icon"></span>
               </div>
               <div class="tabs-inner__empty-content empty-content">
-                <div class="empty-content__inner">
-                  <h4 class="subtitle">Здесь пока пусто</h4>
-                  <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
-                    интересное для себя
-                  </p>
-                  <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
-                </div>
+                <h4 class="subtitle">Здесь пока пусто</h4>
+                <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
+                  интересное для себя
+                </p>
+                <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
               </div>
             </li>
             <li class="tabs__item tabs-inner">
@@ -1217,12 +1250,10 @@
                 <span class="tabs-inner__icon"></span>
               </div>
               <div class="tabs-inner__empty-content empty-content">
-                <div class="empty-content__inner">
-                  <h4 class="subtitle">Здесь пока пусто</h4>
-                  <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
-                    интересное для себя</p>
-                  <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
-                </div>
+                <h4 class="subtitle">Здесь пока пусто</h4>
+                <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
+                  интересное для себя</p>
+                <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
               </div>
             </li>
           </ul>
@@ -1406,17 +1437,14 @@
           исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых
           <span class="tooltip">
             <button class="tooltip__btn btn-reset" aria-describedby="tooptip-3"></button>
-            <span class="tooltip__text" role="tooltip" id="tooptip-3">
-              В&nbsp;стремлении повысить качество
-            </span>
+            <span class="tooltip__text" role="tooltip" id="tooptip-3">В&nbsp;стремлении повысить качество</span>
           </span> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных
           социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны
-          с&nbsp;не&nbsp;уникальными данными
-          до&nbsp;степени совершенной неузнаваемости. Подробнее: <a href="#"
-            class="prodjects__link-btn prodject-link-btn link-btn"><span
-              class="prodject-link-btn__text link-btn__text">blanchard-art.ru/projects</span></a>
+          с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости. Подробнее:
+          <a href="#" class="prodjects__link-btn prodject-link-btn link-btn">
+            <span class="prodject-link-btn__text link-btn__text">blanchard-art.ru/projects</span>
+          </a>
         </p>
-
         <aside class="prodjects__aside">
           <h3 class="subtitle prodjects__aside-subtitle">Партнёры проектов:</h3>
           <div class="prodjects__slide-btn">
@@ -1633,37 +1661,14 @@
           </a>
         </li>
         <li class="footer__item">
-          <a href="#" class="footer__link flex-center" aria-label="Связаться с нами в Инстаграмм">
-            <svg class="footer__icon" width="45" height="45" viewBox="0 0 50 50" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M20.2148 25C20.2148 27.6428 22.3572 29.7852 25 29.7852C27.6428 29.7852 29.7852 27.6428 29.7852 25C29.7852 22.3572 27.6428 20.2148 25 20.2148C22.3572 20.2148 20.2148 22.3572 20.2148 25Z"
-                fill="#CACACA" />
-              <path d="M13.8096 16.5333C14.0397 15.91 14.4066 15.3458 14.8835 14.8827C15.3466 14.4059 15.9104 14.0389 16.5341 13.8089C17.0399 13.6124 17.7998 13.3786 19.1994 13.3149C20.7135 13.2458 21.1674 13.231 25.0004 13.231C28.8338 13.231 29.2878
-              13.2455 30.8014 13.3145C32.201 13.3786 32.9613 13.6124 33.4668 13.8089C34.0905 14.0389 34.6547 14.4059 35.1174 14.8827C35.5942 15.3458 35.9612 15.9096 36.1916 16.5333C36.3881 17.0392 36.6219 17.7994 36.6856 19.1991C36.7547 20.7127 36.7695
-              21.1667 36.7695 25.0001C36.7695 28.8331 36.7547 29.287 36.6856 30.8011C36.6219 32.2007 36.3881 32.9606 36.1916 33.4664C35.9612 34.0901 35.5946 34.6539 35.1178 35.117C34.6547 35.5939 34.0909 35.9608 33.4671 36.1909C32.9613 36.3877 32.201 36.6215
-              30.8014 36.6852C29.2878 36.7543 28.8342 36.7688 25.0008 36.7688C21.167 36.7688 20.7131 36.7543 19.1998 36.6852C17.8002 36.6215 17.0399 36.3877 16.5341 36.1909C15.2821 35.7079 14.2926 34.7184 13.8096 33.4664C13.6132 32.9606 13.3793 32.2007
-              13.3152 30.8011C13.2462 29.287 13.2317 28.8331 13.2317 25.0001C13.2317 21.1667 13.2462 20.7127 13.3152 19.1991C13.379 17.7994 13.6128 17.0392 13.8096 16.5333ZM25.0004 32.3712C29.0719 32.3712 32.3723 29.0711 32.3723 24.9997C32.3723 20.9283
-              29.0719 17.6282 25.0004 17.6282C20.9294 17.6282 17.6289 20.9283 17.6289 24.9997C17.6289 29.0711 20.9294 32.3712 25.0004 32.3712ZM17.3375 19.0594C18.2888 19.0594 19.0602 18.2881 19.0602 17.3367C19.0602 16.3853 18.2888 15.614 17.3375 15.614C16.3861
-              15.614 15.6147 16.3853 15.6147 17.3367C15.6151 18.2881 16.3861 19.0594 17.3375 19.0594Z"
-                fill="#CACACA" />
-              <path
-                d="M25 0C38.805 0 50 11.195 50 25C50 38.805 38.805 50 25 50C11.195 50 0 38.805 0 25C0 11.195 11.195 0 25 0ZM10.7311 30.9185C10.8006 32.4467 11.0435 33.49 11.3983 34.4032C12.1441 36.3316 13.6684 37.8559 15.5968 38.6017C16.5096 38.9565
-              17.5533 39.1991 19.0811 39.2689C20.612 39.3387 21.101 39.3555 24.9996 39.3555C28.8986 39.3555 29.3873 39.3387 30.9185 39.2689C32.4463 39.1991 33.49 38.9565 34.4028 38.6017C35.3611 38.2412 36.2286 37.6762 36.9457 36.9457C37.6759 36.2289 38.2408
-              35.3611 38.6013 34.4032C38.9561 33.4904 39.1991 32.4467 39.2685 30.9189C39.3391 29.3877 39.3555 28.8986 39.3555 25C39.3555 21.1014 39.3391 20.6123 39.2689 19.0815C39.1994 17.5533 38.9568 16.51 38.6021 15.5968C38.2416 14.6389 37.6762 13.7711
-              36.9457 13.0543C36.2289 12.3238 35.3611 11.7588 34.4032 11.3983C33.49 11.0435 32.4467 10.8009 30.9185 10.7311C29.3877 10.6613 28.8986 10.6445 25 10.6445C21.1014 10.6445 20.6123 10.6613 19.0815 10.7315C17.5533 10.8009 16.51 11.0435 15.5968
-              11.3979C14.6389 11.7584 13.7711 12.3238 13.0539 13.0543C12.3238 13.7714 11.7584 14.6389 11.3983 15.5968C11.0432 16.51 10.8006 17.5533 10.7307 19.0815C10.6609 20.6123 10.6445 21.1014 10.6445 25C10.6445 28.8986 10.6609 29.3877 10.7311 30.9185Z"
-                fill="#CACACA" />
-            </svg>
-          </a>
-        </li>
-        <li class="footer__item">
           <a href="#" class="footer__link flex-center" aria-label="Связаться с нами через Файсбук">
             <svg class="footer__icon" width="45" height="45" viewBox="0 0 45 45" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
-                d="M22.5 0C10.125 0 0 10.1431 0 22.6355C0 33.9307 8.23499 43.3057 18.99 45V29.1867H13.275V22.6355H18.99V17.6431C18.99 11.9729 22.3425 8.85542 27.495 8.85542C29.9475 8.85542 32.5125 9.28464 32.5125 9.28464V14.8645H29.6775C26.8875 14.8645
-              26.01 16.6039 26.01 18.3886V22.6355H32.265L31.2525 29.1867H26.01V45C31.312 44.1593 36.1399 41.4432 39.6223 37.342C43.1047 33.2408 45.012 28.0248 44.9999 22.6355C44.9999 10.1431 34.875 0 22.5 0Z"
+                d="M19.279 14.9859C19.279 16.8409 20.7828 18.3449 22.6379 18.3449C24.4929 18.3449 25.9967 16.8409 25.9967 14.9859C25.9967 13.1309 24.4929 11.6271 22.6379 11.6271C20.7828 11.6271 19.279 13.1309 19.279 14.9859Z"
+                fill="#CACACA" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45ZM14.5125 14.9858C14.5125 10.4984 18.1503 6.86047 22.6379 6.86047C27.1254 6.86047 30.7632 10.4984 30.7632 14.9858C30.7632 19.4734 27.1254 23.1115 22.6379 23.1115C18.1503 23.1115 14.5125 19.4734 14.5125 14.9858ZM30.8117 27.291C30.7086 27.3737 28.7593 28.9142 25.5064 29.5769L30.4165 34.4432C31.28 35.3053 31.2811 36.7042 30.419 37.5677C29.5569 38.431 28.1583 38.4324 27.2945 37.5701L22.5276 32.928L18.1979 37.5402C17.7644 37.9899 17.1862 38.216 16.6074 38.216C16.0553 38.216 15.5027 38.0106 15.074 37.5972C14.1956 36.7502 14.1701 35.3516 15.0171 34.4733L19.6777 29.6025C16.3336 28.9555 14.3039 27.3749 14.1993 27.291C13.2475 26.5277 13.0946 25.1372 13.8579 24.1852C14.6212 23.2334 16.0115 23.0805 16.9636 23.8437C16.9837 23.86 19.1067 25.4549 22.5275 25.4572C25.9483 25.4549 28.0273 23.86 28.0474 23.8437C28.9995 23.0805 30.3899 23.2334 31.1531 24.1852C31.9165 25.1372 31.7636 26.5277 30.8117 27.291Z"
                 fill="#CACACA" />
             </svg>
           </a>
