@@ -102,11 +102,14 @@ let mySwiperFour = new Swiper(swiperFour, {
   },
   breakpoints: {
     // when window width is >= 320px
-    // 600: {
-    //   slidesPerView: 1,
-    // },
-    600: {
+    200: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+    670: {
       slidesPerView: 2,
+      spaceBetween: 34,
+      slidesPerGroup: 2,
     },
     1400: {
       slidesPerView: 3,
