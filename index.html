@@ -77,6 +77,10 @@
   <script src="js/openSeach.js" defer></script>
   <!-- открытие бургера -->
   <script src="js/openBurger.js" defer></script>
+  <!-- всплывающая подсказка -->
+  <script src="./libs/popper.min.js" defer></script>
+  <script src="./libs/tippy-bundle.umd.js" defer></script>
+  <script src="./js/tooltip.js" defer></script>
   <noscript>
     <style>
       /**
@@ -94,7 +98,7 @@
     <div class="header-top">
       <div class="container header-top__container">
         <picture class="header__picture flex-center">
-          <source srcset="img/logo_header_320_mobile.svg" media="(max-width: 320px)">
+          <source srcset="img/logo_header_320_mobile.svg" media="(max-width: 425px)">
           <source srcset="img/logo_header_1024_tablet.svg" media="(max-width: 1045px)">
           <source srcset="img/logo_header_1920_desktop.svg" media="(max-width: 1920px)">
           <img src="img/logo_header_1920_desktop.svg" alt="Логотип галереи Blanchard">
@@ -373,18 +377,20 @@
             </div>
           </li>
         </ul>
-        <div class="header__btns seach flex-center">
-          <div class="header__btns-inner flex-center">
-            <button class="btn-reset seach-form__btn-open flex-center btn-loop" aria-label="Открыть Поиск">
-              <svg class="seach-form__icon btn-loop__icon" width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" />
-              </svg>
-            </button>
-            <form class="seach__form seach-form" action="#" method="post">
-              <input class="seach-form__input" placeholder="Поиск по сайту" required />
-              <button class="btn-reset seach-form__btn-close flex-center" type="button"></button>
-            </form>
+        <div class="header__btns-wrap">
+          <div class="header__btns seach flex-center">
+            <div class="header__btns-inner flex-center">
+              <button class="btn-reset seach-form__btn-open flex-center btn-loop" aria-label="Открыть Поиск">
+                <svg class="seach-form__icon btn-loop__icon" width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" />
+                </svg>
+              </button>
+              <form class="seach__form seach-form" action="#" method="post">
+                <input class="seach-form__input" placeholder="Поиск по сайту" required />
+                <button class="btn-reset seach-form__btn-close flex-center" type="button"></button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -397,7 +403,7 @@
         <div class="swiper-wrapper">
           <div class="hero__swiper-slide hero__swiper-slide--one swiper-slide"></div>
           <div class="hero__swiper-slide hero__swiper-slide--two swiper-slide"></div>
-          <div class="hero__swiper-slide hero__swiper-slide-three swiper-slide"></div>
+          <div class="hero__swiper-slide hero__swiper-slide--three swiper-slide"></div>
         </div>
       </div>
       <div class="container hero__container">
@@ -423,7 +429,8 @@
           за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что
           высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого
           ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов.
-          В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность
+          В&nbsp;рамках спецификации современных стандартов, действия
+          представителей оппозиции набирают популярность
           среди определённых слоёв населения, а&nbsp;значит, должны быть разоблачены.
         </p>
       </div>
@@ -477,7 +484,7 @@
               <div class="swiper-slide swiper-slide-second">
                 <button class="gallery__swiper-btn popup__btn-open btn-reset" aria-label="Открыть модальное окно с увеличенным фото" type="button" data-path="gallery-popup-1">
                   <picture class="swiper-img gallery__swiper-img flex-center">
-                    <source srcset="img/gallery1-320@1x.jpg 1x, img/gallery1-320@2x.jpg 2x" media="(max-width: 320px)">
+                    <source srcset="img/gallery1-320@1x.jpg 1x, img/gallery1-320@2x.jpg 2x" media="(max-width: 500px)">
                     <source srcset="img/gallery1-768@1x.jpg 1x, img/gallery1-768@2x.jpg 2x" media="(max-width: 1000px)">
                     <source srcset="img/gallery1-1024@1x.jpg 1x, img/gallery1-1024@2x.jpg 2x" media="(max-width: 1250px)">
                     <source srcset="img/gallery1-1920@1x.jpg 1x, img/gallery1-1920@2x.jpg 2x" media="(max-width: 1680px)">
@@ -705,12 +712,8 @@
       <div class="container catalog__container">
         <h2 class="title catalog__title">Каталог</h2>
         <p class="descr catalog__descr descr--width">
-          Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
-          политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь
-          всеголишь частью общей картины, стремящиеся
-          вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов,
-          которые
-          жаждут быть функционально разнесены на&nbsp;независимые элементы.
+          Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь
+          всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть функционально разнесены на&nbsp;независимые элементы.
         </p>
         <div class="catalog__content">
           <div class="catalog__card card">
@@ -1100,7 +1103,7 @@
                 <span class="tabs-inner__icon"></span>
               </div>
               <div class="tabs-inner__empty-content empty-content">
-                <h4 class="subtitle">Здесь пока пусто</h4>
+                <h4 class="subtitle empty-content__subtitle">Здесь пока пусто</h4>
                 <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
                   интересное для себя</p>
                 <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
@@ -1132,7 +1135,7 @@
                 <span class="tabs-inner__icon"></span>
               </div>
               <div class="tabs-inner__empty-content empty-content">
-                <h4 class="subtitle">Здесь пока пусто</h4>
+                <h4 class="subtitle empty-content__subtitle">Здесь пока пусто</h4>
                 <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
                   интересное для себя</p>
                 <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
@@ -1148,7 +1151,7 @@
                 <span class="tabs-inner__icon"></span>
               </div>
               <div class="tabs-inner__empty-content empty-content">
-                <h4 class="subtitle">Здесь пока пусто</h4>
+                <h4 class="subtitle empty-content__subtitle">Здесь пока пусто</h4>
                 <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
                   интересное для себя</p>
                 <a href="#gallery" class="empty-content__link empty-link">В галлерею</a>
@@ -1164,7 +1167,7 @@
                 <span class="tabs-inner__icon"></span>
               </div>
               <div class="tabs-inner__empty-content empty-content">
-                <h4 class="subtitle">Здесь пока пусто</h4>
+                <h4 class="subtitle empty-content__subtitle">Здесь пока пусто</h4>
                 <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
                   интересное для себя
                 </p>
@@ -1181,7 +1184,7 @@
                 <span class="tabs-inner__icon"></span>
               </div>
               <div class="tabs-inner__empty-content empty-content">
-                <h4 class="subtitle">Здесь пока пусто</h4>
+                <h4 class="subtitle empty-content__subtitle">Здесь пока пусто</h4>
                 <p class="descr empty-content__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то
                   интересное для себя
                 </p>
@@ -1207,8 +1210,8 @@
                 <div class="events__card events-card events__card--one">
                   <div class="events-card__top">
                     <div class="events-card__name">
-                      <p class="descr events-card__descr-datatime">Музей им. Щусева</p>
-                      <p class="descr events-card___descr-datatime">
+                      <p class="events-card__descr-datatime">Музей им. Щусева</p>
+                      <p class="events-card__descr-datatime">
                         <time datetime="2022-03-20">с&nbsp;20&nbsp;марта</time> <time datetime="2022-04-30">по&nbsp;30&nbsp;апреля</time>
                       </p>
                     </div>
@@ -1230,8 +1233,8 @@
                 <div class="events__card events-card events__card--two">
                   <div class="events-card__top">
                     <div class="events-card__name">
-                      <p class="descr events-card__descr-datatime"><abbr title="Московский музей современного искусства">ММОМА</abbr></p>
-                      <p class="descr events-card___descr-datatime">
+                      <p class="events-card__descr-datatime"><abbr title="Московский музей современного искусства">ММОМА</abbr></p>
+                      <p class="events-card__descr-datatime">
                         <time datetime="2022-03-24T19:00">24 марта 19:00</time>
                       </p>
                     </div>
@@ -1255,8 +1258,8 @@
                 <div class="events__card events-card events__card--three">
                   <div class="events-card__top">
                     <div class="events-card__name">
-                      <p class="descr events-card__descr-datatime">Еврейский музей</p>
-                      <p class="descr events-card___descr-datatime">
+                      <p class="events-card__descr-datatime">Еврейский музей</p>
+                      <p class="events-card__descr-datatime">
                         <time datetime="2022-03-31">с&nbsp;31&nbsp;марта</time> <time datetime="2022-03-21">по&nbsp;21&nbsp;апреля</time>
                       </p>
                     </div>
@@ -1281,10 +1284,10 @@
                 <div class="events__card events-card events__card--four">
                   <div class="events-card__top">
                     <div class="events-card__name">
-                      <p class="descr events-card__descr-datatime">
+                      <p class="events-card__descr-datatime">
                         <abbr title="Мультимедиа Арт Музей">ММАМ</abbr>
                       </p>
-                      <p class="descr events-card___descr-datatime">
+                      <p class="events-card__descr-datatime">
                         <time datetime="2022-04-08">с&nbsp;8&nbsp;апреля</time> <time datetime="2022-05-20">по&nbsp;20&nbsp;мая</time>
                       </p>
                     </div>
@@ -1309,10 +1312,10 @@
                 <div class="events__card events-card events__card--five">
                   <div class="events-card__top">
                     <div class="events-card__name">
-                      <p class="descr events-card__descr-datatime">
+                      <p class="events-card__descr-datatime">
                         Третьяковка на&nbsp;Крымском валу
                       </p>
-                      <p class="descr events-card___descr-datatime">
+                      <p class="events-card__descr-datatime">
                         <time datetime="2022-03-30">с&nbsp;30&nbsp;марта</time> <time datetime="2022-04-30">по&nbsp;30&nbsp;апреля</time>
                       </p>
                     </div>
@@ -1343,32 +1346,19 @@
         <p class="descr prodjects__descr descr--width">
           Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
           фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны
-          с&nbsp;не&nbsp;уникальными данными до&nbsp;степени
-          совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное
-          информационно-пропагандистское обеспечение
-          <span class="tooltip">
-            <button class="tooltip__btn btn-reset" id="toolltip-btn" aria-describedby="tooltip-1"></button>
-            <span class="tooltip__text" role="tooltip" id="tooltip-1">
-              Пример современных тенденций&nbsp;&mdash; современная методология разработки
-            </span>
-          </span>
+          с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское обеспечение
+          <button class="tooltip-btn btn-reset" id="myButton1"></button>
           нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений.
           И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены
-          <span class="tooltip">
-            <button class="tooltip__btn btn-reset" aria-describedby="tooltip-2"></button>
-            <span class="tooltip__text" role="tooltip" id="tooltip-2">
-              Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции
-            </span>
-          </span>
+          <button class="tooltip-btn btn-reset" id="myButton2"></button>
           исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых
-          <span class="tooltip">
-            <button class="tooltip__btn btn-reset" aria-describedby="tooptip-3"></button>
-            <span class="tooltip__text" role="tooltip" id="tooptip-3">В&nbsp;стремлении повысить качество</span>
-          </span> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных
+          <button class="tooltip-btn btn-reset" id="myButton3"></button>
+          предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также
+          <!-- представители современных -->
           социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны
           с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости. Подробнее:
           <a href="#" class="prodjects__link-btn prodject-link-btn link-btn">
-            <span class="prodject-link-btn__text link-btn__text">blanchard-art.ru/projects</span>
+            <span class="prodject-link-btn__text link-btn__text">blanchard-art.ru/projects<span class="text-visible">/about</span></span>
           </a>
         </p>
         <aside class="prodjects__aside">
@@ -1384,7 +1374,7 @@
                   <h4 class="visually-hidden">Компания партнер Freelands Foundation</h4>
                   <a class="prodjects__swiper-link" href="#">
                     <picture class="prodjects__swiper-picture flex-center">
-                      <source srcset="img/partners-slide-1-320@1x.png" media="(max-width: 320px)">
+                      <source srcset="img/partners-slide-1-320@1x.png" media="(max-width: 425px)">
                       <source srcset="img/partners-slide-1-768@1x.png" media="(max-width: 1000px)">
                       <source srcset="img/partners-slide-1-tablet.png" media="(max-width: 1250px)">
                       <source srcset="img/partners-slide-1.png" media="(max-width: 1920px)">
@@ -1398,7 +1388,7 @@
                   <h4 class="visually-hidden">Компания партнер Institute for Contemporary Art</h4>
                   <a class="prodjects__swiper-link" href="#">
                     <picture class="prodjects__swiper-picture flex-center">
-                      <source srcset="img/partners-slide-2-320@1x.png" media="(max-width: 320px)">
+                      <source srcset="img/partners-slide-2-320@1x.png" media="(max-width: 425px)">
                       <source srcset="img/partners-slide-2-768@1x.png" media="(max-width: 1000px)">
                       <source srcset="img/partners-slide-2-tablet.png" media="(max-width: 1250px)">
                       <source srcset="img/partners-slide-2.png" media="(max-width: 1920px)">
@@ -1412,7 +1402,7 @@
                   <h4 class="visually-hidden">Компания партнер Workhouse</h4>
                   <a class="prodjects__swiper-link" href="#">
                     <picture class="prodjects__swiper-picture flex-center">
-                      <source srcset="img/partners-slide-3-320@1x.png" media="(max-width: 320px)">
+                      <source srcset="img/partners-slide-3-320@1x.png" media="(max-width: 425px)">
                       <source srcset="img/partners-slide-3-768@1x.png" media="(max-width: 1000px)">
                       <source srcset="img/partners-slide-3-tablet.png" media="(max-width: 1250px)">
                       <source srcset="img/partners-slide-3.png" media="(max-width: 1920px)">
@@ -1426,7 +1416,7 @@
                   <h4 class="visually-hidden">Компания партнер 1849</h4>
                   <a class="prodjects__swiper-link" href="#">
                     <picture class="prodjects__swiper-picture flex-center">
-                      <source srcset="img/partners-slide-4-320@1x.png" media="(max-width: 320px)">
+                      <source srcset="img/partners-slide-4-320@1x.png" media="(max-width: 425px)">
                       <source srcset="img/partners-slide-4-768@1x.png" media="(max-width: 1000px)">
                       <source srcset="img/partners-slide-4-tablet.png" media="(max-width: 1250px)">
                       <source srcset="img/partners-slide-4.png" media="(max-width: 1920px)">
@@ -1440,7 +1430,7 @@
                   <h4 class="visually-hidden">Компания партнер Hiscox</h4>
                   <a class="prodjects__swiper-link" href="#">
                     <picture class="prodjects__swiper-picture flex-center">
-                      <source srcset="img/partners-slide-5-320@1x.png" media="(max-width: 320px)">
+                      <source srcset="img/partners-slide-5-320@1x.png" media="(max-width: 425px)">
                       <source srcset="img/partners-slide-5-768@1x.png" media="(max-width: 1000px)">
                       <source srcset="img/partners-slide-5-tablet.png" media="(max-width: 1250px)">
                       <source srcset="img/partners-slide-5.png" media="(max-width: 1920px)">
@@ -1454,7 +1444,7 @@
                   <h4 class="visually-hidden">Компания партнер Camden arts centre</h4>
                   <a class="prodjects__swiper-link" href="#">
                     <picture class="prodjects__swiper-picture flex-center">
-                      <source srcset="img/partners-slide-6-320@1x.png" media="(max-width: 320px)">
+                      <source srcset="img/partners-slide-6-320@1x.png" media="(max-width: 425px)">
                       <source srcset="img/partners-slide-6-768@1x.png" media="(max-width: 1000px)">
                       <source srcset="img/partners-slide-6-tablet.png" media="(max-width: 1250px)">
                       <source srcset="img/partners-slide-6.png" media="(max-width: 1920px)">
@@ -1468,7 +1458,7 @@
                   <h4 class="visually-hidden">Компания партнер Camden Stassen</h4>
                   <a class="prodjects__swiper-link" href="#">
                     <picture class="prodjects__swiper-picture flex-center">
-                      <source srcset="img/partners-slide-7-320@1x.png" media="(max-width: 320px)">
+                      <source srcset="img/partners-slide-7-320@1x.png" media="(max-width: 425px)">
                       <source srcset="img/partners-slide-7-768@1x.png" media="(max-width: 1000px)">
                       <source srcset="img/partners-slide-7-tablet.png" media="(max-width: 1250px)">
                       <source srcset="img/partners-slide-7.png" media="(max-width: 1920px)">
@@ -1482,7 +1472,7 @@
                   <h4 class="visually-hidden">Компания партнер Watts gallery artists village</h4>
                   <a class="prodjects__swiper-link" href="#">
                     <picture class="prodjects__swiper-picture flex-center">
-                      <source srcset="img/partners-slide-8-320@1x.png" media="(max-width: 320px)">
+                      <source srcset="img/partners-slide-8-320@1x.png" media="(max-width: 425px)">
                       <source srcset="img/partners-slide-8-768@1x.png" media="(max-width: 1000px)">
                       <source srcset="img/partners-slide-8-tablet.png" media="(max-width: 1250px)">
                       <source srcset="img/partners-slide-8.png" media="(max-width: 1920px)">
@@ -1496,7 +1486,7 @@
                   <h4 class="visually-hidden">Компания партнер Esad</h4>
                   <a class="prodjects__swiper-link" href="#">
                     <picture class="prodjects__swiper-picture flex-center">
-                      <source srcset="img/partners-slide-9-320@1x.png" media="(max-width: 320px)">
+                      <source srcset="img/partners-slide-9-320@1x.png" media="(max-width: 425px)">
                       <source srcset="img/partners-slide-9-768@1x.png" media="(max-width: 1000px)">
                       <source srcset="img/partners-slide-9-tablet.png" media="(max-width: 1250px)">
                       <source srcset="img/partners-slide-9.png" media="(max-width: 1920px)">
@@ -1531,15 +1521,15 @@
                 <input type="tel" class="form__input input-tel" id="inputMask" name="tel" placeholder="Телефон*" autocomplete="off">
               </li>
               <li class="form__item-btn custom-grid__child">
-                <button class="btn btn-reset form__btn btn--stroke" id="submit-btn" type="submit">Заказать обратный
-                  звонок</button>
+                <button class="btn btn-reset form__btn btn--stroke" id="submit-btn" type="submit">
+                  Заказать <span class="form__btn-text">обратный звонок</span> </button>
               </li>
             </ul>
           </fieldset>
         </form>
 
         <div class="showroom__social">
-          <h3 class="subtitle showroom__subtitle showroom__social-subtitle">
+          <h3 class="subtitle showroom__social-subtitle">
             Связаться в&nbsp;один клик
           </h3>
           <ul class="showroom__list social list-reset">

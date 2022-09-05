@@ -30,15 +30,16 @@ let mySwiperSecond = new Swiper(swiperSecond, {
   },
   breakpoints: {
     // when window width is >= 320px
-    // 480: {
-    //   slidesPerView: 1,
-    // },
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
     500: {
       slidesPerView: 'auto',
       slidesPerGroup: 2,
       spaceBetween: 34,
     },
-    1010: {
+    1011: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 34,
@@ -69,10 +70,11 @@ let mySwiperThree = new Swiper(swiperThree, {
   },
   breakpoints: {
     // when window width is >= 320px
-    // 480: {
-    //   slidesPerView: 1,
-    // },
-    400: {
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+    550: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 34,
@@ -106,9 +108,14 @@ let mySwiperFour = new Swiper(swiperFour, {
       slidesPerView: 1,
       slidesPerGroup: 1,
     },
-    670: {
+    750: {
       slidesPerView: 2,
       spaceBetween: 34,
+      slidesPerGroup: 2,
+    },
+    1000: {
+      slidesPerView: 2,
+      spaceBetween: 50,
       slidesPerGroup: 2,
     },
     1400: {
@@ -123,7 +130,7 @@ window.addEventListener('resize', () => {
     mySwiperSecond.update();
     mySwiperThree.update();
   }
-  if (windowWidth < 1300) {
-    mySwiperThree.update();
-  }
+  // if (windowWidth < 1300) {
+  //   mySwiperThree.update();
+  // }
 });

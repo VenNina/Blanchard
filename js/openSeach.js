@@ -1,6 +1,7 @@
 (function () {
 
   const
+    headerBtnsWrap = document.querySelector('.header__btns-wrap'),
     headerBtns = document.querySelector('.header__btns'),
     headerBtnsInner = document.querySelector('.header__btns-inner'),
     btnSeachOpen = document.querySelector('.seach-form__btn-open'),
@@ -12,6 +13,7 @@
   // 3. отодвигаем лупу вправо, чтобы был отступ.
 
   btnSeachOpen.addEventListener('click', () => {
+    headerBtnsWrap.classList.add('header__btns-wrap--active');
     headerBtns.classList.add('header__btns--active');
     headerBtnsInner.classList.add('header__btns-inner--active');
     // formSeach.classList.add('seach-form--display');
@@ -23,6 +25,7 @@
   btnSeachClose.addEventListener('click', () => {
     headerBtns.classList.remove('header__btns--active');
     headerBtnsInner.classList.remove('header__btns-inner--active');
+    headerBtnsWrap.classList.remove('header__btns-wrap--active');
     // setTimeout(() => {
     //   formSeach.classList.remove('seach-form--display');
     // }, 300);
