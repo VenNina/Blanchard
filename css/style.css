@@ -194,6 +194,7 @@ body {
 }
 
 .link-btn__text {
+  white-space: nowrap;
   display: inline-block;
   background-color: transparent;
 }
@@ -270,6 +271,7 @@ body {
 }
 
 .burger--open {
+  position: absolute;
   top: 35px;
   left: 49px;
 }

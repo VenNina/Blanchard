@@ -156,19 +156,43 @@
     left: 0;
   }
 
+  .tabs__btn::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    left: 0;
+    height: 1px;
+    background-color: var(--color-amethyst);
+    transform: scaleX(0);
+    transition: transform .3s ease;
+    transform-origin: left;
+  }
+
   .tabs__btn--active {
     color: var(--color-active);
+  }
+
+  .tabs__btn.focus-visible {
+    color: var(--color-black);
   }
 
   .tabs__btn.focus-visible::before {
     background-color: var(--color-amethyst);
   }
 
+  .tabs__btn:hover {
+    color: initial;
+  }
+
+  .tabs__btn:hover::after {
+    transform: scaleX(1);
+  }
+
   .tabs-inner__list {
     display: inline-block;
     padding-top: 25px;
     padding-bottom: 25px;
-    /* height: 360px; */
     height: 328px;
     width: 100%;
     column-count: 3;
@@ -192,7 +216,6 @@
     flex-direction: column;
     justify-content: flex-end;
     padding-top: 66%;
-    /* min-height: 616px; */
     background-image: url(../img/empty_author.svg);
     background-position: top center;
     background-size: 100%;
@@ -214,10 +237,6 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 60px 15px 60px 39%;
-    /* background-image: url(../img/empty_accordion.svg);
-    background-position: left;
-    background-size: 37% 79%;
-    background-repeat: no-repeat; */
   }
 
   .empty-content::before,
@@ -250,6 +269,7 @@
 
   .empty-link {
     width: max-content;
+    font-weight: 600;
     font-size: 15px;
     line-height: 21px;
     color: var(--color-amethyst);
