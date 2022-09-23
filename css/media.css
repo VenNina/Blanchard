@@ -112,13 +112,16 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, .9);
+    background-color: transparent;
     overflow: auto;
+    transition: background-color .3s ease-in-out;
   }
 
   .header__popup--active {
     z-index: 200;
+    background-color: rgba(0, 0, 0, .9);
     position: fixed;
+    transition: background-color .3s ease-in-out;
   }
 
   .header__popup-wrap {
@@ -133,13 +136,14 @@
     height: 100vh;
     opacity: 0;
     visibility: hidden;
+    transition: opacity .8s ease-in-out;
   }
 
   .header__popup-wrap--active {
     position: static;
     opacity: 1;
     visibility: visible;
-    transition: opacity 1s ease, visibility 1s ease;
+    transition: opacity .8s ease-in-out;
   }
 
   .header__nav {
@@ -486,6 +490,11 @@
     right: 0;
     bottom: 0;
     left: 0;
+  }
+
+  .header__btns-wrap--active {
+    z-index: 200;
+    background-color: var(--color-black);
   }
 
   .header__btns-inner {
@@ -977,7 +986,8 @@
 
   /* popup */
   .header__popup-wrap {
-    padding-top: 37px;
+    padding-top: 54px;
+    padding-bottom: 26px;
   }
 
   .nav__list {
@@ -1022,97 +1032,125 @@
     right: 59%;
   }
 
-  .link-enter__icon {
-    width: 10px;
-    height: 10px;
-  }
-
   .header__link-enter {
     padding: 12px 31px;
     font-size: 12px;
     line-height: 1;
   }
 
+  .link-enter__icon {
+    width: 10px;
+    height: 10px;
+  }
+
   .header__btns-wrap {
-    transition: bottom .3s ease-in, background-color .6s ease-in;
+    bottom: -31px;
+    transition: background-color .6s ease-in;
+    transform-origin: top right 200px;
+    animation: bg-to-rev .5s both .3s;
   }
 
   .header__btns-wrap--active {
-    bottom: -30px;
-    background-color: rgba(0, 0, 0, .9);
-    transition: bottom .3s ease-in .7s, background-color .6s ease-in;
-  }
-
-  .header__btns-inner {
-    transform: translate(calc(100% - 20px), 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: bg-top .5s both .3s;
   }
 
   .header__btns {
-    align-items: stretch;
+    top: -15px;
     padding: 15px 0;
-    width: calc(50% + (180px + 32px)/2);
+    width: calc(50% + (180px + 24px)/2);
+    transition: transform .3s ease-in-out .3s;
   }
 
+
   .header__btns-inner {
-    align-items: stretch;
+    background-color: inherit;
     transform: translate(calc(100% - 20px), 0);
     transition: transform .3s ease-in-out .3s;
   }
 
   .header__btns-inner--active {
     transform: translate(0%, 0%);
+    transition: transform .3s ease-in-out;
   }
 
   .btn-loop {
-    align-self: flex-end;
     width: 24px;
     height: 18px;
-    /* animation: openseach normal 1s ease; */
-
+    animation: slider-bottom-rev .3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
   }
 
   .header__btns-inner--active .btn-loop {
-    animation: openseach normal 1.3s ease;
+    animation: slider-bottom .3s cubic-bezier(0.215, 0.610, 0.355, 1.000) .4s both;
   }
 
   .seach-form {
-    align-items: stretch;
+    font-size: 12px;
+    transition: opacity .3s ease .4s, visibility 0s ease;
   }
 
   .seach-form__input {
-    align-self: flex-end;
     width: 180px;
-    transform: translateY(-15px);
-    opacity: 0;
-    /* transition: transform .3s ease 1s, opacity .3s ease 1s; */
-    transition: transform .4s ease .9s, opacity .4s ease .9s;
+    animation: slider-bottom-rev .3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
   }
 
   .header__btns-inner--active .seach-form__input {
-    transform: translateY(0);
-    opacity: 1;
+    animation: slider-bottom .3s cubic-bezier(0.215, 0.610, 0.355, 1.000) .4s both;
+  }
+
+  .seach-form__input::placeholder {
+    opacity: 0;
   }
 
   .seach-form__btn-close {
     width: 19px;
     height: 19px;
+    background-position-y: 3px;
   }
 
-  @keyframes openseach {
+  @keyframes bg-top {
     0% {
-      opacity: 0;
-      transform: translateY(-15px);
-    }
-
-    70% {
-      opacity: 0;
-      transform: translateY(-15px)
+      background-position: 50% 100%;
     }
 
     100% {
-      opacity: 1;
+      background-position: 50% 0%;
+    }
+  }
+
+  @keyframes bg-top-rev {
+    0% {
+      background-position: 50% 0;
+    }
+
+    100% {
+      background-position: 50% 100%;
+    }
+  }
+
+  @keyframes slider-bottom {
+    0% {
       transform: translateY(0);
     }
+
+    100% {
+      transform: translateY(22px);
+    }
+  }
+
+  @keyframes slider-bottom-rev {
+    0% {
+      transform: translateY(22px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .header__link-enter-inner {
+
+    padding-bottom: 0;
   }
 
   /* hero */
