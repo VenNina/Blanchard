@@ -2,10 +2,11 @@
 
   const
     headerBtnsWrap = document.querySelector('.header__btns-wrap'),
-    headerBtns = document.querySelector('.header__btns'),
+    // headerBtns = document.querySelector('.header__btns'),
     headerBtnsInner = document.querySelector('.header__btns-inner'),
     btnSeachOpen = document.querySelector('.seach-form__btn-open'),
-    btnSeachClose = document.querySelector('.seach-form__btn-close');
+    btnSeachClose = document.querySelector('.seach-form__btn-close'),
+    burger = document.querySelector('.burger');
 
   // 0. добавляем класс c background-color к блоку header__btns, начинает работать на @media (max-widht: 1010px)
   // 1. по нажатию на лупу, добавляем класс display:block к форме
@@ -14,8 +15,9 @@
 
   btnSeachOpen.addEventListener('click', () => {
     headerBtnsWrap.classList.add('header__btns-wrap--active');
-    headerBtns.classList.add('header__btns--active');
+    headerBtnsWrap.style.zIndex = 200
     headerBtnsInner.classList.add('header__btns-inner--active');
+    // burger.style.zIndex = 0
     // formSeach.classList.add('seach-form--display');
     // setTimeout(() => {
     //   formSeach.classList.add('seach-form--width');
@@ -23,12 +25,12 @@
   });
 
   btnSeachClose.addEventListener('click', () => {
-    headerBtns.classList.remove('header__btns--active');
-    headerBtnsInner.classList.remove('header__btns-inner--active');
+    // headerBtns.classList.remove('header__btns--active');
     headerBtnsWrap.classList.remove('header__btns-wrap--active');
-    // setTimeout(() => {
-    //   formSeach.classList.remove('seach-form--display');
-    // }, 300);
+    headerBtnsInner.classList.remove('header__btns-inner--active');
+    setTimeout(() => {
+      headerBtnsWrap.style.zIndex = 100
+    }, 500);
   });
 
 

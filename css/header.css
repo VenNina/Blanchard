@@ -297,10 +297,10 @@
   transition: background-color .3s ease-in;
 }
 
-.header__btns-wrap--active {
+/* .header__btns-wrap--active {
   z-index: 200;
   background-color: var(--color-black);
-}
+} */
 
 .header__btns {
   width: 250px;
@@ -311,7 +311,7 @@
 .header__btns-inner {
   justify-content: flex-end;
   width: 100%;
-  background-color: inherit;
+  background-color: transparent;
   transform: translate(0%, 0%);
   transition: transform .3s ease-in-out;
 }

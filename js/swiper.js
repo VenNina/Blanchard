@@ -23,6 +23,8 @@ let mySwiperSecond = new Swiper(swiperSecond, {
   },
   a11y: {
     paginationBulletMessage: 'Перейти к слайду {{index}}',
+    prevSlideMessage: 'Предыдущий слайд',
+    nextSlideMessage: 'Следующий слайд',
   },
   pagination: {
     el: '.gallery__swiper-pagination',
@@ -67,6 +69,8 @@ let mySwiperThree = new Swiper(swiperThree, {
   },
   a11y: {
     paginationBulletMessage: 'Перейти к слайду {{index}}',
+    prevSlideMessage: 'Предыдущий слайд',
+    nextSlideMessage: 'Следующий слайд',
   },
   breakpoints: {
     // when window width is >= 320px
@@ -101,6 +105,8 @@ let mySwiperFour = new Swiper(swiperFour, {
   },
   a11y: {
     paginationBulletMessage: 'Перейти к слайду {{index}}',
+    prevSlideMessage: 'Предыдущий слайд',
+    nextSlideMessage: 'Следующий слайд',
   },
   breakpoints: {
     // when window width is >= 320px
