@@ -22,7 +22,7 @@
       drops.forEach(el => {
         if (el !== drop) {
           el.classList.remove('main-menu-dropdown--active')
-          el.setAttribute('hidden', true)
+          // el.setAttribute('hidden', true)
         }
       });
 
@@ -31,13 +31,13 @@
 
       if (currentBtn.getAttribute('aria-expanded') === 'false') {
         currentBtn.setAttribute('aria-expanded', true)
-        drop.removeAttribute('hidden')
+        // drop.removeAttribute('hidden')
         currentBtn.classList.add('main-menu-btn--active')
         drop.classList.add('main-menu-dropdown--active')
       }
       else {
         currentBtn.setAttribute('aria-expanded', false)
-        drop.setAttribute('hidden', true)
+        // drop.setAttribute('hidden', true)
         currentBtn.classList.remove('main-menu-btn--active')
         drop.classList.remove('main-menu-dropdown--active')
       }
@@ -50,10 +50,12 @@
       if (!e.target.closest('.main-menu__list')) {
         menuBtns.forEach(el => {
           el.classList.remove('main-menu-btn--active')
+          el.setAttribute('aria-expanded', false)
         });
 
         drops.forEach(el => {
           el.classList.remove('main-menu-dropdown--active')
+          // el.setAttribute('hidden', true)
         });
       }
     })

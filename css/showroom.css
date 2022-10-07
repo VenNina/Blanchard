@@ -32,15 +32,6 @@
   margin-right: 22px;
 }
 
-/* .grid-custom {
-  margin-left: -22px;
-  margin-right: -22px;
-} */
-
-/* .grid-custom__child {
-  padding: 22px;
-} */
-
 .form__input {
   padding: 15px 24px;
   border: 1px solid var(--color-main);
@@ -48,6 +39,22 @@
   min-width: 270px;
   color: var(--color-main);
   transition: background-color .3s ease-in-out;
+}
+
+.form__input::-webkit-input-placeholder {
+  color: var(--color-grey);
+}
+
+.form__input::-moz-placeholder {
+  color: var(--color-grey);
+}
+
+.form__input:-ms-input-placeholder {
+  color: var(--color-grey);
+}
+
+.form__input::-ms-input-placeholder {
+  color: var(--color-grey);
 }
 
 .form__input::placeholder {
@@ -152,5 +159,6 @@
 /* ищем все элементы у которых в имени класса содержиться текст ground-pane */
 
 [class*="ground-pane"] {
+  -webkit-filter: grayscale(1);
   filter: grayscale(1);
 }
