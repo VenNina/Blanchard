@@ -20,7 +20,7 @@
   width: 20px;
   height: 20px;
   background-image: url(../img/i-tooltip.svg);
-  background-size: 18px 17px;
+  background-size: 18px 18px;
   background-repeat: no-repeat;
   background-position: center;
   transform: translateY(4px);
@@ -39,6 +39,8 @@
 
 .tippy-content {
   max-width: 269px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   text-align: center;
 }
@@ -127,7 +129,7 @@
 }
 
 .swiper-four {
-  width: 91%;
+  width: 90%;
   height: 100%;
 }
 
@@ -153,8 +155,11 @@
 
 .prodjects__swiper-img {
   opacity: .7;
+  -webkit-filter: grayscale(1);
   filter: grayscale(1);
+  transition: opacity .3s ease-in-out, -webkit-filter .3s ease-in-out;
   transition: opacity .3s ease-in-out, filter .3s ease-in-out;
+  transition: opacity .3s ease-in-out, filter .3s ease-in-out, -webkit-filter .3s ease-in-out;
 }
 
 .prodjects__swiper-slide:focus-within .prodjects__article {
@@ -167,6 +172,7 @@
 
 .prodjects__swiper-slide:hover .prodjects__swiper-img {
   opacity: 1;
+  -webkit-filter: grayscale(0);
   filter: grayscale(0);
 }
 
@@ -198,7 +204,6 @@
 .prodjects__slide-btn .prodjects__swiper-button-prev,
 .prodjects__slide-btn .prodjects__swiper-button-next {
   top: calc((var(--height-swiper-four)/ 2) + 7px);
-  /* transform: translateY(-50%); */
 }
 
 .prodjects__slide-btn .prodjects__swiper-button-prev {

@@ -19,16 +19,7 @@
   <link rel="stylesheet" href="libscss/swiper.min.css">
   <link rel="stylesheet" href="css/choices.min.css">
   <link rel="stylesheet" href="libscss/simplebar.css">
-  <noscript>
-    <style>
-      /**
-    * Reinstate scrolling for non-JS clients
-    */
-      .simplebar-content-wrapper {
-        overflow: auto;
-      }
-    </style>
-  </noscript>
+
   <!-- Подключаем наши стили -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header.css">
@@ -43,6 +34,8 @@
   <link rel="stylesheet" href="css/media.css">
   <!-- полифил состояния focus-visible для Safari  -->
   <script src="libs/focus-visible.js" defer></script>
+  <!-- Блокировка фокуса при открытии модальных окон -->
+  <script src="libs/inert.js" defer></script>
   <!-- открытие закрытие меню dropdown-->
   <script src="js/dropdownOpenClose.js" defer></script>
   <!-- Swiper -->
@@ -77,9 +70,10 @@
   <!-- открытие бургера -->
   <script src="js/openBurger.js" defer></script>
   <!-- всплывающая подсказка -->
-  <script src="./libs/popper.min.js" defer></script>
-  <script src="./libs/tippy-bundle.umd.js" defer></script>
-  <script src="./js/tooltip.js" defer></script>
+  <script src="libs/popper.min.js" defer></script>
+  <script src="libs/tippy-bundle.umd.js" defer></script>
+  <script src="js/tooltip.js" defer></script>
+
   <noscript>
     <style>
       /**
@@ -103,7 +97,7 @@
           <img src="img/logo_header_1920_desktop.svg" alt="Логотип художественной галереи Blanchard - продажа предметов искусства">
         </picture>
         <div class="header__popup">
-          <button class="burger btn-reset" type="button" aria-label="Открыть навигацию по сайту">
+          <button class="burger btn-reset" type="button" aria-expanded="false" aria-label="Открыть или Закрыть навигацию по сайту">
             <span class="burger__line"></span>
             <span class="burger__line"></span>
             <span class="burger__line"></span>
@@ -166,7 +160,7 @@
                 <path d="M11 1L6 6L1 1" />
               </svg>
             </button>
-            <div class="main-menu__dropdown main-menu-dropdown" hidden>
+            <div class="main-menu__dropdown main-menu-dropdown">
               <ul class="main-menu-dropdown__wrap list-reset my-elements">
                 <li class="main-menu-dropdown__item main-menu-dropdown__item--bg1-1">
                   <a class="main-menu-dropdown__link" href="#" aria-label="Тинторетто выдающийся живописец венецианской школы">Тинторетто</a>
@@ -226,7 +220,7 @@
                 <path d="M11 1L6 6L1 1" />
               </svg>
             </button>
-            <div class="main-menu__dropdown main-menu-dropdown" hidden>
+            <div class="main-menu__dropdown main-menu-dropdown">
               <ul class="main-menu-dropdown__wrap list-reset my-elements">
                 <li class="main-menu-dropdown__item main-menu-dropdown__item--bg2-1">
                   <a class="main-menu-dropdown__link" href="#">Моне</a>
@@ -262,7 +256,7 @@
                 <path d="M11 1L6 6L1 1" />
               </svg>
             </button>
-            <div class="main-menu__dropdown main-menu-dropdown" hidden>
+            <div class="main-menu__dropdown main-menu-dropdown">
               <ul class="main-menu-dropdown__wrap list-reset my-elements">
                 <li class="main-menu-dropdown__item main-menu-dropdown__item--bg3-1">
                   <a class="main-menu-dropdown__link" href="#">Ван Гог</a>
@@ -298,7 +292,7 @@
                 <path d="M11 1L6 6L1 1" />
               </svg>
             </button>
-            <div class="main-menu__dropdown main-menu-dropdown" hidden>
+            <div class="main-menu__dropdown main-menu-dropdown">
               <ul class="main-menu-dropdown__wrap list-reset my-elements">
                 <li class="main-menu-dropdown__item main-menu-dropdown__item--bg4-1">
                   <a class="main-menu-dropdown__link" href="#">Кандинский</a>
@@ -334,7 +328,7 @@
                 <path d="M11 1L6 6L1 1" />
               </svg>
             </button>
-            <div class="main-menu__dropdown main-menu-dropdown" hidden>
+            <div class="main-menu__dropdown main-menu-dropdown">
               <ul class="main-menu-dropdown__wrap list-reset my-elements">
                 <li class="main-menu-dropdown__item main-menu-dropdown__item--bg5-1">
                   <a class="main-menu-dropdown__link" href="#">Карра</a>
@@ -379,15 +373,15 @@
         <div class="header__btns-wrap">
           <div class="header__btns seach flex-center">
             <div class="header__btns-inner flex-center">
-              <button class="btn-reset seach-form__btn-open flex-center btn-loop" aria-label="Открыть Поиск">
-                <svg class="seach-form__icon btn-loop__icon" width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <button class="btn-reset seach__btn-open flex-center btn-loop" aria-expanded="true" type="button" aria-label="Открыть Поиск">
+                <svg class="seach__icon btn-loop__icon" width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" />
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" />
                 </svg>
               </button>
               <form class="seach__form seach-form" action="#" method="post">
-                <input class="seach-form__input" placeholder="Поиск по сайту" required />
-                <button class="btn-reset seach-form__btn-close flex-center" type="button"></button>
+                <input class="seach-form__input" placeholder="Поиск по сайту" required>
+                <button class="btn-reset seach-form__btn-close flex-center" type="button" aria-label="Закрыть Поиск"></button>
               </form>
             </div>
           </div>
@@ -396,7 +390,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="main">
     <section class="hero">
       <div class="swiper swiper-first hero__slider">
         <div class="swiper-wrapper">
@@ -481,7 +475,7 @@
           <div class="swiper swiper-second gallery__slider">
             <div class="swiper-wrapper gallery__swiper-wrapper">
               <div class="swiper-slide swiper-slide-second">
-                <button class="gallery__swiper-btn popup__btn-open btn-reset" aria-label="Открыть фотографию картины картина Торс (Фигура с розовым лицом) - автор Казимир Малевич" type="button" data-path="gallery-popup-1">
+                <button class="gallery__swiper-btn popup-btn-open btn-reset" aria-expanded="false" aria-label="Открыть фотографию картины Торс (Фигура с розовым лицом) - автор Казимир Малевич" type="button" data-path="gallery-popup-1">
                   <picture class="swiper-img gallery__swiper-img flex-center">
                     <source srcset="img/gallery1-320@1x.jpg 1x, img/gallery1-320@2x.jpg 2x" media="(max-width: 500px)">
                     <source srcset="img/gallery1-768@1x.jpg 1x, img/gallery1-768@2x.jpg 2x" media="(max-width: 1000px)">
@@ -492,7 +486,7 @@
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
-                <button class="gallery__swiper-btn popup__btn-open btn-reset" aria-label="Открыть фотографию картины Женщина с граблями - автор Казимир Малевич" type="button" data-path="gallery-popup-2">
+                <button class="gallery__swiper-btn popup-btn-open btn-reset" aria-expanded="false" aria-label="Открыть фотографию картины Женщина с граблями - автор Казимир Малевич" type="button" data-path="gallery-popup-2">
                   <picture class="swiper-img gallery__swiper-img flex-center">
                     <source srcset="img/gallery2-320@1x.jpg 1x, img/gallery2-320@2x.jpg 2x" media="(max-width: 500px)">
                     <source srcset="img/gallery2-768@1x.jpg 1x, img/gallery2-768@2x.jpg 2x" media="(max-width: 1000px)">
@@ -503,7 +497,7 @@
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
-                <button class="gallery__swiper-btn popup__btn-open btn-reset" aria-label="Открыть фотографию картины Taking in the harvest - автор Казимир Малевич" type="button" data-path="gallery-popup-3">
+                <button class="gallery__swiper-btn popup-btn-open btn-reset" aria-expanded="false" aria-label="Открыть фотографию картины Taking in the harvest - автор Казимир Малевич" type="button" data-path="gallery-popup-3">
                   <picture class="swiper-img gallery__swiper-img flex-center">
                     <source srcset="img/gallery3-320@1x.jpg 1x, img/gallery3-320@2x.jpg 2x" media="(max-width: 500px)">
                     <source srcset="img/gallery3-768@1x.jpg 1x, img/gallery3-768@2x.jpg 2x" media="(max-width: 1000px)">
@@ -514,7 +508,7 @@
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
-                <button class="gallery__swiper-btn popup__btn-open btn-reset" aria-label="Открыть фотографию картины Сюпрематизм - автор Иван Клюн" type="button" data-path="gallery-popup-4">
+                <button class="gallery__swiper-btn popup-btn-open btn-reset" aria-expanded="false" aria-label="Открыть фотографию картины Сюпрематизм - автор Иван Клюн" type="button" data-path="gallery-popup-4">
                   <picture class="swiper-img gallery__swiper-img flex-center">
                     <source srcset="img/gallery4-320@1x.jpg 1x, img/gallery4-320@2x.jpg 2x" media="(max-width: 500px)">
                     <source srcset="img/gallery4-768@1x.jpg 1x, img/gallery4-768@2x.jpg 2x" media="(max-width: 1000px)">
@@ -525,7 +519,7 @@
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
-                <button class="gallery__swiper-btn popup__btn-open btn-reset" aria-label="Открыть фотографию картины Женщина с ведрами - автор Казимир Малевич" type="button" data-path="gallery-popup-5">
+                <button class="gallery__swiper-btn popup-btn-open btn-reset" aria-expanded="false" aria-label="Открыть фотографию картины Женщина с ведрами - автор Казимир Малевич" type="button" data-path="gallery-popup-5">
                   <picture class="swiper-img gallery__swiper-img flex-center">
                     <source srcset="img/gallery5-320@1x.jpg 1x, img/gallery5-320@2x.jpg 2x" media="(max-width: 500px)">
                     <source srcset="img/gallery5-768@1x.jpg 1x, img/gallery5-768@2x.jpg 2x" media="(max-width: 1000px)">
@@ -536,7 +530,7 @@
                 </button>
               </div>
               <div class="swiper-slide swiper-slide-second">
-                <button class="gallery__swiper-btn popup__btn-open btn-reset" aria-label="Открыть фотографию картины Сюпрематизм - автор Казимир Малевич" type="button" data-path="gallery-popup-6">
+                <button class="gallery__swiper-btn popup-btn-open btn-reset" aria-expanded="false" aria-label="Открыть фотографию картины Сюпрематизм - автор Казимир Малевич" type="button" data-path="gallery-popup-6">
                   <picture class="swiper-img gallery__swiper-img flex-center">
                     <source srcset="img/gallery5-320@1x.jpg 1x, img/gallery5-320@2x.jpg 2x" media="(max-width: 500px)">
                     <source srcset="img/gallery6-768@1x.jpg 1x, img/gallery6-768@2x.jpg 2x" media="(max-width: 1000px)">
@@ -550,7 +544,7 @@
           </div>
         </div>
       </div>
-      <div class="popup">
+      <div class="gallery-popup popup">
         <div class="popup__wrap" data-target="gallery-popup-1">
           <button class="popup__btn-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
           <figure class="popup__figure">
@@ -861,7 +855,6 @@
               <a href="#gallery" class="empty-author__link empty-link link-btn">
                 <span class="link-btn__text">В галлерею</span>
               </a>
-              </a>
             </div>
             <div class="card__items empty-author" id="fourteen-tab" aria-labelledby="fourteen" data-target="fourteen">
               <h4 class="subtitle empty-author__subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h4>
@@ -877,7 +870,6 @@
                 на&nbsp;что посмотреть!</p>
               <a href="#gallery" class="empty-author__link empty-link link-btn">
                 <span class="link-btn__text">В галлерею</span>
-              </a>
               </a>
             </div>
             <div class="card__items empty-author" id="sixteen-tab" aria-labelledby="sixteen" data-target="sixteen">
