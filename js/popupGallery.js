@@ -1,6 +1,6 @@
 (function () {
   const btns = document.querySelectorAll('.popup-btn-open'),
-    popup = document.querySelector('.popup'),
+    popup = document.getElementById('gallery-popup'),
     popupWrap = document.querySelectorAll('.popup__wrap'),
     html = document.documentElement,
     body = document.body,
@@ -9,7 +9,7 @@
   let activeElement;
 
   // отключение скролла
-  let disableScroll = function () {
+  function disableScroll() {
     activeElement = document.activeElement // запоминаем активный элемент
     let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
     // сохраняем в переменную ширину текущего скролла
@@ -27,10 +27,9 @@
   }
 
   // включение скролла
-  let enableScroll = function () {
+  function enableScroll() {
     // значение по умолчанию строка, мы переводим его в число
     let pagePosition = parseInt(document.body.dataset.position, 10);
-    console.log(pagePosition);
     // убираем предыдущие значение top у body
     body.style.top = 'auto';
     body.classList.remove('disable-scroll');
@@ -69,15 +68,15 @@
       }, 100);
 
       // отключаем взаимодейсвие со всеми элементами на странице
-      Array.from(body.children).forEach((child) => {
-        if (child !== main) child.inert = true
-      })
-      Array.from(main.children).forEach((child) => {
-        if (child !== gallery) child.inert = true
-      })
-      Array.from(gallery.children).forEach((child) => {
-        if (child !== popup) child.inert = true
-      })
+      // Array.from(body.children).forEach((child) => {
+      //   if (child !== main) child.inert = true
+      // })
+      // Array.from(main.children).forEach((child) => {
+      //   if (child !== gallery) child.inert = true
+      // })
+      // Array.from(gallery.children).forEach((child) => {
+      //   if (child !== popup) child.inert = true
+      // })
 
     });
   });

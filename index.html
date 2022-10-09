@@ -544,7 +544,7 @@
           </div>
         </div>
       </div>
-      <div class="gallery-popup popup">
+      <div class="gallery-popup popup" id="gallery-popup">
         <div class="popup__wrap" data-target="gallery-popup-1">
           <button class="popup__btn-close btn-reset" type="button" aria-label="Закрыть модальное окно"></button>
           <figure class="popup__figure">
@@ -1574,7 +1574,11 @@
             </ul>
           </fieldset>
         </form>
-
+        <div class="showroom__popup showroom-popup popup" id="showroom-popup" role="alert" hidden>
+          <p class="descr showroom-popup__descr">
+            Спасибо, ожидайте звонка
+          </p>
+        </div>
         <div class="showroom__social">
           <h3 class="subtitle showroom__social-subtitle">
             Связаться в&nbsp;один клик

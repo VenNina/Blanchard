@@ -134,7 +134,8 @@
     bottom: 0;
     padding: 95px 48px 50px;
     /* min-height: 738px; */
-    height: 100vh;
+    height: calc(100vh - 120px);
+    /* height: 100vh; */
     opacity: 0;
     visibility: hidden;
     transition: opacity .8s ease-in-out;
@@ -152,7 +153,6 @@
   }
 
   .nav__list {
-    /* margin-bottom: 100px; */
     flex-direction: column;
     align-items: flex-start;
     font-size: 24px;
@@ -180,6 +180,7 @@
   .btn-loop {
     width: 31px;
     height: 29px;
+    pointer-events: auto;
   }
 
   .seach-form {
@@ -362,7 +363,6 @@
 
   .tabs-inner__list {
     height: auto;
-    -moz-column-count: 2;
     column-count: 2;
   }
 
@@ -588,7 +588,6 @@
 
   .tabs-inner__list {
     min-height: 330px;
-    -moz-column-count: 3;
     column-count: 3;
   }
 
@@ -918,7 +917,6 @@
 
   /* catalog */
   .tabs-inner__list {
-    -moz-column-count: 1;
     column-count: 1;
   }
 
@@ -1041,13 +1039,11 @@
     bottom: -31px;
     transition: background-color .6s ease-in;
     transform-origin: top right 200px;
-    -webkit-animation: bg-to-rev .5s both .3s;
     animation: bg-to-rev .5s both .3s;
   }
 
   .header__btns-wrap--active {
     background-color: rgba(0, 0, 0, 0.9);
-    -webkit-animation: bg-top .5s both .3s;
     animation: bg-top .5s both .3s;
   }
 
@@ -1073,12 +1069,10 @@
   .btn-loop {
     width: 24px;
     height: 18px;
-    -webkit-animation: slider-bottom-rev .3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     animation: slider-bottom-rev .3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
   }
 
   .header__btns-inner--active .btn-loop {
-    -webkit-animation: slider-bottom .3s cubic-bezier(0.215, 0.610, 0.355, 1.000) .4s both;
     animation: slider-bottom .3s cubic-bezier(0.215, 0.610, 0.355, 1.000) .4s both;
   }
 
@@ -1089,29 +1083,11 @@
 
   .seach-form__input {
     width: 180px;
-    -webkit-animation: slider-bottom-rev .3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     animation: slider-bottom-rev .3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
   }
 
   .header__btns-inner--active .seach-form__input {
-    -webkit-animation: slider-bottom .3s cubic-bezier(0.215, 0.610, 0.355, 1.000) .4s both;
     animation: slider-bottom .3s cubic-bezier(0.215, 0.610, 0.355, 1.000) .4s both;
-  }
-
-  .seach-form__input::-webkit-input-placeholder {
-    opacity: 0;
-  }
-
-  .seach-form__input::-moz-placeholder {
-    opacity: 0;
-  }
-
-  .seach-form__input:-ms-input-placeholder {
-    opacity: 0;
-  }
-
-  .seach-form__input::-ms-input-placeholder {
-    opacity: 0;
   }
 
   .seach-form__input::placeholder {

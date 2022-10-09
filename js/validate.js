@@ -13,10 +13,12 @@
     },
   });
 
+  const showAlert = document.getElementById('showroom-popup');
+
   validation
     .addField('.input-name', [{
       rule: 'minLength',
-      value: 3,
+      value: 1,
     },
     {
       rule: 'maxLength',
@@ -42,18 +44,22 @@
       errorMessage: 'Введите корректный телефон',
     },
     ]).onSuccess((event) => {
-      console.log('Validation passes and form submitted', event);
+      // console.log('Validation passes and form submitted', event);
 
       let formData = new FormData(event.target);
 
-      console.log(...formData);
+      // console.log(...formData);
 
       let xhr = new XMLHttpRequest();
 
       xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
-            console.log('Отправлено');
+            showAlert.removeAttribute('hidden')
+            showAlert.classList.add('popup--active')
+            setTimeout(() => {
+              showAlert.classList.remove('popup--active')
+            }, 5000)
           }
         }
       }

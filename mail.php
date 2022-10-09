@@ -33,15 +33,15 @@ try {
 
   // Настройки вашей почты
   $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-  $mail->Username   = 'kismnina00@gmail.com'; // Логин на почте
-  $mail->Password   = 'acgpsylhcrfetbkn'; // Пароль на почте
+  $mail->Username   = 'blanchardartgallery@gmail.com'; // Логин на почте
+  $mail->Password   = 'kiclwsbgfgwturua'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
   $mail->setFrom('', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('kismnina@mail.ru');
+  $mail->addAddress('blanchardartgallery@mail.ru');
 
   // Прикрипление файлов к письму
   if (!empty($file['name'][0])) {

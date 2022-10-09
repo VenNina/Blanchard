@@ -11,7 +11,6 @@
     // определяем ширину скролла
     let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px'
     // открываем бургер
-
     let isOpen = burger.getAttribute('aria-expanded') === "false"
     burger.setAttribute('aria-expanded', isOpen)
     burger.classList.toggle('burger--open')
@@ -27,6 +26,18 @@
     // открываем popup
     headerPopup.classList.toggle('header__popup--active');
     headerPopupWrap.classList.toggle('header__popup-wrap--active')
+
+    headerPopupWrap.addEventListener('click', (el) => {
+      if (el.target.tagName === 'SPAN') {
+        openClosePopupMenu()
+      }
+    });
+
+    headerPopupWrap.addEventListener('keydown', (el) => {
+      if (el.key == 'Enter' || el.key == 'Escape') {
+        openClosePopupMenu()
+      }
+    })
 
     // отключаем взаимодействие с body
     if (headerPopup.classList.contains('header__popup--active')) {
@@ -50,15 +61,4 @@
   burger.addEventListener('click', () => {
     openClosePopupMenu()
   });
-
-  headerPopupWrap.addEventListener('click', (el) => {
-    if (el.target.tagName === 'SPAN') openClosePopupMenu()
-  });
-
-  headerPopupWrap.addEventListener('keydown', (el) => {
-    if (el.key == 'Enter' || el.key == 'Escape') {
-      openClosePopupMenu()
-    }
-  })
-
 })();

@@ -1,66 +1,70 @@
-  .hero {
-    position: relative;
-    min-height: 800px;
-    background-image: url(../img/hero-bg1@1x.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+.hero {
+  position: relative;
+  min-height: 800px;
+  background-image: url(../img/hero-bg1@1x.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-  .hero__container {
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    padding-top: 235px;
-    padding-bottom: 50px;
-  }
+.hero__container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding-top: 235px;
+  padding-bottom: 50px;
+}
 
-  .swiper-first {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
+.swiper-first {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
 
-  .swiper-first .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+.swiper-first .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-  .hero__swiper-slide--one {
-    background-image: url(../img/hero-bg1@1x.jpg);
-  }
+.hero__swiper-slide--one {
+  background-image: url(../img/hero-bg1@1x.jpg);
+}
 
-  .hero__swiper-slide--two {
-    background-image: url(../img/hero-bg2@1x.jpg);
-  }
+.hero__swiper-slide--two {
+  background-image: url(../img/hero-bg2@1x.jpg);
+}
 
-  .hero__swiper-slide--three {
-    background-image: url(../img/hero-bg3@1x.jpg);
-  }
+.hero__swiper-slide--three {
+  background-image: url(../img/hero-bg3@1x.jpg);
+}
 
-  .hero__content {
-    max-width: 38%;
-  }
+.hero__content {
+  max-width: 38%;
+}
 
-  .hero__content>* {
-    position: relative;
-    z-index: 2;
-    color: var(--color-white);
-  }
+.hero__content>* {
+  position: relative;
+  z-index: 2;
+  color: var(--color-white);
+}
 
-  .main-descr {
-    margin: 0;
-    font-weight: 700;
-    font-size: 72px;
-    line-height: 96px;
-  }
+.main-descr {
+  margin: 0;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 96px;
+}
 
-  .hero__descr {
-    margin-bottom: 92px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 30px;
-  }
+.hero__descr {
+  margin-bottom: 92px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+}
