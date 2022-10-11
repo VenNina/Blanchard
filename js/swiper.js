@@ -8,9 +8,9 @@ let mySwiperFirst = new Swiper(swiperFirst, {
   fadeEffect: {
     crossFade: true,
   },
-  // autoplay: {
-  //   delay: 2000,
-  // },
+  autoplay: {
+    delay: 2000,
+  },
 });
 
 let mySwiperSecond = new Swiper(swiperSecond, {

@@ -68,15 +68,15 @@
       }, 100);
 
       // отключаем взаимодейсвие со всеми элементами на странице
-      // Array.from(body.children).forEach((child) => {
-      //   if (child !== main) child.inert = true
-      // })
-      // Array.from(main.children).forEach((child) => {
-      //   if (child !== gallery) child.inert = true
-      // })
-      // Array.from(gallery.children).forEach((child) => {
-      //   if (child !== popup) child.inert = true
-      // })
+      Array.from(body.children).forEach((child) => {
+        if (child !== main) child.inert = true
+      })
+      Array.from(main.children).forEach((child) => {
+        if (child !== gallery) child.inert = true
+      })
+      Array.from(gallery.children).forEach((child) => {
+        if (child !== popup) child.inert = true
+      })
 
     });
   });
