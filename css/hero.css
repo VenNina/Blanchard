@@ -49,7 +49,9 @@
   max-width: 38%;
 }
 
-.hero__content>* {
+.main-descr,
+.hero__descr,
+.hero__btn {
   position: relative;
   z-index: 2;
   color: var(--color-white);
