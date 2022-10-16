@@ -383,7 +383,7 @@ body {
 }
 
 .burger:focus {
-  color: var(--color-amethyst);
+  /* color: var(--color-amethyst); */
   outline: none;
 }
 

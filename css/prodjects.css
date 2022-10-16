@@ -75,7 +75,7 @@
 
 .tooltip-btn.focus-visible {
   outline: none;
-  background-image: url(../img/i-tooltip-active.svg);
+  background-image: url(../img/i-tooltip-hover.svg);
 }
 
 .tooltip-btn.focus-visible+.tooltip__text {
@@ -161,6 +161,7 @@
   justify-content: center;
   min-height: var(--height-swiper-four);
   border: 1px solid var(--color-caca);
+  width: 99%;
   -webkit-transition: border-color .3s ease;
   -o-transition: border-color .3s ease;
   transition: border-color .3s ease;
@@ -273,6 +274,6 @@
   background-color: var(--color-accent);
 }
 
-.text-visible {
+.text-visible-about {
   display: none;
 }
