@@ -2,12 +2,14 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -62,8 +64,14 @@ body {
 }
 
 .flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -111,7 +119,7 @@ body {
 }
 
 .descr--width {
-  width: 68%
+  width: 67%
 }
 
 .descr-time {
@@ -138,6 +146,8 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
+  -webkit-transition: color .3s ease-in-out, border-color .3s ease-in-out, background-color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out, border-color .3s ease-in-out, background-color .3s ease-in-out;
   transition: color .3s ease-in-out, border-color .3s ease-in-out, background-color .3s ease-in-out;
 }
 
@@ -183,9 +193,15 @@ body {
 .link-btn {
   position: relative;
   z-index: 100;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: var(--color-white);
+  -webkit-transition: color .3s ease;
+  -o-transition: color .3s ease;
   transition: color .3s ease;
 }
 
@@ -209,6 +225,8 @@ body {
   bottom: -3px;
   left: -8px;
   background-color: transparent;
+  -webkit-transition: background-color .3s ease;
+  -o-transition: background-color .3s ease;
   transition: background-color .3s ease;
 }
 
@@ -263,11 +281,14 @@ body {
   display: none;
   position: relative;
   z-index: 200;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 36px;
   height: 28px;
   color: var(--color-white);
   background-color: transparent;
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
 }
 
@@ -288,35 +309,57 @@ body {
 .burger__line:nth-child(1) {
   top: 0;
   right: 0;
+  -webkit-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  -o-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
   transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
 }
 
 .burger__line:nth-child(2) {
   top: 50%;
   right: 23%;
   opacity: 1;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  -webkit-transition: opacity .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+  -o-transition: opacity .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
   transition: opacity .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
 }
 
 .burger__line:last-child {
   top: 100%;
   right: 32%;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
   transform: translateY(-100%);
+  -webkit-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  -o-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
   transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
 }
 
 .burger.burger--open .burger__line:nth-child(1) {
   top: 50%;
   right: 0;
   left: 0;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  -ms-transform: translateY(-50%) rotate(45deg);
   transform: translateY(-50%) rotate(45deg);
+  -webkit-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+  -o-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
   transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
 }
 
 .burger.burger--open .burger__line:nth-child(2) {
   right: 0;
   opacity: 0;
+  -webkit-transition: opacity .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  -o-transition: opacity .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
   transition: opacity .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
 }
 
@@ -324,12 +367,23 @@ body {
   top: 50%;
   right: 0;
   left: 0;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  -ms-transform: translateY(-50%) rotate(-45deg);
   transform: translateY(-50%) rotate(-45deg);
+  -webkit-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+  -o-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
   transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
 }
 
 .burger.focus-visible {
   color: var(--color-amethyst);
+  outline: none;
+}
+
+.burger:focus {
+  /* color: var(--color-amethyst); */
   outline: none;
 }
 
