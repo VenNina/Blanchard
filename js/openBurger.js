@@ -33,7 +33,7 @@
 
     // события закрытие бургера
     headerPopupWrap.addEventListener('keydown', (el) => {
-      console.log(el.key)
+
       if (el.key == 'Enter' || el.key == 'Escape') {
         closePopupMenu()
       }
@@ -42,7 +42,7 @@
       if (el.target.tagName === 'SPAN' || el.target == burger) {
         closePopupMenu()
       }
-    });
+    })
   }
 
   function closePopupMenu() {

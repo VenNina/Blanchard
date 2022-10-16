@@ -101,15 +101,15 @@
       event.target.reset();
     });
 
-  document.getElementById('submit-btn').addEventListener('click', () => {
-    showAlert.removeAttribute('hidden')
-    showAlert.classList.add('popup--active')
-    disableScroll()
-    setTimeout(() => {
-      showAlert.classList.remove('popup--active')
-      showAlert.setAttribute('hidden', true)
-      enableScroll()
-    }, 3000)
-  })
+  // document.getElementById('submit-btn').addEventListener('click', () => {
+  //   showAlert.removeAttribute('hidden')
+  //   showAlert.classList.add('popup--active')
+  //   disableScroll()
+  //   setTimeout(() => {
+  //     showAlert.classList.remove('popup--active')
+  //     showAlert.setAttribute('hidden', true)
+  //     enableScroll()
+  //   }, 3000)
+  // })
 
 })()
