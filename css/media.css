@@ -518,7 +518,7 @@
 
 @media (max-width: 1010px) {
   :root {
-    --height-swiper-three: 683px;
+    /* --height-swiper-three: 683px; */
     --height-swiper-four: 106px;
   }
 
@@ -735,7 +735,7 @@
   /* prodjects */
 
   .prodjects__container {
-    padding-top: 70px;
+    padding-top: 67px;
     padding-bottom: 53px;
   }
 
@@ -1519,7 +1519,7 @@
 
   .swiper-pagination-bullets.swiper-pagination-horizontal,
   .swiper-pagination-custom {
-    bottom: 8px;
+    bottom: 12px;
   }
 
   /* prodject */
