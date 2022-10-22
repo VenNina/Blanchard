@@ -154,14 +154,18 @@
   color: var(--color-white);
 }
 
-.tabs-inner__content:active.tabs-inner__content::before,
+/* .tabs-inner__content:active.tabs-inner__content::before,
 .tabs-inner__content:active.tabs-inner__content::after {
   z-index: 10;
   background-color: var(--color-active);
-}
+} */
 
 .tabs-inner__content:active .tabs-inner__icon {
   background-image: url(../img/accordion-icon_active.svg);
+}
+
+.tabs-inner__content.focus-visible.ui-state-active .tabs-inner__link-btn {
+  color: var(--color-white);
 }
 
 .ui-state-active .tabs-inner__icon {
