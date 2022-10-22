@@ -486,7 +486,7 @@
   }
 
   .events-card__img {
-    min-height: 195px;
+    min-height: 200px;
   }
 
   .swiper-pagination-bullets.swiper-pagination-horizontal,
@@ -1561,7 +1561,7 @@
 
   .swiper-pagination-bullets.swiper-pagination-horizontal,
   .swiper-pagination-custom {
-    bottom: 12px;
+    bottom: 9px;
   }
 
   /* prodject */
